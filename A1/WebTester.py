@@ -51,7 +51,7 @@ def create_socket_connection(url):
 
     except socket.gaierror as err:
         print(f"{err} : failed to connect to given url")
-        return None
+        exit(1)
 
 
     
@@ -60,6 +60,7 @@ def send_HTTP_request(url):
     #create the socket
     
     S = create_socket_connection(url)
+    
     
     urls.append(url)
 

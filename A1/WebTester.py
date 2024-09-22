@@ -37,7 +37,7 @@ def create_socket_connection(url):
             context = ssl.create_default_context()
             raw_sock = socket.create_connection((hostname, port))
             sock = context.wrap_socket(raw_sock, server_hostname=hostname)
-            print("Connected to {url} using HTTPS")
+            print "Connected to {url} using HTTPS"
             return sock
                 
         else:
@@ -67,7 +67,7 @@ def send_HTTP_request(url):
     #send, recieve and decode the request
     request = "GET / HTTP/2.0\r\nHost: {}\r\nConnection: close\r\n\r\n".format(url)
     S.send(request.encode())
-    response = S.recv(4096).decode()
+    response = S.recv(4096).decode("utf-8")
 
     #extract headers and body
     headers, body = get_header_and_body(response)

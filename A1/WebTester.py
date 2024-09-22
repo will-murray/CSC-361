@@ -37,7 +37,7 @@ def create_socket_connection(url):
             context = ssl.create_default_context()
             raw_sock = socket.create_connection((hostname, port))
             sock = context.wrap_socket(raw_sock, server_hostname=hostname)
-            print(f"Connected to {url} using HTTPS")
+            print("Connected to {url} using HTTPS")
             return sock
                 
         else:
@@ -46,17 +46,17 @@ def create_socket_connection(url):
 
             # Create a plain socket
             sock = socket.create_connection((hostname, port))
-            print(f"Connected to {url} using HTTP")
+            print("Connected to ",url," using HTTP")
             return sock
 
     except socket.gaierror as err:
-        print(f"{err} : failed to connect to given url")
+        print(err ," : failed to connect to given url")
         exit(1)
 
 
     
 def send_HTTP_request(url):
-    print(f"*********starting request on {url}**********")
+    print("*********starting request on " ,url)
     #create the socket
     
     S = create_socket_connection(url)
@@ -71,16 +71,15 @@ def send_HTTP_request(url):
 
     #extract headers and body
     headers, body = get_header_and_body(response)
-    #print(f"HEADERS\n {headers} \n\n********")
-    #print(f"********\nBODY\n {body} \n\n********")
+
     status = get_status(response) 
-    print(f"STATUS : {status}")
+    print("STATUS : ",status)
     if(status[0] == "4"):
         return "Client Error"
 
     if(status[0] == "3"):
       next_url = get_next_url(headers)
-      print(f"LOCATION : {next_url}")
+      print("LOCATION : ",next_url)
       return send_HTTP_request(next_url)
 
 
@@ -106,4 +105,3 @@ response = send_HTTP_request(start_url)
 
 
 
-    

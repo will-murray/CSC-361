@@ -1,12 +1,15 @@
 #!/bin/bash
 # test cases
 urls=(
-  "www.google.com"
-  "https://chatgpt.com"
-  "docs.engr.uvic.ca"
-  "www.uvic.ca"
-  "not.a.url.com"
-
+  #"https://www.uvic.ca"
+  #"https://www.bing.com/"
+  #"http://www.uvic.ca/index.html"
+  #"www.uvic.ca"
+  "https://www.python.org/downloads/"
+  "www.python.org/downloads/"
+  "https://www.python.org/community/forums/"
+  
+  #"google.com"
 
 )
 
@@ -15,6 +18,6 @@ for url in "${urls[@]}"; do
   # Read URL and HTTP version from the case
   
   echo "Testing URL: $url"
-  python WebTester.py "$url"
-  echo "--------------------------------------"
+  python3 WebTester.py "$url"
+  echo "++++++++++++++++++++++++++++++++++++++"
 done

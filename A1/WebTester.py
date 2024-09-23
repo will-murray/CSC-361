@@ -2,106 +2,90 @@ import socket
 import sys
 import ssl
 
-def find_cookies(response):
-    #split the response into lines
-    lines = response.split("\n")
-    lines = [line for line in lines if "Cookie" in line]
-    if(len(lines) == 0 ):
-        print("no cookies found")
-    for line in lines:
-        print(line)
 
-def get_header_and_body(response):
-    header_body_split = response.split('\r\n\r\n', 1)  # Split on the first occurrence
-    headers = header_body_split[0]
-    body = header_body_split[1] if len(header_body_split) > 1 else ''  # Handle the case where there may be no body
-    return [headers,body]
+#If theres no protocol specified in the uri, use https://
+def preprocess_uri(uri):
+    if not (uri.startswith("http://") or uri.startswith("https://")):
+        uri = "https://" + uri
+    return uri
 
-def get_status(response):
-    
-    return response.split('\n')[0].split(' ')[1] #grab the second token from the first line of the decoded response
 
-def get_next_url(headers):
-    
-    location = [line for line in headers.split("\n") if line.startswith("Location")][0]
-    location = location[10: len(location) -2]
-    return location
+def check_http2(sock):
+    L = sock.selected_alpn_protocol()
+    if L is None:
+        return False
+    else:
+        return 'h2' in L
 
-def create_socket_connection(url):
+def get_response_head_and_body(res):
+    parts = res.split("\r\n\r\n", 1)
+    if len(parts) < 2:
+        return [parts[0], None]
+    return [parts[0], parts[1]]
+
+
+def find_server_info(uri):
+    #create the socket
+
     try:
-        if url.startswith("https://"):
-            hostname = url[8:]
-            port = 443  # Default port for HTTPS
+        
+        if uri.startswith("http://"):
+            # Remove "http://" from the URI, extract hostname and optional path
+            hostname = uri[7:].split('/')[0]
+            port = 80
+            path = '/' + '/'.join(uri[7:].split('/')[1:]) if '/' in uri[7:] else '/'
 
-            # Create a socket and wrap it with SSL
+            # Create a plain socket for HTTP
+            
+            sock = socket.create_connection((hostname, port))
+        
+        else:
+            # Remove "https://" from the URI, extract hostname and optional path
+            hostname = uri[8:].split('/')[0]
+            port = 443
+            path = '/' + '/'.join(uri[8:].split('/')[1:]) if '/' in uri[8:] else '/'
+
+            # Create a socket and wrap it with SSL for HTTPS
             context = ssl.create_default_context()
+            context.set_alpn_protocols(['http/1.1', 'h2'])
+
             raw_sock = socket.create_connection((hostname, port))
             sock = context.wrap_socket(raw_sock, server_hostname=hostname)
-            print "Connected to {url} using HTTPS"
-            return sock
-                
-        else:
-            hostname = url
-            port = 80  # Default port for HTTP
 
-            # Create a plain socket
-            sock = socket.create_connection((hostname, port))
-            print("Connected to ",url," using HTTP")
-            return sock
+
 
     except socket.gaierror as err:
-        print(err ," : failed to connect to given url")
+        print(f"{err}: failed to connect to given URI")
         exit(1)
 
 
-    
-def send_HTTP_request(url):
-    print("*********starting request on " ,url)
-    #create the socket
-    
-    S = create_socket_connection(url)
-    
-    
-    urls.append(url)
-
-    #send, recieve and decode the request
-    request = "GET / HTTP/2.0\r\nHost: {}\r\nConnection: close\r\n\r\n".format(url)
-    S.send(request.encode())
-    response = S.recv(4096).decode("utf-8")
-
-    #extract headers and body
-    headers, body = get_header_and_body(response)
-
-    status = get_status(response) 
-    print("STATUS : ",status)
-    if(status[0] == "4"):
-        return "Client Error"
-
-    if(status[0] == "3"):
-      next_url = get_next_url(headers)
-      print("LOCATION : ",next_url)
-      return send_HTTP_request(next_url)
+    # Send Request
+    print("---Request begin---")
+    request = f"GET {uri} HTTP/1.1\r\nHost: {hostname}\r\nConnection: close\r\n\r\n"
+    print(request)
+    sock.send(request.encode())
+    print("--Request end---\nHTTP request sent, awaiting response...\n")
 
 
-      
-    print("Sucess")
-    return response
+    res= sock.recv(4096).decode()
+    res_header, res_body = get_response_head_and_body(res)
+    #print("---Response header---\n", res_header)
 
-#extract the status code from the decoded response object
+
+    print("Supports http2 :" ,check_http2(sock))
+
+    return None
+
 
 
 
 assert(len(sys.argv) == 2)
-start_url = sys.argv[1]
-
-#list of visited URLS
-urls = []
 
 
-    
-    
+start_uri = sys.argv[1]
+start_uri = preprocess_uri(start_uri)
 
-response = send_HTTP_request(start_url)
+response = find_server_info(start_uri)
 
 
 

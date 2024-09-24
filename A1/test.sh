@@ -16,7 +16,6 @@ for url in "${urls[@]}"; do
   echo
   echo
   echo "++++++++++++++++++++++++++++++++++++++"
-  echo "Testing URL: $url"
   python3 WebTester.py "$url"
   echo "++++++++++++++++++++++++++++++++++++++"
   echo

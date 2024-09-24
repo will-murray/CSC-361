@@ -88,10 +88,12 @@ def grab_location(response):
 
 
 def send_request(uri, depth = 1):
+
     if depth > 10 :
         return
 
-    print(f"request {depth}")
+    print(f"\n------- request {depth} -------")
+    print(f"requesting from {uri}")
     uri, hostname, path = parse_uri(uri)  
 
     if(uri.startswith("http://")):
@@ -103,11 +105,16 @@ def send_request(uri, depth = 1):
     print(f"status : {status}")
     
     if not status.startswith("3"):
+        
+        print("\n** Summary **")
+
         print(f"website : {hostname}")
-        print(f"2. Supports http2 : {http2}")
-        print(f"3. List of Cookies:")
+        print(f"1. Supports http2 : {http2}")
+        print(f"2. List of Cookies:")
         for c in grab_cookies(response):
             print(c)
+
+        print("\n")
     
     else:
 
@@ -116,6 +123,7 @@ def send_request(uri, depth = 1):
 
         send_request(location, depth + 1)
 
+    
     
 
 

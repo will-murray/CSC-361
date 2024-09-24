@@ -2,12 +2,9 @@
 # test cases
 urls=(
   #"https://www.uvic.ca"
-  #"https://www.bing.com/"
-  #"http://www.uvic.ca/index.html"
-  #"www.uvic.ca"
-  "https://www.python.org/downloads/"
-  "www.python.org/downloads/"
-  "https://www.python.org/community/forums/"
+  "http://www.uvic.ca"
+  "http://www.uvic.ca/tools/"
+  "http://chatgpt.com"
   
   #"google.com"
 
@@ -16,8 +13,12 @@ urls=(
 
 for url in "${urls[@]}"; do
   # Read URL and HTTP version from the case
-  
+  echo
+  echo
+  echo "++++++++++++++++++++++++++++++++++++++"
   echo "Testing URL: $url"
   python3 WebTester.py "$url"
   echo "++++++++++++++++++++++++++++++++++++++"
+  echo
+  echo
 done

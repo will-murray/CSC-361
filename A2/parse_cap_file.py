@@ -1,4 +1,7 @@
 import struct
+from datetime import datetime, timedelta
+
+
 
 def glob_header(buff):
 
@@ -51,6 +54,7 @@ def parse_flags(flags):
 
 def parse_cap_file(file_path):
     L = []
+    reference_datetime = datetime(1970, 1, 1)
 
     with open(file_path, 'rb') as f:
         # Skip the global header (24 bytes)
@@ -73,13 +77,16 @@ def parse_cap_file(file_path):
             ip_total_length, ip_header_length, src_ip, dest_ip =  parse_ipv4_header(payload)
 
             payload = payload[ip_header_length:]
+
             src_port, dest_port, seq, ack, flags, tcp_header_length, payload = parse_tcp_header(payload)
             flags = parse_flags(flags)
 
             LENGTH = ip_total_length - ip_header_length - tcp_header_length
+            time_delta = reference_datetime + timedelta(seconds=ts_sec, microseconds=ts_usec)
 
-            L.append(tuple([src_ip, src_port, dest_ip, dest_port, seq, ack, flags, ts_sec, ts_usec,LENGTH, incl_len]))
-
+            L.append(tuple([src_ip, src_port, dest_ip, dest_port, seq, ack, flags, time_delta,LENGTH, incl_len]))
+    
+    
         
     return L
 
@@ -98,7 +105,7 @@ def unique_conns(data):
 
 def get_packets_by_id(id,data):
     D =  [i for i in data if id == i[:4] or id == (i[2],i[3],i[0],i[1])]
-    D =  sorted(D, key=lambda x: (x[-2], x[-1]))
+    D =  sorted(D, key=lambda x: x[7])
     return D
 
 class Connection:
@@ -112,7 +119,12 @@ class Connection:
         self.port_b = self.ID[3]
 
         self.D =  [i for i in data if self.ID == i[:4] or self.ID == (i[2],i[3],i[0],i[1])]
-        self.D =  sorted(self.D, key=lambda x: (x[-2], x[-1]))
+        self.D =  sorted(self.D, key=lambda x: x[7])
+        self.abs_start_time = data[0][7]
+
+        
+
+        self.idx = idx
 
     def __str__(self):
         s = ""
@@ -141,18 +153,8 @@ class Connection:
         """
         return(len([i for i in self.D if 'RST' in i[6]]))
 
-    def __time_diff(self,t1,t2):
-        T = [
-            t1[0] - t2[0],
-            t1[1] - t2[1]
-        ]
-        if T[1] < 0:
-            T[0] -= 1
-            T[1] += 1000000
-       
-        return T
 
-    def get_duration(self):
+    def get_duration(self, dur_only = False):
         """the starting time, ending time, and duration of each complete connection"""
         first_syn_idx = None
         for i in range(len(self.D)):
@@ -165,20 +167,43 @@ class Connection:
             if 'FIN' in self.D[i][6]:
                 last_fin_idx = i
 
-        start_time = [self.D[first_syn_idx][7], self.D[first_syn_idx][8]]  # [seconds, microseconds]
-        end_time = [self.D[last_fin_idx][7], self.D[last_fin_idx][8]]      # [seconds, microseconds]
+        start_time = self.D[first_syn_idx][7] 
+        end_time = self.D[last_fin_idx][7]    
 
         # Calculate relative times by subtracting the abs_start_time
-        relative_start_time = self.__time_diff(start_time, self.abs_start_time)
-        relative_end_time = self.__time_diff(end_time, self.abs_start_time)
-        duration = self.__time_diff(end_time, start_time)
+        relative_start_time = start_time - self.abs_start_time
+        relative_end_time = end_time - self.abs_start_time
+        duration = end_time - start_time
 
-
+        if dur_only:
+            return duration
                 
         return [relative_start_time, relative_end_time, duration]
-                       
+
+    def tranmission_summary(self):
+        """
+        returns a 6 element list
+        1. Number of packets sent from Source to Destination:
+        2. Number of packets sent from Destination to Source:
+        3. Total number of packets:
+        4. Number of data bytes sent from Source to Destination:
+        5. Number of data bytes sent from Destination to Source:
+        6. Total number of data bytes:
+        """
+        S = [pack for pack in self.D if pack[0] == self.ip_a]
+        D = [pack for pack in self.D if pack[0] == self.ip_b]
+        num_src_to_dest = len(S)
+        num_dest_to_src = len(D)
+        total_packets =  len(self.D)
+    
+        bytes_src_to_dest = sum([pack[9] for pack in S])
+        bytes_dest_to_src = sum([pack[9] for pack in D])
+        total_bytes = bytes_src_to_dest + bytes_dest_to_src
+        
+        return [num_src_to_dest,num_dest_to_src,total_packets,bytes_src_to_dest, bytes_dest_to_src,total_bytes]
+
     def connection_summary(self):
-        s = ""
+        s = f"Connection {self.idx}:\n"
         s += f"Source Address: {self.ip_a}\n"
         s += f"Destination Address: {self.ip_b}\n"
         s += f"Source Port : {self.port_a}\n"
@@ -186,11 +211,71 @@ class Connection:
 
         if self.is_complete():
             st,end,dur = self.get_duration()
-            s += f"Start Time : {st}"
-            s += f"End Time : {end}"
-            s += f"Duration : {dur}"
+            s += f"Start Time : {st} \n"
+            s += f"Duration :   {dur} \n"
+            s += f"End Time :   {end} \n"
 
-        
+            TS = self.tranmission_summary()
+            s+= f"Number of packets sent from Source to Destination: {TS[0]}\n"
+            s+= f"Number of packets sent from Destination to Source: {TS[1]}\n"
+            s+= f"Total number of packets: {TS[2]}\n"
+            s+= f"Number of bytes from Source to Destination: {TS[3]}\n"
+            s+= f"Number of bytes from Destination to Source: {TS[4]}\n"
+            s+= f"Total number of bytes: {TS[5]}\n"
+            s+= f"END"
+        s += '\n' + "+" * 25
 
 
         return s
+
+    def is_departing_package(self, i):
+
+        pack = self.D[i]
+        return pack[0] == self.ip_a and "RST" not in pack[6] and pack[6] != ["ACK"]
+
+
+    def get_RTTs(self):
+        """
+        returns a list containing the RTT
+        """
+        time_list = []
+        for i in range(len(self.D)):
+            rtt = self.__RTT(i)
+            if rtt is not None:
+                time_list.append(rtt)
+
+        return time_list
+
+        
+
+    def __RTT(self, i):
+        """
+        Calculate the RTT of the ith packet.
+        """
+        if not self.is_departing_package(i):
+            return None
+
+        
+        seq_num = self.D[i][4]
+        length = self.D[i][8]
+        
+        # Check if the packet is a SYN packet and adjust the expected ACK number accordingly
+        is_syn_packet = self.D[i][6] == ['SYN'] # Assuming SYN flag information is in D[i][6]; adjust if needed
+        is_fin_ack_packet = self.D[i][6] == ['FIN', 'ACK']
+        exp_ack_num = seq_num + length + (1 if (is_syn_packet or is_fin_ack_packet )else 0)
+
+        # print(f"{self.D[i][6]}: {seq_num} : {exp_ack_num}")
+
+        ack_pack = [p for p in self.D if p[5] == exp_ack_num]
+        if len(ack_pack) == 0:
+            return None
+
+        return abs(ack_pack[0][7] - self.D[i][7])
+        
+    def num_packets(self):
+        return len(self.D)
+    
+
+
+        
+

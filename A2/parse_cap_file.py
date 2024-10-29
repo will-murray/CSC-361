@@ -25,12 +25,17 @@ def parse_ipv4_header(data):
 
     return total_length, header_length, ip_addr(src_ip), ip_addr(dest_ip)
 
+import struct
+
 def parse_tcp_header(data):
-    """Parse the TCP header and extract ports, sequence numbers, flags, and TCP header length."""
-    src_port, dest_port, seq, ack, offset_reserved_flags = struct.unpack('!HHLLH', data[:14])
-    offset = (offset_reserved_flags >> 12) * 4  # Data offset in the first 4 bits
+    """Parse the TCP header and extract ports, sequence numbers, flags, TCP header length, and window size."""
+    src_port, dest_port, seq, ack, offset_reserved_flags, window_size = struct.unpack('!HHLLHH', data[:16])
+    
+    offset = (offset_reserved_flags >> 12) * 4 
     flags = offset_reserved_flags & 0x01FF  # Last 9 bits are the flags
-    return src_port, dest_port, seq, ack, flags, offset, data[offset:]
+    
+    return src_port, dest_port, seq, ack, flags, offset, window_size, data[offset:]
+
 
 
 def parse_flags(flags):
@@ -78,13 +83,13 @@ def parse_cap_file(file_path):
 
             payload = payload[ip_header_length:]
 
-            src_port, dest_port, seq, ack, flags, tcp_header_length, payload = parse_tcp_header(payload)
+            src_port, dest_port, seq, ack, flags, tcp_header_length, win_size , payload = parse_tcp_header(payload)
             flags = parse_flags(flags)
 
             LENGTH = ip_total_length - ip_header_length - tcp_header_length
             time_delta = reference_datetime + timedelta(seconds=ts_sec, microseconds=ts_usec)
 
-            L.append(tuple([src_ip, src_port, dest_ip, dest_port, seq, ack, flags, time_delta,LENGTH, incl_len]))
+            L.append(tuple([src_ip, src_port, dest_ip, dest_port, seq, ack, flags, time_delta,LENGTH, incl_len,win_size]))
     
     
         
@@ -195,9 +200,9 @@ class Connection:
         num_src_to_dest = len(S)
         num_dest_to_src = len(D)
         total_packets =  len(self.D)
-    
-        bytes_src_to_dest = sum([pack[9] for pack in S])
-        bytes_dest_to_src = sum([pack[9] for pack in D])
+        
+        bytes_src_to_dest = sum([pack[8] for pack in S])
+        bytes_dest_to_src = sum([pack[8] for pack in D])
         total_bytes = bytes_src_to_dest + bytes_dest_to_src
         
         return [num_src_to_dest,num_dest_to_src,total_packets,bytes_src_to_dest, bytes_dest_to_src,total_bytes]
@@ -206,22 +211,23 @@ class Connection:
         s = f"Connection {self.idx}:\n"
         s += f"Source Address: {self.ip_a}\n"
         s += f"Destination Address: {self.ip_b}\n"
-        s += f"Source Port : {self.port_a}\n"
-        s += f"Destination Port : {self.port_b}\n"
+        s += f"Source Port: {self.port_a}\n"
+        s += f"Destination Port: {self.port_b}\n"
+        s += self.status()
 
         if self.is_complete():
             st,end,dur = self.get_duration()
-            s += f"Start Time : {st} \n"
-            s += f"Duration :   {dur} \n"
-            s += f"End Time :   {end} \n"
+            s += f"Start time: {st.total_seconds()} seconds\n"
+            s += f"End time:   {end.total_seconds()} seconds\n"
+            s += f"Duration:   {dur.total_seconds()} seconds\n"
 
             TS = self.tranmission_summary()
             s+= f"Number of packets sent from Source to Destination: {TS[0]}\n"
             s+= f"Number of packets sent from Destination to Source: {TS[1]}\n"
             s+= f"Total number of packets: {TS[2]}\n"
-            s+= f"Number of bytes from Source to Destination: {TS[3]}\n"
-            s+= f"Number of bytes from Destination to Source: {TS[4]}\n"
-            s+= f"Total number of bytes: {TS[5]}\n"
+            s+= f"Number of data bytes sent from Source to Destination: {TS[3]}\n"
+            s+= f"Number of data bytes sent from Destination to Source: {TS[4]}\n"
+            s+= f"Total number of data bytes: {TS[5]}\n"
             s+= f"END"
         s += '\n' + "+" * 25
 
@@ -275,7 +281,35 @@ class Connection:
     def num_packets(self):
         return len(self.D)
     
+    def window_size(self):
+        return [i[10] for i in self.D]
 
+
+    def status(self):
+        num_syns = len([i for i in self.D if "SYN" in i[6]])
+        num_fins = len([i for i in self.D if "FIN" in i[6]])
+        num_rsts = len([i for i in self.D if "RST" in i[6]])
+
+        s = f"S{num_syns}F{num_fins}"
+
+        if num_rsts > 0:
+            s += "/R"
 
         
+        return "Status: " + s + "\n"
+
+    def is_closed(self):
+        first_fin_idx = -1
+        for idx,pack in enumerate(self.D):
+            if "FIN" in pack[6]:
+                first_fin_idx = idx
+
+        if first_fin_idx < 0:
+            return False
+        for pack in self.D[first_fin_idx:]:
+            if pack[9] >0 :
+                return True
+        return False
+    
+
 

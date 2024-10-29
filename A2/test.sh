@@ -1,0 +1,1 @@
+diff -y <(python3 analyze_trace.py) test\ output.txt 

@@ -237,7 +237,7 @@ class Connection:
     def is_departing_package(self, i):
 
         pack = self.D[i]
-        return pack[0] == self.ip_a and "RST" not in pack[6] and pack[6] != ["ACK"]
+        return pack[0] == self.ip_a and "RST" not in pack[6] and "ACK" not in pack[6]
 
 
     def get_RTTs(self):
@@ -261,18 +261,19 @@ class Connection:
         if not self.is_departing_package(i):
             return None
 
+       
+
         
         seq_num = self.D[i][4]
         length = self.D[i][8]
         
         # Check if the packet is a SYN packet and adjust the expected ACK number accordingly
         is_syn_packet = self.D[i][6] == ['SYN'] # Assuming SYN flag information is in D[i][6]; adjust if needed
-        is_fin_ack_packet = self.D[i][6] == ['FIN', 'ACK']
-        exp_ack_num = seq_num + length + (1 if (is_syn_packet or is_fin_ack_packet )else 0)
+        exp_ack_num = seq_num + length + (1 if (is_syn_packet )else 0)
 
         # print(f"{self.D[i][6]}: {seq_num} : {exp_ack_num}")
 
-        ack_pack = [p for p in self.D if p[5] == exp_ack_num]
+        ack_pack = [p for p in self.D[i:] if p[5] == exp_ack_num]
         if len(ack_pack) == 0:
             return None
 

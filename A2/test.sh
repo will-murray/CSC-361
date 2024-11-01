@@ -1,1 +1,1 @@
-diff -y <(python3 analyze_trace.py) test\ output.txt 
+diff -y <(python3 analyze_trace.py sample-capture-file.cap) test\ output.txt 

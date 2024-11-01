@@ -1,7 +1,8 @@
 from parse_cap_file import *
+import sys
 
 #globally available capture data    
-data = parse_cap_file('sample-capture-file.cap')
+data = parse_cap_file(sys.argv[1])
 connection_ids = unique_conns(data)
 
 

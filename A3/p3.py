@@ -2,9 +2,17 @@ import struct
 import socket
 import sys
 from datetime import datetime, timedelta
+from collections import defaultdict
 
 
 reference_datetime = datetime(1970, 1, 1)
+
+proto_map = defaultdict(lambda: "Other")
+proto_map[1] = "ICMP"
+proto_map[6] = "TCP"
+proto_map[17] = "UDP"
+
+
 
 class IP_Datagram():
     
@@ -12,17 +20,16 @@ class IP_Datagram():
         self.timestamp = reference_datetime + timedelta(seconds=ts_sec,microseconds=ts_usec)
         self.ethernet_header = buffer[:14]
         self.header = IP_Header(buffer[14:34])
-
         raw_payload = buffer[14 + self.header.header_length:] #ethernet header length + IP header length
        
         if self.header.proto == 1: # ICMP
-            self.payload = ICMP_Message(raw_payload)
+            self.payload :ICMP_Message = ICMP_Message(raw_payload)
 
         elif self.header.proto == 17: # UDP
-            self.payload = UDP_Message(raw_payload)
+            self.payload :UDP_Message = UDP_Message(raw_payload)
         
         else: # proto == TCP
-            self.payload = TCP_Message(raw_payload)
+            self.payload : TCP_Message = TCP_Message(raw_payload)
     
 
 
@@ -46,7 +53,7 @@ class IP_Header():
     
 
     def __str__(self):
-        return f"id : {self.id} | proto : {self.proto}"
+        return f"{self.source} -> {self.dest} | proto : {proto_map[self.proto]} | TTL : {self.ttl}"
 
 class ICMP_Message():
     def __init__(self,buffer):
@@ -55,6 +62,11 @@ class ICMP_Message():
         self.icmp_type = self.icmp_fields[0]
         self.icmp_id = self.icmp_fields[2]
         self.OG_header = IP_Header(buffer[8:28])
+
+        #extract the identifier from the OG_header
+        
+        if self.OG_header.proto == 17:
+            self.identifier = struct.unpack("!HHHH", buffer[28:36])[0]   
 
 class UDP_Message():
 
@@ -100,9 +112,20 @@ def analyze_traceroute(file_path):
 # Example usage
 L = analyze_traceroute(sys.argv[1])
 
-for l in L:
-    if l.header.proto == 1: #ICMP message
-        pass
+for i in L:
+    if i.header.proto == 1: 
+        if i.payload.icmp_type == 11: #ICMP timeout packet detected
+            icmp_og_packet_type = i.payload.OG_header.proto
+            for j in L:
+                if icmp_og_packet_type == j.header.proto:
+                    if icmp_og_packet_type == 17:
+                        #compare the UDP source ports
+                        if i.payload.identifier == j.payload.udp_src_port:
+                            print(f"ICMP: {i.header}")
+                            print(f"origonal UDP package: {j.header}")
+                            print()
+
+
 
 
 

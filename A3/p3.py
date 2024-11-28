@@ -30,6 +30,13 @@ class IP_Datagram():
         
         else: # proto == TCP
             self.payload : TCP_Message = TCP_Message(raw_payload)
+
+    def __str__(self):
+        s = ""
+        if self.header.proto == 1:
+            s = f" | icmp type: {self.payload.icmp_type} | identifier = {self.payload.identifier}"
+
+        return self.header.__str__() + s
     
 
 
@@ -53,7 +60,7 @@ class IP_Header():
     
 
     def __str__(self):
-        return f"{self.source} -> {self.dest} | proto : {proto_map[self.proto]} | TTL : {self.ttl}"
+        return f"{self.source} -> {self.dest} | {proto_map[self.proto]} | TTL : {self.ttl} | id = {self.id}| offset = {self.frag_offset}"
 
 class ICMP_Message():
     def __init__(self,buffer):
@@ -62,11 +69,29 @@ class ICMP_Message():
         self.icmp_type = self.icmp_fields[0]
         self.icmp_id = self.icmp_fields[2]
         self.OG_header = IP_Header(buffer[8:28])
+        self.identifier = None
 
-        #extract the identifier from the OG_header
-        
-        if self.OG_header.proto == 17:
+        """
+        1. if the OG protocol was UDP and this ICMP message is time exceeded then this
+        ICMP message can be identified through the UDP source port from the OG message 
+        """
+        if self.OG_header.proto == 17 and self.icmp_type == 11:
             self.identifier = struct.unpack("!HHHH", buffer[28:36])[0]   
+        
+        """
+        if the og protocol is ICMP and this ICMP message is time exceeded then 
+        this message can be identified through the sequence number from the OG message
+        """
+        if self.OG_header.proto == 1 and self.icmp_type == 11:
+            self.identifier = struct.unpack("!BBHHH", buffer[28:36])[4]
+
+        """
+        if this package is an echo message then it can be identified
+        """
+        if self.icmp_type == 8: # echo message
+            self.identifier = self.icmp_fields[4]
+            
+
 
 class UDP_Message():
 
@@ -84,7 +109,7 @@ class TCP_Message():
         self.flags = self.offset_reserved_flags & 0x01FF  # Last 9 bits are the flags
         
 
-def analyze_traceroute(file_path):
+def parse_traceroute(file_path):
     # Open the PCAP file
     with open(file_path, "rb") as f:
         # Read and parse the PCAP global header (24 bytes)
@@ -110,23 +135,29 @@ def analyze_traceroute(file_path):
             
 
 # Example usage
-L = analyze_traceroute(sys.argv[1])
-
+L = parse_traceroute(sys.argv[1])
+L = sorted(L, key = lambda x: x.header.ttl)
 for i in L:
+    # print(i)
     if i.header.proto == 1: 
         if i.payload.icmp_type == 11: #ICMP timeout packet detected
+
             icmp_og_packet_type = i.payload.OG_header.proto
             for j in L:
+
                 if icmp_og_packet_type == j.header.proto:
-                    if icmp_og_packet_type == 17:
+                    if icmp_og_packet_type == 17: #origonal packet was UDP (linux implementation of traceroute)
                         #compare the UDP source ports
                         if i.payload.identifier == j.payload.udp_src_port:
-                            print(f"ICMP: {i.header}")
-                            print(f"origonal UDP package: {j.header}")
+                            print(f"UDP (outbound): {j.header}")
+                            print(f"ICMP 11 (inbound): {i.header}")
                             print()
 
-
-
+                    elif icmp_og_packet_type == 1: #origonal packer was ICMP echo message (windows implementation of traceroute)
+                        if i.payload.identifier == j.payload.identifier:
+                            print(f"ICMP 8 (outbound): {j.header}")
+                            print(f"ICMP 11 (inbound): {i.header}")
+                            print()
 
 
 

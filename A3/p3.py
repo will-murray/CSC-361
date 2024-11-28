@@ -4,7 +4,6 @@ import sys
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-
 reference_datetime = datetime(1970, 1, 1)
 
 proto_map = defaultdict(lambda: "Other")
@@ -38,10 +37,6 @@ class IP_Datagram():
 
         return self.header.__str__() + s
     
-
-
-
-
 class IP_Header():
     def __init__(self, buffer):
         ip_fields = struct.unpack("!BBHHHBBH4s4s", buffer)
@@ -91,8 +86,6 @@ class ICMP_Message():
         if self.icmp_type == 8: # echo message
             self.identifier = self.icmp_fields[4]
             
-
-
 class UDP_Message():
 
     def __init__(self,buffer):
@@ -108,56 +101,89 @@ class TCP_Message():
         self.offset = (self.offset_reserved_flags >> 12) * 4 
         self.flags = self.offset_reserved_flags & 0x01FF  # Last 9 bits are the flags
         
-
 def parse_traceroute(file_path):
+    """
+    given the file path to a PCAP file, parse the file into a list of IP datagrams
+        supports TCP, UDP and ICMP payloads
+    """
     # Open the PCAP file
     with open(file_path, "rb") as f:
         # Read and parse the PCAP global header (24 bytes)
-        global_header = f.read(24)
+        globby = f.read(24)
         
         L = [] #set of datagrams
         # Iterate over the packet headers and data
+        count = 0
         while True:
             # Read the next packet header (16 bytes)
             packet_header = f.read(16)
             if len(packet_header) < 16:
+                print(f"parsed {count} packets")
                 break
             
             ts_sec, ts_usec, incl_len, orig_len = struct.unpack("IIII", packet_header)
             packet_data = f.read(incl_len)
             packet = IP_Datagram(packet_data,incl_len,ts_sec,ts_usec)
             L.append(packet)
+            count += 1
 
-
-
-            
     return L
-            
+
+def get_src_ip(L):
+    L = sorted(L, key = lambda x: x.header.ttl)
+    return L[0].header.source
+
+def analyze_traceroute(L, verbose = False):
+    """
+    L is a list of IP_Datagrams
+    """         
+    routers = []
+    src_ip = get_src_ip(L)
+    print(f"source ip = {src_ip}")
+
+    for i in L:
+        if i.header.proto == 1: 
+            if i.payload.icmp_type == 11: #ICMP timeout packet detected
+
+                icmp_og_packet_type = i.payload.OG_header.proto
+                for j in L:
+
+                    if icmp_og_packet_type == j.header.proto and j.header.source == src_ip:
+                        if icmp_og_packet_type == 17: #origonal packet was UDP (linux implementation of traceroute)
+                            #compare the UDP source ports
+                            if i.payload.identifier == j.payload.udp_src_port:
+                                if verbose:
+                                    print(f"UDP (outbound): {j}") 
+                                    print(f"ICMP 11 (inbound): {i}")
+                                    print()
+                                routers.append((i.header.source, j.header.ttl))
+
+
+                        elif icmp_og_packet_type == 1: #origonal packer was ICMP echo message (windows implementation of traceroute)
+                            if i.payload.identifier == j.payload.identifier:
+                                if verbose:
+                                    print(f"ICMP 8 (outbound): {j}")
+                                    print(f"ICMP 11 (inbound): {i}")
+                                    print()
+                                routers.append((i.header.source, j.header.ttl))
+    routers = list(set(routers))
+    routers = sorted(routers, key= lambda x: x[1])
+    return routers
+
+
+if len(sys.argv) == 1:
+    fname = "PcapTracesAssignment3/group1-trace1.pcap"
+    print(f"input file not provided as command line argument, defaulting to {fname}")
+else:
+    fname = sys.argv[1]
 
 # Example usage
-L = parse_traceroute(sys.argv[1])
-L = sorted(L, key = lambda x: x.header.ttl)
-for i in L:
-    # print(i)
-    if i.header.proto == 1: 
-        if i.payload.icmp_type == 11: #ICMP timeout packet detected
+L = parse_traceroute(fname)
+routers = analyze_traceroute(L, verbose= True)
 
-            icmp_og_packet_type = i.payload.OG_header.proto
-            for j in L:
+for r in routers:
+    print(r)
 
-                if icmp_og_packet_type == j.header.proto:
-                    if icmp_og_packet_type == 17: #origonal packet was UDP (linux implementation of traceroute)
-                        #compare the UDP source ports
-                        if i.payload.identifier == j.payload.udp_src_port:
-                            print(f"UDP (outbound): {j.header}")
-                            print(f"ICMP 11 (inbound): {i.header}")
-                            print()
-
-                    elif icmp_og_packet_type == 1: #origonal packer was ICMP echo message (windows implementation of traceroute)
-                        if i.payload.identifier == j.payload.identifier:
-                            print(f"ICMP 8 (outbound): {j.header}")
-                            print(f"ICMP 11 (inbound): {i.header}")
-                            print()
 
 
 

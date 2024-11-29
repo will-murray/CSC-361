@@ -38,7 +38,8 @@ class IP_Datagram():
         elif self.header.proto == 17:
             s = f" | identifier = {self.payload.identifier}"
 
-        return str(self.timestamp) + " | " + str(self.time) + " | " + self.header.__str__() + s
+        # return str(self.timestamp) + " | " + str(self.time) + " | " + self.header.__str__() + s
+        return self.header.__str__() + s
     
 class IP_Header():
     def __init__(self, buffer):
@@ -53,6 +54,7 @@ class IP_Header():
         self.ihl = ip_fields[0] & 0x0F  # Extract the lower 4 bits from the first byte (IHL)
         self.header_length = self.ihl * 4  # Multiply by 4 to get the actual length in bytes
 
+        
 
 
     
@@ -134,50 +136,84 @@ def parse_traceroute(file_path):
 
     return L
 
-def get_src_ip(L):
+def extract_og_datagram(L):
     L = sorted(L, key = lambda x: x.header.ttl)
-    L_filtered = []
     for l in L:
         if l.header.proto == 1:
             if l.payload.icmp_type == 8:
-                return l.header.source
+                return [l.header.source, l.header.dest, l.header.id]
         elif l.header.proto == 17:
-            return l.header.source    
+            return [l.header.source,l.header.dest,l.header.id]    
     exit("No valid source ip detected: check get_src_ip()")
     
+def analyze_og_datagram(L,id):
+    """
+    given the data and the id of the origonal datagram sent from the source
+    return the number of fragments and the offset of the last fragment 
+    """
+    L = [l for l in L if l.header.id == id]
+    L = sorted(L, key = lambda x: x.header.frag_offset)
+
+    num_fragments = len(L)
+    final_offset = L[len(L) - 1].header.frag_offset
+    return [num_fragments,final_offset]
+
 def find_matching_packages(L, src_ip,verbose):
+    """
+    match outgoing packages with thier returning ICMP 11 packages, and collect the set of protocols found in the whole trace file
+    """
     matches=[]
+    protos = []
 
     for i in L:    
+        protos.append(i.header.proto)
         if i.header.proto == 1: 
             if i.payload.icmp_type == 11: #ICMP timeout packet detected
 
                 icmp_og_packet_type = i.payload.OG_header.proto
                 for j in L:
                     
-                    if icmp_og_packet_type == j.header.proto and j.header.source == src_ip and i.timestamp > j.timestamp:
+                    if icmp_og_packet_type == j.header.proto and j.header.source == src_ip :#and i.timestamp > j.timestamp:
                          if i.payload.identifier == j.payload.identifier:
                                 if verbose:
-                                    print(f"{proto_map[icmp_og_packet_type]} (outbound): {j}") 
-                                    print(f"ICMP 11 (return): {i}")
-                                    print(f"return time - outbound time: {i.timestamp - j.timestamp} | {i.payload.identifier}\n")
-                                matches.append((i.header.source, j.header.ttl, i.timestamp - j.timestamp,  i.header.frag_offset))
+                                    # print(f"{proto_map[icmp_og_packet_type]} (outbound): {j}") 
+                                    # print(f"ICMP 11 (return): {i}")
+                                    print(f"RTT: {i.timestamp - j.timestamp} | {i.payload.identifier} | ttl : {j.header.ttl}")
+                                matches.append((i.header.source, j.header.ttl))
                                 
 
-    return matches
-
+    protos = set(protos)
+    return [matches,protos]
 
 def analyze_traceroute(L, verbose = False):
     """
     L is a list of IP_Datagrams
     """         
-    src_ip = get_src_ip(L)
-    print(f"source ip = {src_ip}\n")
+    src_ip,dest_ip,og_id = extract_og_datagram(L)
+    print(f"og id = {og_id}")
+    print(f"The IP address of the source node: {src_ip}")
+    print(f"The IP address of the destination node: {dest_ip}")
+    print(f"The IP address of the intermediate nodes:")
 
-    matches = find_matching_packages(L,src_ip,verbose) 
+    matches,protos = find_matching_packages(L,src_ip,verbose) 
     routers = list(set(matches))
     routers = sorted(routers, key= lambda x: x[1])
-    return routers
+    for r in routers:
+        hop_num, ip = r[1], r[0]
+        print(f"\trouter {hop_num}: {ip}")
+    
+
+    print(f"\nThe values in the protocol field of IP headers:")
+    for idx,p in enumerate(protos):
+        val = proto_map[p]
+        if val == "Other":
+            val = p
+        print(f"\t{idx}: {val}")
+
+    num_frags,final_offset = analyze_og_datagram(L,og_id)
+    print(f"\nThe number of fragments created from the original datagram is: {num_frags}")
+    print(f"The offset of the last fragment is: {final_offset}")
+
 
 
 if len(sys.argv) == 1:
@@ -188,7 +224,7 @@ else:
 
 # Example usage
 L = parse_traceroute(fname)
-routers = analyze_traceroute(L, verbose= True)
+routers = analyze_traceroute(L, verbose= False)
 
 
 

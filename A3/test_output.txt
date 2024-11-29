@@ -1,164 +1,31 @@
 processing PcapTracesAssignment3/group1-trace1.pcap 
 
 parsed 157 packets
-source ip = 192.168.100.17
+The IP address of the source node: 192.168.100.17
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 142.104.68.167
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 207.23.244.242
+	router 9: 206.12.3.17
+	router 10: 199.212.24.64
+	router 11: 206.81.80.17
+	router 12: 72.14.237.123
+	router 12: 74.125.37.91
+	router 13: 209.85.250.121
+	router 13: 209.85.249.153
+	router 13: 209.85.249.155
 
-UDP (outbound): 2016-07-06 16:40:50.842000 | (1467823083, 167842000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 16252| offset = 0 | identifier = 45344
-ICMP 11 (return): 2016-07-06 16:41:01.954000 | (1467823083, 178954000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 43533| offset = 0 | icmp type: 11 | identifier = 45344
-return time - outbound time: 0:00:11.112000 | 45344
-
-UDP (outbound): 2016-07-06 16:40:50.869000 | (1467823083, 167869000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 16253| offset = 0 | identifier = 48975
-ICMP 11 (return): 2016-07-06 16:41:02.238000 | (1467823083, 179238000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 43534| offset = 0 | icmp type: 11 | identifier = 48975
-return time - outbound time: 0:00:11.369000 | 48975
-
-UDP (outbound): 2016-07-06 16:40:50.885000 | (1467823083, 167885000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 16254| offset = 0 | identifier = 40110
-ICMP 11 (return): 2016-07-06 16:41:02.504000 | (1467823083, 179504000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 43535| offset = 0 | icmp type: 11 | identifier = 40110
-return time - outbound time: 0:00:11.619000 | 40110
-
-UDP (outbound): 2016-07-06 16:40:50.940000 | (1467823083, 167940000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 16258| offset = 0 | identifier = 60038
-ICMP 11 (return): 2016-07-06 16:41:06.668000 | (1467823083, 183668000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 43538| offset = 0 | icmp type: 11 | identifier = 60038
-return time - outbound time: 0:00:15.728000 | 60038
-
-UDP (outbound): 2016-07-06 16:40:50.954000 | (1467823083, 167954000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 16259| offset = 0 | identifier = 48895
-ICMP 11 (return): 2016-07-06 16:41:06.972000 | (1467823083, 183972000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 43539| offset = 0 | icmp type: 11 | identifier = 48895
-return time - outbound time: 0:00:16.018000 | 48895
-
-UDP (outbound): 2016-07-06 16:40:50.967000 | (1467823083, 167967000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 16260| offset = 0 | identifier = 41564
-ICMP 11 (return): 2016-07-06 16:41:07.247000 | (1467823083, 184247000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 43540| offset = 0 | icmp type: 11 | identifier = 41564
-return time - outbound time: 0:00:16.280000 | 41564
-
-UDP (outbound): 2016-07-06 16:40:50.899000 | (1467823083, 167899000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 16255| offset = 0 | identifier = 46241
-ICMP 11 (return): 2016-07-06 16:41:07.506000 | (1467823083, 184506000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 43541| offset = 0 | icmp type: 11 | identifier = 46241
-return time - outbound time: 0:00:16.607000 | 46241
-
-UDP (outbound): 2016-07-06 16:40:50.913000 | (1467823083, 167913000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 16256| offset = 0 | identifier = 60688
-ICMP 11 (return): 2016-07-06 16:41:07.761000 | (1467823083, 184761000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 43542| offset = 0 | icmp type: 11 | identifier = 60688
-return time - outbound time: 0:00:16.848000 | 60688
-
-UDP (outbound): 2016-07-06 16:40:50.927000 | (1467823083, 167927000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 16257| offset = 0 | identifier = 45930
-ICMP 11 (return): 2016-07-06 16:41:08.024000 | (1467823083, 185024000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 43543| offset = 0 | icmp type: 11 | identifier = 45930
-return time - outbound time: 0:00:17.097000 | 45930
-
-UDP (outbound): 2016-07-06 16:40:50.981000 | (1467823083, 167981000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 16261| offset = 0 | identifier = 42541
-ICMP 11 (return): 2016-07-06 16:41:08.291000 | (1467823083, 185291000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 43544| offset = 0 | icmp type: 11 | identifier = 42541
-return time - outbound time: 0:00:17.310000 | 42541
-
-UDP (outbound): 2016-07-06 16:40:50.994000 | (1467823083, 167994000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 16262| offset = 0 | identifier = 41326
-ICMP 11 (return): 2016-07-06 16:41:08.555000 | (1467823083, 185555000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 43545| offset = 0 | icmp type: 11 | identifier = 41326
-return time - outbound time: 0:00:17.561000 | 41326
-
-UDP (outbound): 2016-07-06 16:40:51.008000 | (1467823083, 168008000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 16263| offset = 0 | identifier = 38441
-ICMP 11 (return): 2016-07-06 16:41:08.823000 | (1467823083, 185823000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 43546| offset = 0 | icmp type: 11 | identifier = 38441
-return time - outbound time: 0:00:17.815000 | 38441
-
-UDP (outbound): 2016-07-06 16:40:51.021000 | (1467823083, 168021000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 16264| offset = 0 | identifier = 53293
-ICMP 11 (return): 2016-07-06 16:41:09.093000 | (1467823083, 186093000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 43547| offset = 0 | icmp type: 11 | identifier = 53293
-return time - outbound time: 0:00:18.072000 | 53293
-
-UDP (outbound): 2016-07-06 16:40:51.034000 | (1467823083, 168034000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 16265| offset = 0 | identifier = 59062
-ICMP 11 (return): 2016-07-06 16:41:09.409000 | (1467823083, 186409000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 43548| offset = 0 | icmp type: 11 | identifier = 59062
-return time - outbound time: 0:00:18.375000 | 59062
-
-UDP (outbound): 2016-07-06 16:40:51.048000 | (1467823083, 168048000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 16266| offset = 0 | identifier = 59977
-ICMP 11 (return): 2016-07-06 16:41:09.684000 | (1467823083, 186684000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 43549| offset = 0 | icmp type: 11 | identifier = 59977
-return time - outbound time: 0:00:18.636000 | 59977
-
-UDP (outbound): 2016-07-06 16:40:51.061000 | (1467823083, 168061000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 16267| offset = 0 | identifier = 43296
-ICMP 11 (return): 2016-07-06 16:41:10.342000 | (1467823083, 187342000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 43550| offset = 0 | icmp type: 11 | identifier = 43296
-return time - outbound time: 0:00:19.281000 | 43296
-
-UDP (outbound): 2016-07-06 16:41:12.693000 | (1467823083, 189693000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 16271| offset = 0 | identifier = 48837
-ICMP 11 (return): 2016-07-06 16:41:16.145000 | (1467823083, 193145000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 43554| offset = 0 | icmp type: 11 | identifier = 48837
-return time - outbound time: 0:00:03.452000 | 48837
-
-UDP (outbound): 2016-07-06 16:42:25.817000 | (1467823083, 262817000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 16288| offset = 0 | identifier = 33804
-ICMP 11 (return): 2016-07-06 16:42:38.668000 | (1467823083, 275668000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 43580| offset = 0 | icmp type: 11 | identifier = 33804
-return time - outbound time: 0:00:12.851000 | 33804
-
-UDP (outbound): 2016-07-06 16:42:25.831000 | (1467823083, 262831000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 16289| offset = 0 | identifier = 52607
-ICMP 11 (return): 2016-07-06 16:42:38.979000 | (1467823083, 275979000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 43581| offset = 0 | icmp type: 11 | identifier = 52607
-return time - outbound time: 0:00:13.148000 | 52607
-
-UDP (outbound): 2016-07-06 16:42:25.843000 | (1467823083, 262843000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 16290| offset = 0 | identifier = 40730
-ICMP 11 (return): 2016-07-06 16:42:39.274000 | (1467823083, 276274000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 43582| offset = 0 | icmp type: 11 | identifier = 40730
-return time - outbound time: 0:00:13.431000 | 40730
-
-UDP (outbound): 2016-07-06 16:42:25.866000 | (1467823083, 262866000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 16292| offset = 0 | identifier = 39976
-ICMP 11 (return): 2016-07-06 16:42:39.535000 | (1467823083, 276535000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 43583| offset = 0 | icmp type: 11 | identifier = 39976
-return time - outbound time: 0:00:13.669000 | 39976
-
-UDP (outbound): 2016-07-06 16:42:25.854000 | (1467823083, 262854000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 16291| offset = 0 | identifier = 59297
-ICMP 11 (return): 2016-07-06 16:42:39.797000 | (1467823083, 276797000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 43584| offset = 0 | icmp type: 11 | identifier = 59297
-return time - outbound time: 0:00:13.943000 | 59297
-
-UDP (outbound): 2016-07-06 16:42:25.878000 | (1467823083, 262878000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 16293| offset = 0 | identifier = 50196
-ICMP 11 (return): 2016-07-06 16:42:40.061000 | (1467823083, 277061000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 43585| offset = 0 | icmp type: 11 | identifier = 50196
-return time - outbound time: 0:00:14.183000 | 50196
-
-UDP (outbound): 2016-07-06 16:42:25.890000 | (1467823083, 262890000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 16294| offset = 0 | identifier = 58242
-ICMP 11 (return): 2016-07-06 16:42:40.325000 | (1467823083, 277325000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 43586| offset = 0 | icmp type: 11 | identifier = 58242
-return time - outbound time: 0:00:14.435000 | 58242
-
-UDP (outbound): 2016-07-06 16:42:25.936000 | (1467823083, 262936000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 16298| offset = 0 | identifier = 53809
-ICMP 11 (return): 2016-07-06 16:42:42.583000 | (1467823083, 279583000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 43589| offset = 0 | icmp type: 11 | identifier = 53809
-return time - outbound time: 0:00:16.647000 | 53809
-
-UDP (outbound): 2016-07-06 16:42:25.948000 | (1467823083, 262948000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 16299| offset = 0 | identifier = 54383
-ICMP 11 (return): 2016-07-06 16:42:42.866000 | (1467823083, 279866000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 43590| offset = 0 | icmp type: 11 | identifier = 54383
-return time - outbound time: 0:00:16.918000 | 54383
-
-UDP (outbound): 2016-07-06 16:42:25.960000 | (1467823083, 262960000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 16300| offset = 0 | identifier = 60932
-ICMP 11 (return): 2016-07-06 16:42:43.130000 | (1467823083, 280130000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 43591| offset = 0 | icmp type: 11 | identifier = 60932
-return time - outbound time: 0:00:17.170000 | 60932
-
-UDP (outbound): 2016-07-06 16:42:25.901000 | (1467823083, 262901000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 16295| offset = 0 | identifier = 56469
-ICMP 11 (return): 2016-07-06 16:42:43.839000 | (1467823083, 280839000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 43592| offset = 0 | icmp type: 11 | identifier = 56469
-return time - outbound time: 0:00:17.938000 | 56469
-
-UDP (outbound): 2016-07-06 16:42:25.913000 | (1467823083, 262913000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 16296| offset = 0 | identifier = 45197
-ICMP 11 (return): 2016-07-06 16:42:44.165000 | (1467823083, 281165000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 43593| offset = 0 | icmp type: 11 | identifier = 45197
-return time - outbound time: 0:00:18.252000 | 45197
-
-UDP (outbound): 2016-07-06 16:42:25.924000 | (1467823083, 262924000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 16297| offset = 0 | identifier = 55398
-ICMP 11 (return): 2016-07-06 16:42:44.437000 | (1467823083, 281437000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 43594| offset = 0 | icmp type: 11 | identifier = 55398
-return time - outbound time: 0:00:18.513000 | 55398
-
-UDP (outbound): 2016-07-06 16:42:25.972000 | (1467823083, 262972000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 16301| offset = 0 | identifier = 41414
-ICMP 11 (return): 2016-07-06 16:42:45.105000 | (1467823083, 282105000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 43595| offset = 0 | icmp type: 11 | identifier = 41414
-return time - outbound time: 0:00:19.133000 | 41414
-
-UDP (outbound): 2016-07-06 16:42:25.983000 | (1467823083, 262983000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 16302| offset = 0 | identifier = 56524
-ICMP 11 (return): 2016-07-06 16:42:45.437000 | (1467823083, 282437000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 43596| offset = 0 | icmp type: 11 | identifier = 56524
-return time - outbound time: 0:00:19.454000 | 56524
-
-UDP (outbound): 2016-07-06 16:42:26.010000 | (1467823083, 263010000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 16303| offset = 0 | identifier = 56610
-ICMP 11 (return): 2016-07-06 16:42:45.710000 | (1467823083, 282710000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 43597| offset = 0 | icmp type: 11 | identifier = 56610
-return time - outbound time: 0:00:19.700000 | 56610
-
-UDP (outbound): 2016-07-06 16:42:38.731000 | (1467823083, 275731000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 16306| offset = 0 | identifier = 44632
-ICMP 11 (return): 2016-07-06 16:42:52.910000 | (1467823083, 289910000) | 74.125.37.91 -> 192.168.100.17 | ICMP | TTL : 52 | id = 43598| offset = 0 | icmp type: 11 | identifier = 44632
-return time - outbound time: 0:00:14.179000 | 44632
-
-UDP (outbound): 2016-07-06 16:43:15.254000 | (1467823083, 312254000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 16312| offset = 0 | identifier = 33348
-ICMP 11 (return): 2016-07-06 16:43:24.615000 | (1467823083, 321615000) | 74.125.37.91 -> 192.168.100.17 | ICMP | TTL : 52 | id = 43602| offset = 0 | icmp type: 11 | identifier = 33348
-return time - outbound time: 0:00:09.361000 | 33348
-
-UDP (outbound): 2016-07-06 16:44:34.973000 | (1467823083, 391973000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 16327| offset = 0 | identifier = 41103
-ICMP 11 (return): 2016-07-06 16:44:52.597000 | (1467823083, 409597000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 43628| offset = 0 | icmp type: 11 | identifier = 41103
-return time - outbound time: 0:00:17.624000 | 41103
-
-UDP (outbound): 2016-07-06 16:44:35.005000 | (1467823083, 392005000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 16329| offset = 0 | identifier = 44785
-ICMP 11 (return): 2016-07-06 16:44:53.473000 | (1467823083, 410473000) | 209.85.250.121 -> 192.168.100.17 | ICMP | TTL : 242 | id = 43629| offset = 0 | icmp type: 11 | identifier = 44785
-return time - outbound time: 0:00:18.468000 | 44785
-
-UDP (outbound): 2016-07-06 16:44:34.990000 | (1467823083, 391990000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 16328| offset = 0 | identifier = 35966
-ICMP 11 (return): 2016-07-06 16:44:54.811000 | (1467823083, 411811000) | 209.85.249.155 -> 192.168.100.17 | ICMP | TTL : 242 | id = 43634| offset = 0 | icmp type: 11 | identifier = 35966
-return time - outbound time: 0:00:19.821000 | 35966
-
-UDP (outbound): 2016-07-06 16:44:35.019000 | (1467823083, 392019000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 16330| offset = 0 | identifier = 38773
-ICMP 11 (return): 2016-07-06 16:44:55.591000 | (1467823083, 412591000) | 209.85.249.153 -> 192.168.100.17 | ICMP | TTL : 242 | id = 43637| offset = 0 | icmp type: 11 | identifier = 38773
-return time - outbound time: 0:00:20.572000 | 38773
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: UDP
+	2: TCP
+	3: ICMP
 ------------------------
 
 
@@ -166,164 +33,30 @@ return time - outbound time: 0:00:20.572000 | 38773
 processing PcapTracesAssignment3/group1-trace2.pcap 
 
 parsed 139 packets
-source ip = 192.168.100.17
+The IP address of the source node: 192.168.100.17
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 142.104.68.167
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 207.23.244.242
+	router 9: 206.12.3.17
+	router 10: 199.212.24.64
+	router 11: 206.81.80.17
+	router 12: 72.14.237.123
+	router 12: 74.125.37.91
+	router 13: 209.85.250.57
+	router 13: 209.85.246.219
+	router 13: 209.85.249.109
 
-UDP (outbound): 2016-07-06 17:25:27.732000 | (1467825588, 339732000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 18871| offset = 0 | identifier = 40265
-ICMP 11 (return): 2016-07-06 17:25:38.837000 | (1467825588, 350837000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 54836| offset = 0 | icmp type: 11 | identifier = 40265
-return time - outbound time: 0:00:11.105000 | 40265
-
-UDP (outbound): 2016-07-06 17:25:27.756000 | (1467825588, 339756000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 18872| offset = 0 | identifier = 42167
-ICMP 11 (return): 2016-07-06 17:25:39.156000 | (1467825588, 351156000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 54837| offset = 0 | icmp type: 11 | identifier = 42167
-return time - outbound time: 0:00:11.400000 | 42167
-
-UDP (outbound): 2016-07-06 17:25:27.773000 | (1467825588, 339773000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 18873| offset = 0 | identifier = 43735
-ICMP 11 (return): 2016-07-06 17:25:39.423000 | (1467825588, 351423000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 54838| offset = 0 | icmp type: 11 | identifier = 43735
-return time - outbound time: 0:00:11.650000 | 43735
-
-UDP (outbound): 2016-07-06 17:25:27.828000 | (1467825588, 339828000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 18877| offset = 0 | identifier = 39596
-ICMP 11 (return): 2016-07-06 17:25:42.834000 | (1467825588, 354834000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 54840| offset = 0 | icmp type: 11 | identifier = 39596
-return time - outbound time: 0:00:15.006000 | 39596
-
-UDP (outbound): 2016-07-06 17:25:27.787000 | (1467825588, 339787000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 18874| offset = 0 | identifier = 57065
-ICMP 11 (return): 2016-07-06 17:25:43.112000 | (1467825588, 355112000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 54841| offset = 0 | icmp type: 11 | identifier = 57065
-return time - outbound time: 0:00:15.325000 | 57065
-
-UDP (outbound): 2016-07-06 17:25:27.855000 | (1467825588, 339855000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 18879| offset = 0 | identifier = 38663
-ICMP 11 (return): 2016-07-06 17:25:43.385000 | (1467825588, 355385000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 54842| offset = 0 | icmp type: 11 | identifier = 38663
-return time - outbound time: 0:00:15.530000 | 38663
-
-UDP (outbound): 2016-07-06 17:25:27.842000 | (1467825588, 339842000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 18878| offset = 0 | identifier = 59736
-ICMP 11 (return): 2016-07-06 17:25:43.657000 | (1467825588, 355657000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 54843| offset = 0 | icmp type: 11 | identifier = 59736
-return time - outbound time: 0:00:15.815000 | 59736
-
-UDP (outbound): 2016-07-06 17:25:27.801000 | (1467825588, 339801000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 18875| offset = 0 | identifier = 53769
-ICMP 11 (return): 2016-07-06 17:25:43.915000 | (1467825588, 355915000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 54844| offset = 0 | icmp type: 11 | identifier = 53769
-return time - outbound time: 0:00:16.114000 | 53769
-
-UDP (outbound): 2016-07-06 17:25:27.815000 | (1467825588, 339815000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 18876| offset = 0 | identifier = 46167
-ICMP 11 (return): 2016-07-06 17:25:44.175000 | (1467825588, 356175000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 54845| offset = 0 | icmp type: 11 | identifier = 46167
-return time - outbound time: 0:00:16.360000 | 46167
-
-UDP (outbound): 2016-07-06 17:25:27.908000 | (1467825588, 339908000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 18883| offset = 0 | identifier = 39673
-ICMP 11 (return): 2016-07-06 17:25:44.434000 | (1467825588, 356434000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 54846| offset = 0 | icmp type: 11 | identifier = 39673
-return time - outbound time: 0:00:16.526000 | 39673
-
-UDP (outbound): 2016-07-06 17:25:27.934000 | (1467825588, 339934000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 18885| offset = 0 | identifier = 36721
-ICMP 11 (return): 2016-07-06 17:25:44.706000 | (1467825588, 356706000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 54847| offset = 0 | icmp type: 11 | identifier = 36721
-return time - outbound time: 0:00:16.772000 | 36721
-
-UDP (outbound): 2016-07-06 17:25:27.868000 | (1467825588, 339868000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 18880| offset = 0 | identifier = 60252
-ICMP 11 (return): 2016-07-06 17:25:44.972000 | (1467825588, 356972000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 54848| offset = 0 | icmp type: 11 | identifier = 60252
-return time - outbound time: 0:00:17.104000 | 60252
-
-UDP (outbound): 2016-07-06 17:25:27.921000 | (1467825588, 339921000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 18884| offset = 0 | identifier = 33121
-ICMP 11 (return): 2016-07-06 17:25:45.257000 | (1467825588, 357257000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 54849| offset = 0 | icmp type: 11 | identifier = 33121
-return time - outbound time: 0:00:17.336000 | 33121
-
-UDP (outbound): 2016-07-06 17:25:27.881000 | (1467825588, 339881000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 18881| offset = 0 | identifier = 37727
-ICMP 11 (return): 2016-07-06 17:25:45.539000 | (1467825588, 357539000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 54850| offset = 0 | icmp type: 11 | identifier = 37727
-return time - outbound time: 0:00:17.658000 | 37727
-
-UDP (outbound): 2016-07-06 17:25:27.895000 | (1467825588, 339895000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 18882| offset = 0 | identifier = 49196
-ICMP 11 (return): 2016-07-06 17:25:46.268000 | (1467825588, 358268000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 54851| offset = 0 | icmp type: 11 | identifier = 49196
-return time - outbound time: 0:00:18.373000 | 49196
-
-UDP (outbound): 2016-07-06 17:25:27.947000 | (1467825588, 339947000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 18886| offset = 0 | identifier = 35888
-ICMP 11 (return): 2016-07-06 17:25:46.597000 | (1467825588, 358597000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 54852| offset = 0 | icmp type: 11 | identifier = 35888
-return time - outbound time: 0:00:18.650000 | 35888
-
-UDP (outbound): 2016-07-06 17:26:16.158000 | (1467825588, 388158000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 18893| offset = 0 | identifier = 57513
-ICMP 11 (return): 2016-07-06 17:26:19.559000 | (1467825588, 391559000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 54856| offset = 0 | icmp type: 11 | identifier = 57513
-return time - outbound time: 0:00:03.401000 | 57513
-
-UDP (outbound): 2016-07-06 17:27:46.308000 | (1467825588, 478308000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 18903| offset = 0 | identifier = 45964
-ICMP 11 (return): 2016-07-06 17:27:59.180000 | (1467825588, 491180000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 54883| offset = 0 | icmp type: 11 | identifier = 45964
-return time - outbound time: 0:00:12.872000 | 45964
-
-UDP (outbound): 2016-07-06 17:27:46.325000 | (1467825588, 478325000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 18904| offset = 0 | identifier = 46272
-ICMP 11 (return): 2016-07-06 17:27:59.468000 | (1467825588, 491468000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 54884| offset = 0 | icmp type: 11 | identifier = 46272
-return time - outbound time: 0:00:13.143000 | 46272
-
-UDP (outbound): 2016-07-06 17:27:46.340000 | (1467825588, 478340000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 18905| offset = 0 | identifier = 59318
-ICMP 11 (return): 2016-07-06 17:27:59.785000 | (1467825588, 491785000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 54885| offset = 0 | icmp type: 11 | identifier = 59318
-return time - outbound time: 0:00:13.445000 | 59318
-
-UDP (outbound): 2016-07-06 17:27:46.355000 | (1467825588, 478355000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 18906| offset = 0 | identifier = 51052
-ICMP 11 (return): 2016-07-06 17:28:00.055000 | (1467825588, 492055000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 54886| offset = 0 | icmp type: 11 | identifier = 51052
-return time - outbound time: 0:00:13.700000 | 51052
-
-UDP (outbound): 2016-07-06 17:27:46.398000 | (1467825588, 478398000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 18909| offset = 0 | identifier = 41212
-ICMP 11 (return): 2016-07-06 17:28:00.320000 | (1467825588, 492320000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 54887| offset = 0 | icmp type: 11 | identifier = 41212
-return time - outbound time: 0:00:13.922000 | 41212
-
-UDP (outbound): 2016-07-06 17:27:46.412000 | (1467825588, 478412000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 18910| offset = 0 | identifier = 41063
-ICMP 11 (return): 2016-07-06 17:28:02.909000 | (1467825588, 494909000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 54890| offset = 0 | icmp type: 11 | identifier = 41063
-return time - outbound time: 0:00:16.497000 | 41063
-
-UDP (outbound): 2016-07-06 17:27:46.426000 | (1467825588, 478426000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 18911| offset = 0 | identifier = 53040
-ICMP 11 (return): 2016-07-06 17:28:03.239000 | (1467825588, 495239000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 54891| offset = 0 | icmp type: 11 | identifier = 53040
-return time - outbound time: 0:00:16.813000 | 53040
-
-UDP (outbound): 2016-07-06 17:27:46.441000 | (1467825588, 478441000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 18912| offset = 0 | identifier = 57351
-ICMP 11 (return): 2016-07-06 17:28:03.515000 | (1467825588, 495515000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 54892| offset = 0 | icmp type: 11 | identifier = 57351
-return time - outbound time: 0:00:17.074000 | 57351
-
-UDP (outbound): 2016-07-06 17:27:46.455000 | (1467825588, 478455000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 18913| offset = 0 | identifier = 49819
-ICMP 11 (return): 2016-07-06 17:28:03.783000 | (1467825588, 495783000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 54893| offset = 0 | icmp type: 11 | identifier = 49819
-return time - outbound time: 0:00:17.328000 | 49819
-
-UDP (outbound): 2016-07-06 17:27:46.469000 | (1467825588, 478469000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 18914| offset = 0 | identifier = 53659
-ICMP 11 (return): 2016-07-06 17:28:04.046000 | (1467825588, 496046000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 54894| offset = 0 | icmp type: 11 | identifier = 53659
-return time - outbound time: 0:00:17.577000 | 53659
-
-UDP (outbound): 2016-07-06 17:27:46.483000 | (1467825588, 478483000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 18915| offset = 0 | identifier = 40240
-ICMP 11 (return): 2016-07-06 17:28:04.312000 | (1467825588, 496312000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 54895| offset = 0 | icmp type: 11 | identifier = 40240
-return time - outbound time: 0:00:17.829000 | 40240
-
-UDP (outbound): 2016-07-06 17:27:46.497000 | (1467825588, 478497000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 18916| offset = 0 | identifier = 53524
-ICMP 11 (return): 2016-07-06 17:28:05.431000 | (1467825588, 497431000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 54896| offset = 0 | icmp type: 11 | identifier = 53524
-return time - outbound time: 0:00:18.934000 | 53524
-
-UDP (outbound): 2016-07-06 17:27:46.512000 | (1467825588, 478512000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 18917| offset = 0 | identifier = 60880
-ICMP 11 (return): 2016-07-06 17:28:05.763000 | (1467825588, 497763000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 54897| offset = 0 | icmp type: 11 | identifier = 60880
-return time - outbound time: 0:00:19.251000 | 60880
-
-UDP (outbound): 2016-07-06 17:27:46.545000 | (1467825588, 478545000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 18918| offset = 0 | identifier = 53857
-ICMP 11 (return): 2016-07-06 17:28:06.030000 | (1467825588, 498030000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 54898| offset = 0 | icmp type: 11 | identifier = 53857
-return time - outbound time: 0:00:19.485000 | 53857
-
-UDP (outbound): 2016-07-06 17:27:59.221000 | (1467825588, 491221000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 18920| offset = 0 | identifier = 53076
-ICMP 11 (return): 2016-07-06 17:28:11.721000 | (1467825588, 503721000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 54899| offset = 0 | icmp type: 11 | identifier = 53076
-return time - outbound time: 0:00:12.500000 | 53076
-
-UDP (outbound): 2016-07-06 17:28:19.186000 | (1467825588, 511186000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 18924| offset = 0 | identifier = 45873
-ICMP 11 (return): 2016-07-06 17:28:35.600000 | (1467825588, 527600000) | 74.125.37.91 -> 192.168.100.17 | ICMP | TTL : 52 | id = 54915| offset = 0 | icmp type: 11 | identifier = 45873
-return time - outbound time: 0:00:16.414000 | 45873
-
-UDP (outbound): 2016-07-06 17:28:19.267000 | (1467825588, 511267000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 18925| offset = 0 | identifier = 54529
-ICMP 11 (return): 2016-07-06 17:28:36.428000 | (1467825588, 528428000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 54916| offset = 0 | icmp type: 11 | identifier = 54529
-return time - outbound time: 0:00:17.161000 | 54529
-
-UDP (outbound): 2016-07-06 17:28:19.283000 | (1467825588, 511283000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 18926| offset = 0 | identifier = 48855
-ICMP 11 (return): 2016-07-06 17:28:36.701000 | (1467825588, 528701000) | 209.85.249.109 -> 192.168.100.17 | ICMP | TTL : 242 | id = 54917| offset = 0 | icmp type: 11 | identifier = 48855
-return time - outbound time: 0:00:17.418000 | 48855
-
-UDP (outbound): 2016-07-06 17:28:19.302000 | (1467825588, 511302000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 18927| offset = 0 | identifier = 40400
-ICMP 11 (return): 2016-07-06 17:28:37.238000 | (1467825588, 529238000) | 209.85.250.57 -> 192.168.100.17 | ICMP | TTL : 242 | id = 54919| offset = 0 | icmp type: 11 | identifier = 40400
-return time - outbound time: 0:00:17.936000 | 40400
-
-UDP (outbound): 2016-07-06 17:28:19.316000 | (1467825588, 511316000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 18928| offset = 0 | identifier = 53895
-ICMP 11 (return): 2016-07-06 17:28:38.018000 | (1467825588, 530018000) | 209.85.246.219 -> 192.168.100.17 | ICMP | TTL : 242 | id = 54922| offset = 0 | icmp type: 11 | identifier = 53895
-return time - outbound time: 0:00:18.702000 | 53895
-
-UDP (outbound): 2016-07-06 17:27:46.369000 | (1467825588, 478369000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 18907| offset = 0 | identifier = 47523
-ICMP 11 (return): 2016-07-06 17:28:54.615000 | (1467825588, 546615000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 54935| offset = 0 | icmp type: 11 | identifier = 47523
-return time - outbound time: 0:01:08.246000 | 47523
-
-UDP (outbound): 2016-07-06 17:27:46.384000 | (1467825588, 478384000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 18908| offset = 0 | identifier = 39102
-ICMP 11 (return): 2016-07-06 17:28:54.942000 | (1467825588, 546942000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 54936| offset = 0 | icmp type: 11 | identifier = 39102
-return time - outbound time: 0:01:08.558000 | 39102
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: UDP
+	2: ICMP
 ------------------------
 
 
@@ -331,164 +64,31 @@ return time - outbound time: 0:01:08.558000 | 39102
 processing PcapTracesAssignment3/group1-trace3.pcap 
 
 parsed 147 packets
-source ip = 192.168.100.17
+The IP address of the source node: 192.168.100.17
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 142.104.68.167
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 207.23.244.242
+	router 9: 206.12.3.17
+	router 10: 199.212.24.64
+	router 11: 206.81.80.17
+	router 12: 72.14.237.123
+	router 12: 74.125.37.91
+	router 13: 209.85.245.65
+	router 13: 209.85.249.155
+	router 13: 209.85.247.63
 
-UDP (outbound): 2016-07-06 17:32:53.901000 | (1467825942, 431901000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 63853| offset = 0 | identifier = 47215
-ICMP 11 (return): 2016-07-06 17:33:05.319000 | (1467825942, 443319000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 11908| offset = 0 | icmp type: 11 | identifier = 47215
-return time - outbound time: 0:00:11.418000 | 47215
-
-UDP (outbound): 2016-07-06 17:32:53.931000 | (1467825942, 431931000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 63854| offset = 0 | identifier = 47241
-ICMP 11 (return): 2016-07-06 17:33:05.621000 | (1467825942, 443621000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 11909| offset = 0 | icmp type: 11 | identifier = 47241
-return time - outbound time: 0:00:11.690000 | 47241
-
-UDP (outbound): 2016-07-06 17:32:53.948000 | (1467825942, 431948000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 63855| offset = 0 | identifier = 56827
-ICMP 11 (return): 2016-07-06 17:33:05.898000 | (1467825942, 443898000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 11910| offset = 0 | icmp type: 11 | identifier = 56827
-return time - outbound time: 0:00:11.950000 | 56827
-
-UDP (outbound): 2016-07-06 17:32:53.962000 | (1467825942, 431962000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 63856| offset = 0 | identifier = 57514
-ICMP 11 (return): 2016-07-06 17:33:09.348000 | (1467825942, 447348000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 11912| offset = 0 | icmp type: 11 | identifier = 57514
-return time - outbound time: 0:00:15.386000 | 57514
-
-UDP (outbound): 2016-07-06 17:32:53.977000 | (1467825942, 431977000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 63857| offset = 0 | identifier = 33923
-ICMP 11 (return): 2016-07-06 17:33:09.627000 | (1467825942, 447627000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 11913| offset = 0 | icmp type: 11 | identifier = 33923
-return time - outbound time: 0:00:15.650000 | 33923
-
-UDP (outbound): 2016-07-06 17:32:54.006000 | (1467825942, 432006000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 63859| offset = 0 | identifier = 36443
-ICMP 11 (return): 2016-07-06 17:33:09.899000 | (1467825942, 447899000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 11914| offset = 0 | icmp type: 11 | identifier = 36443
-return time - outbound time: 0:00:15.893000 | 36443
-
-UDP (outbound): 2016-07-06 17:32:53.992000 | (1467825942, 431992000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 63858| offset = 0 | identifier = 48921
-ICMP 11 (return): 2016-07-06 17:33:10.153000 | (1467825942, 448153000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 11915| offset = 0 | icmp type: 11 | identifier = 48921
-return time - outbound time: 0:00:16.161000 | 48921
-
-UDP (outbound): 2016-07-06 17:32:54.020000 | (1467825942, 432020000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 63860| offset = 0 | identifier = 40744
-ICMP 11 (return): 2016-07-06 17:33:10.417000 | (1467825942, 448417000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 11916| offset = 0 | icmp type: 11 | identifier = 40744
-return time - outbound time: 0:00:16.397000 | 40744
-
-UDP (outbound): 2016-07-06 17:32:54.035000 | (1467825942, 432035000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 63861| offset = 0 | identifier = 34447
-ICMP 11 (return): 2016-07-06 17:33:10.688000 | (1467825942, 448688000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 11917| offset = 0 | icmp type: 11 | identifier = 34447
-return time - outbound time: 0:00:16.653000 | 34447
-
-UDP (outbound): 2016-07-06 17:32:54.049000 | (1467825942, 432049000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 63862| offset = 0 | identifier = 55714
-ICMP 11 (return): 2016-07-06 17:33:10.952000 | (1467825942, 448952000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 11918| offset = 0 | icmp type: 11 | identifier = 55714
-return time - outbound time: 0:00:16.903000 | 55714
-
-UDP (outbound): 2016-07-06 17:32:54.063000 | (1467825942, 432063000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 63863| offset = 0 | identifier = 38895
-ICMP 11 (return): 2016-07-06 17:33:11.224000 | (1467825942, 449224000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 11919| offset = 0 | icmp type: 11 | identifier = 38895
-return time - outbound time: 0:00:17.161000 | 38895
-
-UDP (outbound): 2016-07-06 17:32:54.078000 | (1467825942, 432078000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 63864| offset = 0 | identifier = 37368
-ICMP 11 (return): 2016-07-06 17:33:11.488000 | (1467825942, 449488000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 11920| offset = 0 | icmp type: 11 | identifier = 37368
-return time - outbound time: 0:00:17.410000 | 37368
-
-UDP (outbound): 2016-07-06 17:32:54.091000 | (1467825942, 432091000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 63865| offset = 0 | identifier = 51583
-ICMP 11 (return): 2016-07-06 17:33:11.754000 | (1467825942, 449754000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 11921| offset = 0 | icmp type: 11 | identifier = 51583
-return time - outbound time: 0:00:17.663000 | 51583
-
-UDP (outbound): 2016-07-06 17:32:54.106000 | (1467825942, 432106000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 63866| offset = 0 | identifier = 57196
-ICMP 11 (return): 2016-07-06 17:33:12.015000 | (1467825942, 450015000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 11922| offset = 0 | icmp type: 11 | identifier = 57196
-return time - outbound time: 0:00:17.909000 | 57196
-
-UDP (outbound): 2016-07-06 17:32:54.120000 | (1467825942, 432120000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 63867| offset = 0 | identifier = 40163
-ICMP 11 (return): 2016-07-06 17:33:12.292000 | (1467825942, 450292000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 11923| offset = 0 | icmp type: 11 | identifier = 40163
-return time - outbound time: 0:00:18.172000 | 40163
-
-UDP (outbound): 2016-07-06 17:32:54.134000 | (1467825942, 432134000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 63868| offset = 0 | identifier = 45099
-ICMP 11 (return): 2016-07-06 17:33:12.956000 | (1467825942, 450956000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 11924| offset = 0 | icmp type: 11 | identifier = 45099
-return time - outbound time: 0:00:18.822000 | 45099
-
-UDP (outbound): 2016-07-06 17:33:27.791000 | (1467825942, 465791000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 63873| offset = 0 | identifier = 52692
-ICMP 11 (return): 2016-07-06 17:33:31.480000 | (1467825942, 469480000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 11928| offset = 0 | icmp type: 11 | identifier = 52692
-return time - outbound time: 0:00:03.689000 | 52692
-
-UDP (outbound): 2016-07-06 17:34:43.930000 | (1467825942, 541930000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 63887| offset = 0 | identifier = 42961
-ICMP 11 (return): 2016-07-06 17:34:57.759000 | (1467825942, 555759000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 11954| offset = 0 | icmp type: 11 | identifier = 42961
-return time - outbound time: 0:00:13.829000 | 42961
-
-UDP (outbound): 2016-07-06 17:34:43.944000 | (1467825942, 541944000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 63888| offset = 0 | identifier = 54555
-ICMP 11 (return): 2016-07-06 17:34:58.075000 | (1467825942, 556075000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 11955| offset = 0 | icmp type: 11 | identifier = 54555
-return time - outbound time: 0:00:14.131000 | 54555
-
-UDP (outbound): 2016-07-06 17:34:43.955000 | (1467825942, 541955000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 63889| offset = 0 | identifier = 50263
-ICMP 11 (return): 2016-07-06 17:34:58.369000 | (1467825942, 556369000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 11956| offset = 0 | icmp type: 11 | identifier = 50263
-return time - outbound time: 0:00:14.414000 | 50263
-
-UDP (outbound): 2016-07-06 17:34:43.965000 | (1467825942, 541965000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 63890| offset = 0 | identifier = 60127
-ICMP 11 (return): 2016-07-06 17:34:58.638000 | (1467825942, 556638000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 11957| offset = 0 | icmp type: 11 | identifier = 60127
-return time - outbound time: 0:00:14.673000 | 60127
-
-UDP (outbound): 2016-07-06 17:34:43.975000 | (1467825942, 541975000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 63891| offset = 0 | identifier = 40814
-ICMP 11 (return): 2016-07-06 17:34:58.903000 | (1467825942, 556903000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 11958| offset = 0 | icmp type: 11 | identifier = 40814
-return time - outbound time: 0:00:14.928000 | 40814
-
-UDP (outbound): 2016-07-06 17:34:43.985000 | (1467825942, 541985000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 63892| offset = 0 | identifier = 55199
-ICMP 11 (return): 2016-07-06 17:34:59.166000 | (1467825942, 557166000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 11959| offset = 0 | icmp type: 11 | identifier = 55199
-return time - outbound time: 0:00:15.181000 | 55199
-
-UDP (outbound): 2016-07-06 17:34:43.995000 | (1467825942, 541995000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 63893| offset = 0 | identifier = 43346
-ICMP 11 (return): 2016-07-06 17:34:59.433000 | (1467825942, 557433000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 11960| offset = 0 | icmp type: 11 | identifier = 43346
-return time - outbound time: 0:00:15.438000 | 43346
-
-UDP (outbound): 2016-07-06 17:34:44.006000 | (1467825942, 542006000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 63894| offset = 0 | identifier = 42783
-ICMP 11 (return): 2016-07-06 17:35:01.800000 | (1467825942, 559800000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 11963| offset = 0 | icmp type: 11 | identifier = 42783
-return time - outbound time: 0:00:17.794000 | 42783
-
-UDP (outbound): 2016-07-06 17:34:44.016000 | (1467825942, 542016000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 63895| offset = 0 | identifier = 33190
-ICMP 11 (return): 2016-07-06 17:35:02.119000 | (1467825942, 560119000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 11964| offset = 0 | icmp type: 11 | identifier = 33190
-return time - outbound time: 0:00:18.103000 | 33190
-
-UDP (outbound): 2016-07-06 17:34:44.026000 | (1467825942, 542026000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 63896| offset = 0 | identifier = 54032
-ICMP 11 (return): 2016-07-06 17:35:02.386000 | (1467825942, 560386000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 11965| offset = 0 | icmp type: 11 | identifier = 54032
-return time - outbound time: 0:00:18.360000 | 54032
-
-UDP (outbound): 2016-07-06 17:34:44.036000 | (1467825942, 542036000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 63897| offset = 0 | identifier = 49762
-ICMP 11 (return): 2016-07-06 17:35:02.651000 | (1467825942, 560651000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 11966| offset = 0 | icmp type: 11 | identifier = 49762
-return time - outbound time: 0:00:18.615000 | 49762
-
-UDP (outbound): 2016-07-06 17:34:44.046000 | (1467825942, 542046000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 63898| offset = 0 | identifier = 33053
-ICMP 11 (return): 2016-07-06 17:35:02.911000 | (1467825942, 560911000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 11967| offset = 0 | icmp type: 11 | identifier = 33053
-return time - outbound time: 0:00:18.865000 | 33053
-
-UDP (outbound): 2016-07-06 17:34:44.056000 | (1467825942, 542056000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 63899| offset = 0 | identifier = 41474
-ICMP 11 (return): 2016-07-06 17:35:03.171000 | (1467825942, 561171000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 11968| offset = 0 | icmp type: 11 | identifier = 41474
-return time - outbound time: 0:00:19.115000 | 41474
-
-UDP (outbound): 2016-07-06 17:34:44.067000 | (1467825942, 542067000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 63900| offset = 0 | identifier = 37017
-ICMP 11 (return): 2016-07-06 17:35:03.887000 | (1467825942, 561887000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 11969| offset = 0 | icmp type: 11 | identifier = 37017
-return time - outbound time: 0:00:19.820000 | 37017
-
-UDP (outbound): 2016-07-06 17:34:44.077000 | (1467825942, 542077000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 63901| offset = 0 | identifier = 53338
-ICMP 11 (return): 2016-07-06 17:35:04.214000 | (1467825942, 562214000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 11970| offset = 0 | icmp type: 11 | identifier = 53338
-return time - outbound time: 0:00:20.137000 | 53338
-
-UDP (outbound): 2016-07-06 17:34:44.134000 | (1467825942, 542134000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 63902| offset = 0 | identifier = 50960
-ICMP 11 (return): 2016-07-06 17:35:04.485000 | (1467825942, 562485000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 11971| offset = 0 | icmp type: 11 | identifier = 50960
-return time - outbound time: 0:00:20.351000 | 50960
-
-UDP (outbound): 2016-07-06 17:34:57.828000 | (1467825942, 555828000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 63903| offset = 0 | identifier = 38486
-ICMP 11 (return): 2016-07-06 17:35:11.732000 | (1467825942, 569732000) | 74.125.37.91 -> 192.168.100.17 | ICMP | TTL : 52 | id = 11972| offset = 0 | icmp type: 11 | identifier = 38486
-return time - outbound time: 0:00:13.904000 | 38486
-
-UDP (outbound): 2016-07-06 17:35:18.986000 | (1467825942, 576986000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 63906| offset = 0 | identifier = 60986
-ICMP 11 (return): 2016-07-06 17:35:28.554000 | (1467825942, 586554000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 11976| offset = 0 | icmp type: 11 | identifier = 60986
-return time - outbound time: 0:00:09.568000 | 60986
-
-UDP (outbound): 2016-07-06 17:36:53.577000 | (1467825942, 671577000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 63920| offset = 0 | identifier = 48584
-ICMP 11 (return): 2016-07-06 17:37:11.615000 | (1467825942, 689615000) | 74.125.37.91 -> 192.168.100.17 | ICMP | TTL : 52 | id = 12002| offset = 0 | icmp type: 11 | identifier = 48584
-return time - outbound time: 0:00:18.038000 | 48584
-
-UDP (outbound): 2016-07-06 17:36:53.610000 | (1467825942, 671610000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 63922| offset = 0 | identifier = 59610
-ICMP 11 (return): 2016-07-06 17:37:13.162000 | (1467825942, 691162000) | 209.85.245.65 -> 192.168.100.17 | ICMP | TTL : 242 | id = 12006| offset = 0 | icmp type: 11 | identifier = 59610
-return time - outbound time: 0:00:19.552000 | 59610
-
-UDP (outbound): 2016-07-06 17:36:53.624000 | (1467825942, 671624000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 63923| offset = 0 | identifier = 58344
-ICMP 11 (return): 2016-07-06 17:37:13.426000 | (1467825942, 691426000) | 209.85.249.155 -> 192.168.100.17 | ICMP | TTL : 242 | id = 12007| offset = 0 | icmp type: 11 | identifier = 58344
-return time - outbound time: 0:00:19.802000 | 58344
-
-UDP (outbound): 2016-07-06 17:36:53.595000 | (1467825942, 671595000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 63921| offset = 0 | identifier = 55954
-ICMP 11 (return): 2016-07-06 17:37:16.760000 | (1467825942, 694760000) | 209.85.247.63 -> 192.168.100.17 | ICMP | TTL : 242 | id = 12016| offset = 0 | icmp type: 11 | identifier = 55954
-return time - outbound time: 0:00:23.165000 | 55954
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: UDP
+	2: ICMP
+	3: TCP
 ------------------------
 
 
@@ -496,164 +96,30 @@ return time - outbound time: 0:00:23.165000 | 55954
 processing PcapTracesAssignment3/group1-trace4.pcap 
 
 parsed 137 packets
-source ip = 192.168.100.17
+The IP address of the source node: 192.168.100.17
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 142.104.68.167
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 207.23.244.242
+	router 9: 206.12.3.17
+	router 10: 199.212.24.64
+	router 11: 206.81.80.17
+	router 12: 74.125.37.91
+	router 12: 72.14.237.123
+	router 13: 209.85.250.123
+	router 13: 209.85.245.65
+	router 13: 209.85.246.219
 
-UDP (outbound): 2016-07-06 17:28:58.579000 | (1467826044, 94579000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 13631| offset = 0 | identifier = 44323
-ICMP 11 (return): 2016-07-06 17:29:09.516000 | (1467826044, 105516000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 23738| offset = 0 | icmp type: 11 | identifier = 44323
-return time - outbound time: 0:00:10.937000 | 44323
-
-UDP (outbound): 2016-07-06 17:28:58.607000 | (1467826044, 94607000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 13632| offset = 0 | identifier = 34072
-ICMP 11 (return): 2016-07-06 17:29:09.834000 | (1467826044, 105834000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 23739| offset = 0 | icmp type: 11 | identifier = 34072
-return time - outbound time: 0:00:11.227000 | 34072
-
-UDP (outbound): 2016-07-06 17:28:58.622000 | (1467826044, 94622000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 13633| offset = 0 | identifier = 43627
-ICMP 11 (return): 2016-07-06 17:29:10.100000 | (1467826044, 106100000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 23740| offset = 0 | icmp type: 11 | identifier = 43627
-return time - outbound time: 0:00:11.478000 | 43627
-
-UDP (outbound): 2016-07-06 17:28:58.636000 | (1467826044, 94636000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 13634| offset = 0 | identifier = 58835
-ICMP 11 (return): 2016-07-06 17:29:13.554000 | (1467826044, 109554000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 23742| offset = 0 | icmp type: 11 | identifier = 58835
-return time - outbound time: 0:00:14.918000 | 58835
-
-UDP (outbound): 2016-07-06 17:28:58.677000 | (1467826044, 94677000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 13637| offset = 0 | identifier = 52123
-ICMP 11 (return): 2016-07-06 17:29:13.840000 | (1467826044, 109840000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 23743| offset = 0 | icmp type: 11 | identifier = 52123
-return time - outbound time: 0:00:15.163000 | 52123
-
-UDP (outbound): 2016-07-06 17:28:58.690000 | (1467826044, 94690000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 13638| offset = 0 | identifier = 58508
-ICMP 11 (return): 2016-07-06 17:29:14.113000 | (1467826044, 110113000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 23744| offset = 0 | icmp type: 11 | identifier = 58508
-return time - outbound time: 0:00:15.423000 | 58508
-
-UDP (outbound): 2016-07-06 17:28:58.704000 | (1467826044, 94704000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 13639| offset = 0 | identifier = 46227
-ICMP 11 (return): 2016-07-06 17:29:14.380000 | (1467826044, 110380000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 23745| offset = 0 | icmp type: 11 | identifier = 46227
-return time - outbound time: 0:00:15.676000 | 46227
-
-UDP (outbound): 2016-07-06 17:28:58.651000 | (1467826044, 94651000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 13635| offset = 0 | identifier = 40206
-ICMP 11 (return): 2016-07-06 17:29:14.639000 | (1467826044, 110639000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 23746| offset = 0 | icmp type: 11 | identifier = 40206
-return time - outbound time: 0:00:15.988000 | 40206
-
-UDP (outbound): 2016-07-06 17:28:58.664000 | (1467826044, 94664000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 13636| offset = 0 | identifier = 39474
-ICMP 11 (return): 2016-07-06 17:29:14.896000 | (1467826044, 110896000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 23747| offset = 0 | icmp type: 11 | identifier = 39474
-return time - outbound time: 0:00:16.232000 | 39474
-
-UDP (outbound): 2016-07-06 17:28:58.717000 | (1467826044, 94717000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 13640| offset = 0 | identifier = 59558
-ICMP 11 (return): 2016-07-06 17:29:15.156000 | (1467826044, 111156000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 23748| offset = 0 | icmp type: 11 | identifier = 59558
-return time - outbound time: 0:00:16.439000 | 59558
-
-UDP (outbound): 2016-07-06 17:28:58.730000 | (1467826044, 94730000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 13641| offset = 0 | identifier = 53739
-ICMP 11 (return): 2016-07-06 17:29:15.418000 | (1467826044, 111418000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 23749| offset = 0 | icmp type: 11 | identifier = 53739
-return time - outbound time: 0:00:16.688000 | 53739
-
-UDP (outbound): 2016-07-06 17:28:58.743000 | (1467826044, 94743000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 13642| offset = 0 | identifier = 33264
-ICMP 11 (return): 2016-07-06 17:29:15.682000 | (1467826044, 111682000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 23750| offset = 0 | icmp type: 11 | identifier = 33264
-return time - outbound time: 0:00:16.939000 | 33264
-
-UDP (outbound): 2016-07-06 17:28:58.757000 | (1467826044, 94757000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 13643| offset = 0 | identifier = 34667
-ICMP 11 (return): 2016-07-06 17:29:15.949000 | (1467826044, 111949000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 23751| offset = 0 | icmp type: 11 | identifier = 34667
-return time - outbound time: 0:00:17.192000 | 34667
-
-UDP (outbound): 2016-07-06 17:28:58.770000 | (1467826044, 94770000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 13644| offset = 0 | identifier = 56549
-ICMP 11 (return): 2016-07-06 17:29:16.213000 | (1467826044, 112213000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 23752| offset = 0 | icmp type: 11 | identifier = 56549
-return time - outbound time: 0:00:17.443000 | 56549
-
-UDP (outbound): 2016-07-06 17:28:58.784000 | (1467826044, 94784000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 13645| offset = 0 | identifier = 37393
-ICMP 11 (return): 2016-07-06 17:29:16.477000 | (1467826044, 112477000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 23753| offset = 0 | icmp type: 11 | identifier = 37393
-return time - outbound time: 0:00:17.693000 | 37393
-
-UDP (outbound): 2016-07-06 17:28:58.797000 | (1467826044, 94797000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 13646| offset = 0 | identifier = 50288
-ICMP 11 (return): 2016-07-06 17:29:17.163000 | (1467826044, 113163000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 23754| offset = 0 | icmp type: 11 | identifier = 50288
-return time - outbound time: 0:00:18.366000 | 50288
-
-UDP (outbound): 2016-07-06 17:29:32.025000 | (1467826044, 128025000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 13652| offset = 0 | identifier = 38195
-ICMP 11 (return): 2016-07-06 17:29:35.376000 | (1467826044, 131376000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 23758| offset = 0 | icmp type: 11 | identifier = 38195
-return time - outbound time: 0:00:03.351000 | 38195
-
-UDP (outbound): 2016-07-06 17:30:16.213000 | (1467826044, 172213000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 13661| offset = 0 | identifier = 42041
-ICMP 11 (return): 2016-07-06 17:30:29.054000 | (1467826044, 185054000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 23784| offset = 0 | icmp type: 11 | identifier = 42041
-return time - outbound time: 0:00:12.841000 | 42041
-
-UDP (outbound): 2016-07-06 17:30:16.229000 | (1467826044, 172229000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 13662| offset = 0 | identifier = 44849
-ICMP 11 (return): 2016-07-06 17:30:29.364000 | (1467826044, 185364000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 23785| offset = 0 | icmp type: 11 | identifier = 44849
-return time - outbound time: 0:00:13.135000 | 44849
-
-UDP (outbound): 2016-07-06 17:30:16.242000 | (1467826044, 172242000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 13663| offset = 0 | identifier = 41496
-ICMP 11 (return): 2016-07-06 17:30:29.661000 | (1467826044, 185661000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 23786| offset = 0 | icmp type: 11 | identifier = 41496
-return time - outbound time: 0:00:13.419000 | 41496
-
-UDP (outbound): 2016-07-06 17:30:16.270000 | (1467826044, 172270000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 13665| offset = 0 | identifier = 45812
-ICMP 11 (return): 2016-07-06 17:30:29.933000 | (1467826044, 185933000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 23787| offset = 0 | icmp type: 11 | identifier = 45812
-return time - outbound time: 0:00:13.663000 | 45812
-
-UDP (outbound): 2016-07-06 17:30:16.285000 | (1467826044, 172285000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 13666| offset = 0 | identifier = 60613
-ICMP 11 (return): 2016-07-06 17:30:30.202000 | (1467826044, 186202000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 23788| offset = 0 | icmp type: 11 | identifier = 60613
-return time - outbound time: 0:00:13.917000 | 60613
-
-UDP (outbound): 2016-07-06 17:30:16.257000 | (1467826044, 172257000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 13664| offset = 0 | identifier = 58968
-ICMP 11 (return): 2016-07-06 17:30:30.466000 | (1467826044, 186466000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 23789| offset = 0 | icmp type: 11 | identifier = 58968
-return time - outbound time: 0:00:14.209000 | 58968
-
-UDP (outbound): 2016-07-06 17:30:16.298000 | (1467826044, 172298000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 13667| offset = 0 | identifier = 42754
-ICMP 11 (return): 2016-07-06 17:30:30.737000 | (1467826044, 186737000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 23790| offset = 0 | icmp type: 11 | identifier = 42754
-return time - outbound time: 0:00:14.439000 | 42754
-
-UDP (outbound): 2016-07-06 17:30:16.311000 | (1467826044, 172311000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 13668| offset = 0 | identifier = 35619
-ICMP 11 (return): 2016-07-06 17:30:32.976000 | (1467826044, 188976000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 23793| offset = 0 | icmp type: 11 | identifier = 35619
-return time - outbound time: 0:00:16.665000 | 35619
-
-UDP (outbound): 2016-07-06 17:30:16.324000 | (1467826044, 172324000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 13669| offset = 0 | identifier = 33307
-ICMP 11 (return): 2016-07-06 17:30:33.260000 | (1467826044, 189260000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 23794| offset = 0 | icmp type: 11 | identifier = 33307
-return time - outbound time: 0:00:16.936000 | 33307
-
-UDP (outbound): 2016-07-06 17:30:16.338000 | (1467826044, 172338000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 13670| offset = 0 | identifier = 58498
-ICMP 11 (return): 2016-07-06 17:30:33.529000 | (1467826044, 189529000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 23795| offset = 0 | icmp type: 11 | identifier = 58498
-return time - outbound time: 0:00:17.191000 | 58498
-
-UDP (outbound): 2016-07-06 17:30:16.364000 | (1467826044, 172364000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 13672| offset = 0 | identifier = 56468
-ICMP 11 (return): 2016-07-06 17:30:34.234000 | (1467826044, 190234000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 23796| offset = 0 | icmp type: 11 | identifier = 56468
-return time - outbound time: 0:00:17.870000 | 56468
-
-UDP (outbound): 2016-07-06 17:30:16.377000 | (1467826044, 172377000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 13673| offset = 0 | identifier = 49413
-ICMP 11 (return): 2016-07-06 17:30:34.566000 | (1467826044, 190566000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 23797| offset = 0 | icmp type: 11 | identifier = 49413
-return time - outbound time: 0:00:18.189000 | 49413
-
-UDP (outbound): 2016-07-06 17:30:16.351000 | (1467826044, 172351000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 13671| offset = 0 | identifier = 34814
-ICMP 11 (return): 2016-07-06 17:30:34.835000 | (1467826044, 190835000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 23798| offset = 0 | icmp type: 11 | identifier = 34814
-return time - outbound time: 0:00:18.484000 | 34814
-
-UDP (outbound): 2016-07-06 17:30:16.390000 | (1467826044, 172390000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 13674| offset = 0 | identifier = 38093
-ICMP 11 (return): 2016-07-06 17:30:35.510000 | (1467826044, 191510000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 23799| offset = 0 | icmp type: 11 | identifier = 38093
-return time - outbound time: 0:00:19.120000 | 38093
-
-UDP (outbound): 2016-07-06 17:30:16.403000 | (1467826044, 172403000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 13675| offset = 0 | identifier = 57729
-ICMP 11 (return): 2016-07-06 17:30:35.880000 | (1467826044, 191880000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 23800| offset = 0 | icmp type: 11 | identifier = 57729
-return time - outbound time: 0:00:19.477000 | 57729
-
-UDP (outbound): 2016-07-06 17:30:16.458000 | (1467826044, 172458000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 13676| offset = 0 | identifier = 51097
-ICMP 11 (return): 2016-07-06 17:30:36.163000 | (1467826044, 192163000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 23801| offset = 0 | icmp type: 11 | identifier = 51097
-return time - outbound time: 0:00:19.705000 | 51097
-
-UDP (outbound): 2016-07-06 17:30:29.117000 | (1467826044, 185117000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 13678| offset = 0 | identifier = 39036
-ICMP 11 (return): 2016-07-06 17:30:43.359000 | (1467826044, 199359000) | 74.125.37.91 -> 192.168.100.17 | ICMP | TTL : 52 | id = 23802| offset = 0 | icmp type: 11 | identifier = 39036
-return time - outbound time: 0:00:14.242000 | 39036
-
-UDP (outbound): 2016-07-06 17:30:50.580000 | (1467826044, 206580000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 13682| offset = 0 | identifier = 60003
-ICMP 11 (return): 2016-07-06 17:31:00.151000 | (1467826044, 216151000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 23806| offset = 0 | icmp type: 11 | identifier = 60003
-return time - outbound time: 0:00:09.571000 | 60003
-
-UDP (outbound): 2016-07-06 17:33:17.498000 | (1467826044, 353498000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 13700| offset = 0 | identifier = 38471
-ICMP 11 (return): 2016-07-06 17:33:35.203000 | (1467826044, 371203000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 23832| offset = 0 | icmp type: 11 | identifier = 38471
-return time - outbound time: 0:00:17.705000 | 38471
-
-UDP (outbound): 2016-07-06 17:33:17.514000 | (1467826044, 353514000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 13701| offset = 0 | identifier = 41133
-ICMP 11 (return): 2016-07-06 17:33:36.520000 | (1467826044, 372520000) | 209.85.246.219 -> 192.168.100.17 | ICMP | TTL : 242 | id = 23835| offset = 0 | icmp type: 11 | identifier = 41133
-return time - outbound time: 0:00:19.006000 | 41133
-
-UDP (outbound): 2016-07-06 17:33:17.528000 | (1467826044, 353528000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 13702| offset = 0 | identifier = 52135
-ICMP 11 (return): 2016-07-06 17:33:37.042000 | (1467826044, 373042000) | 209.85.250.123 -> 192.168.100.17 | ICMP | TTL : 242 | id = 23837| offset = 0 | icmp type: 11 | identifier = 52135
-return time - outbound time: 0:00:19.514000 | 52135
-
-UDP (outbound): 2016-07-06 17:33:17.543000 | (1467826044, 353543000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 13703| offset = 0 | identifier = 55239
-ICMP 11 (return): 2016-07-06 17:33:38.349000 | (1467826044, 374349000) | 209.85.245.65 -> 192.168.100.17 | ICMP | TTL : 242 | id = 23840| offset = 0 | icmp type: 11 | identifier = 55239
-return time - outbound time: 0:00:20.806000 | 55239
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: UDP
+	2: ICMP
 ------------------------
 
 
@@ -661,164 +127,30 @@ return time - outbound time: 0:00:20.806000 | 55239
 processing PcapTracesAssignment3/group1-trace5.pcap 
 
 parsed 142 packets
-source ip = 192.168.100.17
+The IP address of the source node: 192.168.100.17
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 142.104.68.167
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 207.23.244.242
+	router 9: 206.12.3.17
+	router 10: 199.212.24.64
+	router 11: 206.81.80.17
+	router 12: 72.14.237.123
+	router 13: 209.85.247.61
+	router 13: 209.85.250.59
+	router 13: 209.85.249.153
 
-UDP (outbound): 2016-07-06 17:36:23.761000 | (1467826122, 461761000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 24603| offset = 0 | identifier = 57145
-ICMP 11 (return): 2016-07-06 17:36:34.810000 | (1467826122, 472810000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 25824| offset = 0 | icmp type: 11 | identifier = 57145
-return time - outbound time: 0:00:11.049000 | 57145
-
-UDP (outbound): 2016-07-06 17:36:23.788000 | (1467826122, 461788000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 24604| offset = 0 | identifier = 50834
-ICMP 11 (return): 2016-07-06 17:36:35.081000 | (1467826122, 473081000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 25825| offset = 0 | icmp type: 11 | identifier = 50834
-return time - outbound time: 0:00:11.293000 | 50834
-
-UDP (outbound): 2016-07-06 17:36:23.804000 | (1467826122, 461804000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 1 | id = 24605| offset = 0 | identifier = 46577
-ICMP 11 (return): 2016-07-06 17:36:35.357000 | (1467826122, 473357000) | 142.104.68.167 -> 192.168.100.17 | ICMP | TTL : 29 | id = 25826| offset = 0 | icmp type: 11 | identifier = 46577
-return time - outbound time: 0:00:11.553000 | 46577
-
-UDP (outbound): 2016-07-06 17:36:23.819000 | (1467826122, 461819000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 24606| offset = 0 | identifier = 35419
-ICMP 11 (return): 2016-07-06 17:36:40.210000 | (1467826122, 478210000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 25829| offset = 0 | icmp type: 11 | identifier = 35419
-return time - outbound time: 0:00:16.391000 | 35419
-
-UDP (outbound): 2016-07-06 17:36:23.833000 | (1467826122, 461833000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 24607| offset = 0 | identifier = 55901
-ICMP 11 (return): 2016-07-06 17:36:40.545000 | (1467826122, 478545000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 25830| offset = 0 | icmp type: 11 | identifier = 55901
-return time - outbound time: 0:00:16.712000 | 55901
-
-UDP (outbound): 2016-07-06 17:36:23.846000 | (1467826122, 461846000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 2 | id = 24608| offset = 0 | identifier = 52355
-ICMP 11 (return): 2016-07-06 17:36:40.817000 | (1467826122, 478817000) | 142.104.68.1 -> 192.168.100.17 | ICMP | TTL : 254 | id = 25831| offset = 0 | icmp type: 11 | identifier = 52355
-return time - outbound time: 0:00:16.971000 | 52355
-
-UDP (outbound): 2016-07-06 17:36:23.860000 | (1467826122, 461860000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 24609| offset = 0 | identifier = 50941
-ICMP 11 (return): 2016-07-06 17:36:41.091000 | (1467826122, 479091000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 25832| offset = 0 | icmp type: 11 | identifier = 50941
-return time - outbound time: 0:00:17.231000 | 50941
-
-UDP (outbound): 2016-07-06 17:36:23.886000 | (1467826122, 461886000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 24611| offset = 0 | identifier = 37431
-ICMP 11 (return): 2016-07-06 17:36:41.358000 | (1467826122, 479358000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 25833| offset = 0 | icmp type: 11 | identifier = 37431
-return time - outbound time: 0:00:17.472000 | 37431
-
-UDP (outbound): 2016-07-06 17:36:23.873000 | (1467826122, 461873000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 3 | id = 24610| offset = 0 | identifier = 52569
-ICMP 11 (return): 2016-07-06 17:36:41.623000 | (1467826122, 479623000) | 192.168.9.5 -> 192.168.100.17 | ICMP | TTL : 62 | id = 25834| offset = 0 | icmp type: 11 | identifier = 52569
-return time - outbound time: 0:00:17.750000 | 52569
-
-UDP (outbound): 2016-07-06 17:36:23.899000 | (1467826122, 461899000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 24612| offset = 0 | identifier = 34073
-ICMP 11 (return): 2016-07-06 17:36:41.891000 | (1467826122, 479891000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 25835| offset = 0 | icmp type: 11 | identifier = 34073
-return time - outbound time: 0:00:17.992000 | 34073
-
-UDP (outbound): 2016-07-06 17:36:23.912000 | (1467826122, 461912000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 24613| offset = 0 | identifier = 53906
-ICMP 11 (return): 2016-07-06 17:36:42.158000 | (1467826122, 480158000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 25836| offset = 0 | icmp type: 11 | identifier = 53906
-return time - outbound time: 0:00:18.246000 | 53906
-
-UDP (outbound): 2016-07-06 17:36:23.925000 | (1467826122, 461925000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 4 | id = 24614| offset = 0 | identifier = 49411
-ICMP 11 (return): 2016-07-06 17:36:42.427000 | (1467826122, 480427000) | 192.168.10.1 -> 192.168.100.17 | ICMP | TTL : 252 | id = 25837| offset = 0 | icmp type: 11 | identifier = 49411
-return time - outbound time: 0:00:18.502000 | 49411
-
-UDP (outbound): 2016-07-06 17:36:23.938000 | (1467826122, 461938000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 24615| offset = 0 | identifier = 55165
-ICMP 11 (return): 2016-07-06 17:36:42.692000 | (1467826122, 480692000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 25838| offset = 0 | icmp type: 11 | identifier = 55165
-return time - outbound time: 0:00:18.754000 | 55165
-
-UDP (outbound): 2016-07-06 17:36:23.951000 | (1467826122, 461951000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 24616| offset = 0 | identifier = 45729
-ICMP 11 (return): 2016-07-06 17:36:42.962000 | (1467826122, 480962000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 25839| offset = 0 | icmp type: 11 | identifier = 45729
-return time - outbound time: 0:00:19.011000 | 45729
-
-UDP (outbound): 2016-07-06 17:36:23.964000 | (1467826122, 461964000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 5 | id = 24617| offset = 0 | identifier = 42009
-ICMP 11 (return): 2016-07-06 17:36:43.230000 | (1467826122, 481230000) | 192.168.8.6 -> 192.168.100.17 | ICMP | TTL : 251 | id = 25840| offset = 0 | icmp type: 11 | identifier = 42009
-return time - outbound time: 0:00:19.266000 | 42009
-
-UDP (outbound): 2016-07-06 17:36:23.977000 | (1467826122, 461977000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 24618| offset = 0 | identifier = 34736
-ICMP 11 (return): 2016-07-06 17:36:43.490000 | (1467826122, 481490000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 25841| offset = 0 | icmp type: 11 | identifier = 34736
-return time - outbound time: 0:00:19.513000 | 34736
-
-UDP (outbound): 2016-07-06 17:37:23.154000 | (1467826122, 521154000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 24620| offset = 0 | identifier = 44679
-ICMP 11 (return): 2016-07-06 17:37:26.502000 | (1467826122, 524502000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 25847| offset = 0 | icmp type: 11 | identifier = 44679
-return time - outbound time: 0:00:03.348000 | 44679
-
-UDP (outbound): 2016-07-06 17:38:44.357000 | (1467826122, 602357000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 6 | id = 24627| offset = 0 | identifier = 37773
-ICMP 11 (return): 2016-07-06 17:38:57.249000 | (1467826122, 615249000) | 142.104.252.37 -> 192.168.100.17 | ICMP | TTL : 250 | id = 25876| offset = 0 | icmp type: 11 | identifier = 37773
-return time - outbound time: 0:00:12.892000 | 37773
-
-UDP (outbound): 2016-07-06 17:38:44.374000 | (1467826122, 602374000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 24628| offset = 0 | identifier = 46262
-ICMP 11 (return): 2016-07-06 17:38:57.557000 | (1467826122, 615557000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 25877| offset = 0 | icmp type: 11 | identifier = 46262
-return time - outbound time: 0:00:13.183000 | 46262
-
-UDP (outbound): 2016-07-06 17:38:44.391000 | (1467826122, 602391000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 24629| offset = 0 | identifier = 38461
-ICMP 11 (return): 2016-07-06 17:38:57.851000 | (1467826122, 615851000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 25878| offset = 0 | icmp type: 11 | identifier = 38461
-return time - outbound time: 0:00:13.460000 | 38461
-
-UDP (outbound): 2016-07-06 17:38:44.433000 | (1467826122, 602433000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 24632| offset = 0 | identifier = 52280
-ICMP 11 (return): 2016-07-06 17:38:58.115000 | (1467826122, 616115000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 25879| offset = 0 | icmp type: 11 | identifier = 52280
-return time - outbound time: 0:00:13.682000 | 52280
-
-UDP (outbound): 2016-07-06 17:38:44.405000 | (1467826122, 602405000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 7 | id = 24630| offset = 0 | identifier = 48666
-ICMP 11 (return): 2016-07-06 17:38:58.379000 | (1467826122, 616379000) | 142.104.252.246 -> 192.168.100.17 | ICMP | TTL : 249 | id = 25880| offset = 0 | icmp type: 11 | identifier = 48666
-return time - outbound time: 0:00:13.974000 | 48666
-
-UDP (outbound): 2016-07-06 17:38:44.447000 | (1467826122, 602447000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 24633| offset = 0 | identifier = 43301
-ICMP 11 (return): 2016-07-06 17:38:58.641000 | (1467826122, 616641000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 25881| offset = 0 | icmp type: 11 | identifier = 43301
-return time - outbound time: 0:00:14.194000 | 43301
-
-UDP (outbound): 2016-07-06 17:38:44.460000 | (1467826122, 602460000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 24634| offset = 0 | identifier = 49303
-ICMP 11 (return): 2016-07-06 17:39:00.900000 | (1467826122, 618900000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 25884| offset = 0 | icmp type: 11 | identifier = 49303
-return time - outbound time: 0:00:16.440000 | 49303
-
-UDP (outbound): 2016-07-06 17:38:44.474000 | (1467826122, 602474000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 24635| offset = 0 | identifier = 57639
-ICMP 11 (return): 2016-07-06 17:39:01.189000 | (1467826122, 619189000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 25885| offset = 0 | icmp type: 11 | identifier = 57639
-return time - outbound time: 0:00:16.715000 | 57639
-
-UDP (outbound): 2016-07-06 17:38:44.487000 | (1467826122, 602487000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 9 | id = 24636| offset = 0 | identifier = 52669
-ICMP 11 (return): 2016-07-06 17:39:01.457000 | (1467826122, 619457000) | 206.12.3.17 -> 192.168.100.17 | ICMP | TTL : 247 | id = 25886| offset = 0 | icmp type: 11 | identifier = 52669
-return time - outbound time: 0:00:16.970000 | 52669
-
-UDP (outbound): 2016-07-06 17:38:44.514000 | (1467826122, 602514000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 24638| offset = 0 | identifier = 58454
-ICMP 11 (return): 2016-07-06 17:39:02.167000 | (1467826122, 620167000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 25887| offset = 0 | icmp type: 11 | identifier = 58454
-return time - outbound time: 0:00:17.653000 | 58454
-
-UDP (outbound): 2016-07-06 17:38:44.501000 | (1467826122, 602501000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 24637| offset = 0 | identifier = 42040
-ICMP 11 (return): 2016-07-06 17:39:02.498000 | (1467826122, 620498000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 25888| offset = 0 | icmp type: 11 | identifier = 42040
-return time - outbound time: 0:00:17.997000 | 42040
-
-UDP (outbound): 2016-07-06 17:38:44.528000 | (1467826122, 602528000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 10 | id = 24639| offset = 0 | identifier = 44195
-ICMP 11 (return): 2016-07-06 17:39:02.772000 | (1467826122, 620772000) | 199.212.24.64 -> 192.168.100.17 | ICMP | TTL : 246 | id = 25889| offset = 0 | icmp type: 11 | identifier = 44195
-return time - outbound time: 0:00:18.244000 | 44195
-
-UDP (outbound): 2016-07-06 17:38:44.588000 | (1467826122, 602588000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 24642| offset = 0 | identifier = 34290
-ICMP 11 (return): 2016-07-06 17:39:03.370000 | (1467826122, 621370000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 25890| offset = 0 | icmp type: 11 | identifier = 34290
-return time - outbound time: 0:00:18.782000 | 34290
-
-UDP (outbound): 2016-07-06 17:38:44.542000 | (1467826122, 602542000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 24640| offset = 0 | identifier = 55177
-ICMP 11 (return): 2016-07-06 17:39:03.986000 | (1467826122, 621986000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 25891| offset = 0 | icmp type: 11 | identifier = 55177
-return time - outbound time: 0:00:19.444000 | 55177
-
-UDP (outbound): 2016-07-06 17:38:44.556000 | (1467826122, 602556000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 11 | id = 24641| offset = 0 | identifier = 52042
-ICMP 11 (return): 2016-07-06 17:39:04.312000 | (1467826122, 622312000) | 206.81.80.17 -> 192.168.100.17 | ICMP | TTL : 245 | id = 25892| offset = 0 | icmp type: 11 | identifier = 52042
-return time - outbound time: 0:00:19.756000 | 52042
-
-UDP (outbound): 2016-07-06 17:38:57.308000 | (1467826122, 615308000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 24644| offset = 0 | identifier = 34825
-ICMP 11 (return): 2016-07-06 17:39:11.543000 | (1467826122, 629543000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 25893| offset = 0 | icmp type: 11 | identifier = 34825
-return time - outbound time: 0:00:14.235000 | 34825
-
-UDP (outbound): 2016-07-06 17:38:44.419000 | (1467826122, 602419000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 8 | id = 24631| offset = 0 | identifier = 34953
-ICMP 11 (return): 2016-07-06 17:39:12.110000 | (1467826122, 630110000) | 207.23.244.242 -> 192.168.100.17 | ICMP | TTL : 247 | id = 25894| offset = 0 | icmp type: 11 | identifier = 34953
-return time - outbound time: 0:00:27.691000 | 34953
-
-UDP (outbound): 2016-07-06 17:39:34.072000 | (1467826122, 652072000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 24649| offset = 0 | identifier = 58455
-ICMP 11 (return): 2016-07-06 17:39:43.426000 | (1467826122, 661426000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 25907| offset = 0 | icmp type: 11 | identifier = 58455
-return time - outbound time: 0:00:09.354000 | 58455
-
-UDP (outbound): 2016-07-06 17:40:54.615000 | (1467826122, 732615000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 12 | id = 24663| offset = 0 | identifier = 59267
-ICMP 11 (return): 2016-07-06 17:41:12.702000 | (1467826122, 750702000) | 72.14.237.123 -> 192.168.100.17 | ICMP | TTL : 52 | id = 25934| offset = 0 | icmp type: 11 | identifier = 59267
-return time - outbound time: 0:00:18.087000 | 59267
-
-UDP (outbound): 2016-07-06 17:40:54.640000 | (1467826122, 732640000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 24665| offset = 0 | identifier = 44988
-ICMP 11 (return): 2016-07-06 17:41:14.005000 | (1467826122, 752005000) | 209.85.250.59 -> 192.168.100.17 | ICMP | TTL : 242 | id = 25937| offset = 0 | icmp type: 11 | identifier = 44988
-return time - outbound time: 0:00:19.365000 | 44988
-
-UDP (outbound): 2016-07-06 17:40:54.629000 | (1467826122, 732629000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 24664| offset = 0 | identifier = 38920
-ICMP 11 (return): 2016-07-06 17:41:14.277000 | (1467826122, 752277000) | 209.85.249.153 -> 192.168.100.17 | ICMP | TTL : 242 | id = 25938| offset = 0 | icmp type: 11 | identifier = 38920
-return time - outbound time: 0:00:19.648000 | 38920
-
-UDP (outbound): 2016-07-06 17:40:54.651000 | (1467826122, 732651000) | 192.168.100.17 -> 8.8.8.8 | UDP | TTL : 13 | id = 24666| offset = 0 | identifier = 53118
-ICMP 11 (return): 2016-07-06 17:41:14.542000 | (1467826122, 752542000) | 209.85.247.61 -> 192.168.100.17 | ICMP | TTL : 242 | id = 25939| offset = 0 | icmp type: 11 | identifier = 53118
-return time - outbound time: 0:00:19.891000 | 53118
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: UDP
+	2: ICMP
+	3: TCP
 ------------------------
 
 
@@ -826,104 +158,20 @@ return time - outbound time: 0:00:19.891000 | 53118
 processing PcapTracesAssignment3/group2-trace1.pcap 
 
 parsed 54 packets
-source ip = 192.168.0.16
+The IP address of the source node: 192.168.0.16
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 192.168.0.1
+	router 2: 24.108.0.1
+	router 3: 64.59.161.197
+	router 4: 66.163.72.26
+	router 5: 66.163.68.18
+	router 6: 72.14.221.102
+	router 7: 108.170.245.113
+	router 8: 209.85.249.249
 
-ICMP (outbound): 2018-03-21 04:09:37.400000 | (1521605105, 272400000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11193| offset = 0 | icmp type: 8 | identifier = 35
-ICMP 11 (return): 2018-03-21 04:09:39.480000 | (1521605105, 274480000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25719| offset = 0 | icmp type: 11 | identifier = 35
-return time - outbound time: 0:00:02.080000 | 35
-
-ICMP (outbound): 2018-03-21 04:09:40.056000 | (1521605105, 275056000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11194| offset = 0 | icmp type: 8 | identifier = 36
-ICMP 11 (return): 2018-03-21 04:09:45.708000 | (1521605105, 280708000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25720| offset = 0 | icmp type: 11 | identifier = 36
-return time - outbound time: 0:00:05.652000 | 36
-
-ICMP (outbound): 2018-03-21 04:09:46.773000 | (1521605105, 281773000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11195| offset = 0 | icmp type: 8 | identifier = 37
-ICMP 11 (return): 2018-03-21 04:09:49.030000 | (1521605105, 284030000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25721| offset = 0 | icmp type: 11 | identifier = 37
-return time - outbound time: 0:00:02.257000 | 37
-
-ICMP (outbound): 2018-03-21 04:09:56.046000 | (1521605106, 290046000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11196| offset = 0 | icmp type: 8 | identifier = 38
-ICMP 11 (return): 2018-03-21 04:10:08.733000 | (1521605106, 302733000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 1621| offset = 0 | icmp type: 11 | identifier = 38
-return time - outbound time: 0:00:12.687000 | 38
-
-ICMP (outbound): 2018-03-21 04:10:10.235000 | (1521605106, 304235000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11197| offset = 0 | icmp type: 8 | identifier = 39
-ICMP 11 (return): 2018-03-21 04:10:26.906000 | (1521605106, 320906000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 1622| offset = 0 | icmp type: 11 | identifier = 39
-return time - outbound time: 0:00:16.671000 | 39
-
-ICMP (outbound): 2018-03-21 04:10:28.480000 | (1521605106, 322480000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11198| offset = 0 | icmp type: 8 | identifier = 40
-ICMP 11 (return): 2018-03-21 04:10:46.557000 | (1521605106, 340557000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 1626| offset = 0 | icmp type: 11 | identifier = 40
-return time - outbound time: 0:00:18.077000 | 40
-
-ICMP (outbound): 2018-03-21 04:11:08.137000 | (1521605116, 352137000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11199| offset = 0 | icmp type: 8 | identifier = 41
-ICMP 11 (return): 2018-03-21 04:11:24.699000 | (1521605116, 368699000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 34598| offset = 0 | icmp type: 11 | identifier = 41
-return time - outbound time: 0:00:16.562000 | 41
-
-ICMP (outbound): 2018-03-21 04:11:25.305000 | (1521605116, 369305000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11200| offset = 0 | icmp type: 8 | identifier = 42
-ICMP 11 (return): 2018-03-21 04:11:42.523000 | (1521605116, 386523000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 34600| offset = 0 | icmp type: 11 | identifier = 42
-return time - outbound time: 0:00:17.218000 | 42
-
-ICMP (outbound): 2018-03-21 04:11:43.289000 | (1521605116, 387289000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11201| offset = 0 | icmp type: 8 | identifier = 43
-ICMP 11 (return): 2018-03-21 04:12:06.117000 | (1521605116, 410117000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 34605| offset = 0 | icmp type: 11 | identifier = 43
-return time - outbound time: 0:00:22.828000 | 43
-
-ICMP (outbound): 2018-03-21 04:11:49.015000 | (1521605117, 392015000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11202| offset = 0 | icmp type: 8 | identifier = 44
-ICMP 11 (return): 2018-03-21 04:12:14.136000 | (1521605117, 417136000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 2416| offset = 0 | icmp type: 11 | identifier = 44
-return time - outbound time: 0:00:25.121000 | 44
-
-ICMP (outbound): 2018-03-21 04:12:15.727000 | (1521605117, 418727000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11203| offset = 0 | icmp type: 8 | identifier = 45
-ICMP 11 (return): 2018-03-21 04:12:37.596000 | (1521605117, 440596000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 2417| offset = 0 | icmp type: 11 | identifier = 45
-return time - outbound time: 0:00:21.869000 | 45
-
-ICMP (outbound): 2018-03-21 04:12:38.745000 | (1521605117, 441745000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11204| offset = 0 | icmp type: 8 | identifier = 46
-ICMP 11 (return): 2018-03-21 04:13:00.284000 | (1521605117, 463284000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 2418| offset = 0 | icmp type: 11 | identifier = 46
-return time - outbound time: 0:00:21.539000 | 46
-
-ICMP (outbound): 2018-03-21 04:13:22.487000 | (1521605127, 475487000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11205| offset = 0 | icmp type: 8 | identifier = 47
-ICMP 11 (return): 2018-03-21 04:13:43.961000 | (1521605127, 496961000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 13224| offset = 0 | icmp type: 11 | identifier = 47
-return time - outbound time: 0:00:21.474000 | 47
-
-ICMP (outbound): 2018-03-21 04:13:46.139000 | (1521605127, 499139000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11206| offset = 0 | icmp type: 8 | identifier = 48
-ICMP 11 (return): 2018-03-21 04:14:17.370000 | (1521605127, 530370000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 13227| offset = 0 | icmp type: 11 | identifier = 48
-return time - outbound time: 0:00:31.231000 | 48
-
-ICMP (outbound): 2018-03-21 04:14:20.522000 | (1521605127, 533522000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11207| offset = 0 | icmp type: 8 | identifier = 49
-ICMP 11 (return): 2018-03-21 04:14:47.323000 | (1521605127, 560323000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 13229| offset = 0 | icmp type: 11 | identifier = 49
-return time - outbound time: 0:00:26.801000 | 49
-
-ICMP (outbound): 2018-03-21 04:14:33.544000 | (1521605128, 545544000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11208| offset = 0 | icmp type: 8 | identifier = 50
-ICMP 11 (return): 2018-03-21 04:14:58.588000 | (1521605128, 570588000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 50
-return time - outbound time: 0:00:25.044000 | 50
-
-ICMP (outbound): 2018-03-21 04:15:00.678000 | (1521605128, 572678000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11209| offset = 0 | icmp type: 8 | identifier = 51
-ICMP 11 (return): 2018-03-21 04:15:21.583000 | (1521605128, 593583000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 51
-return time - outbound time: 0:00:20.905000 | 51
-
-ICMP (outbound): 2018-03-21 04:15:24.028000 | (1521605128, 596028000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11210| offset = 0 | icmp type: 8 | identifier = 52
-ICMP 11 (return): 2018-03-21 04:15:50.870000 | (1521605128, 622870000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 52
-return time - outbound time: 0:00:26.842000 | 52
-
-ICMP (outbound): 2018-03-21 04:16:27.635000 | (1521605138, 649635000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11211| offset = 0 | icmp type: 8 | identifier = 53
-ICMP 11 (return): 2018-03-21 04:16:46.130000 | (1521605138, 668130000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31748| offset = 0 | icmp type: 11 | identifier = 53
-return time - outbound time: 0:00:18.495000 | 53
-
-ICMP (outbound): 2018-03-21 04:16:48.967000 | (1521605138, 670967000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11212| offset = 0 | icmp type: 8 | identifier = 54
-ICMP 11 (return): 2018-03-21 04:17:07.937000 | (1521605138, 689937000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31749| offset = 0 | icmp type: 11 | identifier = 54
-return time - outbound time: 0:00:18.970000 | 54
-
-ICMP (outbound): 2018-03-21 04:17:11.145000 | (1521605138, 693145000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11213| offset = 0 | icmp type: 8 | identifier = 55
-ICMP 11 (return): 2018-03-21 04:17:28.904000 | (1521605138, 710904000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31750| offset = 0 | icmp type: 11 | identifier = 55
-return time - outbound time: 0:00:17.759000 | 55
-
-ICMP (outbound): 2018-03-21 04:18:17.943000 | (1521605148, 749943000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11214| offset = 0 | icmp type: 8 | identifier = 56
-ICMP 11 (return): 2018-03-21 04:18:47.257000 | (1521605148, 779257000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 49842| offset = 0 | icmp type: 11 | identifier = 56
-return time - outbound time: 0:00:29.314000 | 56
-
-ICMP (outbound): 2018-03-21 04:18:50.634000 | (1521605148, 782634000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11215| offset = 0 | icmp type: 8 | identifier = 57
-ICMP 11 (return): 2018-03-21 04:19:07.971000 | (1521605148, 799971000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 49843| offset = 0 | icmp type: 11 | identifier = 57
-return time - outbound time: 0:00:17.337000 | 57
-
-ICMP (outbound): 2018-03-21 04:19:11.228000 | (1521605148, 803228000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11216| offset = 0 | icmp type: 8 | identifier = 58
-ICMP 11 (return): 2018-03-21 04:19:33.489000 | (1521605148, 825489000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 49844| offset = 0 | icmp type: 11 | identifier = 58
-return time - outbound time: 0:00:22.261000 | 58
-
+The values in the protocol field of IP headers:
+	0: ICMP
 ------------------------
 
 
@@ -931,100 +179,20 @@ return time - outbound time: 0:00:22.261000 | 58
 processing PcapTracesAssignment3/group2-trace2.pcap 
 
 parsed 54 packets
-source ip = 192.168.0.16
+The IP address of the source node: 192.168.0.16
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 192.168.0.1
+	router 2: 24.108.0.1
+	router 3: 64.59.161.197
+	router 4: 66.163.72.26
+	router 5: 66.163.68.18
+	router 6: 72.14.221.102
+	router 7: 108.170.245.113
+	router 8: 209.85.249.249
 
-ICMP (outbound): 2018-03-21 04:13:24.891000 | (1521605454, 150891000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11232| offset = 0 | icmp type: 8 | identifier = 74
-ICMP 11 (return): 2018-03-21 04:13:27.847000 | (1521605454, 153847000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25740| offset = 0 | icmp type: 11 | identifier = 74
-return time - outbound time: 0:00:02.956000 | 74
-
-ICMP (outbound): 2018-03-21 04:13:28.554000 | (1521605454, 154554000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11233| offset = 0 | icmp type: 8 | identifier = 75
-ICMP 11 (return): 2018-03-21 04:13:29.984000 | (1521605454, 155984000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25741| offset = 0 | icmp type: 11 | identifier = 75
-return time - outbound time: 0:00:01.430000 | 75
-
-ICMP (outbound): 2018-03-21 04:13:30.579000 | (1521605454, 156579000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11234| offset = 0 | icmp type: 8 | identifier = 76
-ICMP 11 (return): 2018-03-21 04:13:34.325000 | (1521605454, 160325000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25742| offset = 0 | icmp type: 11 | identifier = 76
-return time - outbound time: 0:00:03.746000 | 76
-
-ICMP (outbound): 2018-03-21 04:13:43.291000 | (1521605455, 168291000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11235| offset = 0 | icmp type: 8 | identifier = 77
-ICMP 11 (return): 2018-03-21 04:13:59.342000 | (1521605455, 184342000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 15872| offset = 0 | icmp type: 11 | identifier = 77
-return time - outbound time: 0:00:16.051000 | 77
-
-ICMP (outbound): 2018-03-21 04:14:02.499000 | (1521605455, 187499000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11236| offset = 0 | icmp type: 8 | identifier = 78
-ICMP 11 (return): 2018-03-21 04:14:25.788000 | (1521605455, 210788000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 15874| offset = 0 | icmp type: 11 | identifier = 78
-return time - outbound time: 0:00:23.289000 | 78
-
-ICMP (outbound): 2018-03-21 04:14:28.872000 | (1521605455, 213872000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11237| offset = 0 | icmp type: 8 | identifier = 79
-ICMP 11 (return): 2018-03-21 04:14:40.887000 | (1521605455, 225887000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 15875| offset = 0 | icmp type: 11 | identifier = 79
-return time - outbound time: 0:00:12.015000 | 79
-
-ICMP (outbound): 2018-03-21 04:15:08.859000 | (1521605465, 243859000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11238| offset = 0 | icmp type: 8 | identifier = 80
-ICMP 11 (return): 2018-03-21 04:15:25.180000 | (1521605465, 260180000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 2256| offset = 0 | icmp type: 11 | identifier = 80
-return time - outbound time: 0:00:16.321000 | 80
-
-ICMP (outbound): 2018-03-21 04:15:28.226000 | (1521605465, 263226000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11239| offset = 0 | icmp type: 8 | identifier = 81
-ICMP 11 (return): 2018-03-21 04:15:46.611000 | (1521605465, 281611000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 2258| offset = 0 | icmp type: 11 | identifier = 81
-return time - outbound time: 0:00:18.385000 | 81
-
-ICMP (outbound): 2018-03-21 04:15:49.869000 | (1521605465, 284869000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11240| offset = 0 | icmp type: 8 | identifier = 82
-ICMP 11 (return): 2018-03-21 04:16:15.453000 | (1521605465, 310453000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 2260| offset = 0 | icmp type: 11 | identifier = 82
-return time - outbound time: 0:00:25.584000 | 82
-
-ICMP (outbound): 2018-03-21 04:16:00.129000 | (1521605466, 294129000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11241| offset = 0 | icmp type: 8 | identifier = 83
-ICMP 11 (return): 2018-03-21 04:16:21.556000 | (1521605466, 315556000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 10124| offset = 0 | icmp type: 11 | identifier = 83
-return time - outbound time: 0:00:21.427000 | 83
-
-ICMP (outbound): 2018-03-21 04:16:23.175000 | (1521605466, 317175000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11242| offset = 0 | icmp type: 8 | identifier = 84
-ICMP 11 (return): 2018-03-21 04:16:41.557000 | (1521605466, 335557000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 10125| offset = 0 | icmp type: 11 | identifier = 84
-return time - outbound time: 0:00:18.382000 | 84
-
-ICMP (outbound): 2018-03-21 04:16:43.002000 | (1521605466, 337002000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11243| offset = 0 | icmp type: 8 | identifier = 85
-ICMP 11 (return): 2018-03-21 04:17:01.453000 | (1521605466, 355453000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 10128| offset = 0 | icmp type: 11 | identifier = 85
-return time - outbound time: 0:00:18.451000 | 85
-
-ICMP (outbound): 2018-03-21 04:17:37.429000 | (1521605476, 381429000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11244| offset = 0 | icmp type: 8 | identifier = 86
-ICMP 11 (return): 2018-03-21 04:18:03.679000 | (1521605476, 407679000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 31388| offset = 0 | icmp type: 11 | identifier = 86
-return time - outbound time: 0:00:26.250000 | 86
-
-ICMP (outbound): 2018-03-21 04:18:07.016000 | (1521605476, 411016000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11245| offset = 0 | icmp type: 8 | identifier = 87
-ICMP 11 (return): 2018-03-21 04:18:25.437000 | (1521605476, 429437000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 31392| offset = 0 | icmp type: 11 | identifier = 87
-return time - outbound time: 0:00:18.421000 | 87
-
-ICMP (outbound): 2018-03-21 04:18:28.776000 | (1521605476, 432776000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11246| offset = 0 | icmp type: 8 | identifier = 88
-ICMP 11 (return): 2018-03-21 04:18:48.771000 | (1521605476, 452771000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 31393| offset = 0 | icmp type: 11 | identifier = 88
-return time - outbound time: 0:00:19.995000 | 88
-
-ICMP (outbound): 2018-03-21 04:18:40.344000 | (1521605477, 443344000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11247| offset = 0 | icmp type: 8 | identifier = 89
-ICMP 11 (return): 2018-03-21 04:19:02.451000 | (1521605477, 465451000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 89
-return time - outbound time: 0:00:22.107000 | 89
-
-ICMP (outbound): 2018-03-21 04:19:05.641000 | (1521605477, 468641000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11248| offset = 0 | icmp type: 8 | identifier = 90
-ICMP 11 (return): 2018-03-21 04:19:25.418000 | (1521605477, 488418000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 90
-return time - outbound time: 0:00:19.777000 | 90
-
-ICMP (outbound): 2018-03-21 04:19:28.328000 | (1521605477, 491328000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11249| offset = 0 | icmp type: 8 | identifier = 91
-ICMP 11 (return): 2018-03-21 04:19:46.391000 | (1521605477, 509391000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 91
-return time - outbound time: 0:00:18.063000 | 91
-
-ICMP (outbound): 2018-03-21 04:20:16.707000 | (1521605487, 529707000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11250| offset = 0 | icmp type: 8 | identifier = 92
-ICMP 11 (return): 2018-03-21 04:21:35.630000 | (1521605487, 608630000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31745| offset = 0 | icmp type: 11 | identifier = 92
-return time - outbound time: 0:01:18.923000 | 92
-
-ICMP (outbound): 2018-03-21 04:21:38.546000 | (1521605487, 611546000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11251| offset = 0 | icmp type: 8 | identifier = 93
-ICMP 11 (return): 2018-03-21 04:22:13.702000 | (1521605487, 646702000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31746| offset = 0 | icmp type: 11 | identifier = 93
-return time - outbound time: 0:00:35.156000 | 93
-
-ICMP (outbound): 2018-03-21 04:22:16.999000 | (1521605487, 649999000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11252| offset = 0 | icmp type: 8 | identifier = 94
-ICMP 11 (return): 2018-03-21 04:22:57.894000 | (1521605487, 690894000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31747| offset = 0 | icmp type: 11 | identifier = 94
-return time - outbound time: 0:00:40.895000 | 94
-
-ICMP (outbound): 2018-03-21 04:24:26.875000 | (1521605497, 769875000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11253| offset = 0 | icmp type: 8 | identifier = 95
-ICMP 11 (return): 2018-03-21 04:26:37.876000 | (1521605497, 900876000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 52586| offset = 0 | icmp type: 11 | identifier = 95
-return time - outbound time: 0:02:11.001000 | 95
-
-ICMP (outbound): 2018-03-21 04:11:52.048000 | (1521605498, 14048000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11255| offset = 0 | icmp type: 8 | identifier = 97
-ICMP 11 (return): 2018-03-21 04:13:29.600000 | (1521605498, 111600000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 52589| offset = 0 | icmp type: 11 | identifier = 97
-return time - outbound time: 0:01:37.552000 | 97
-
+The values in the protocol field of IP headers:
+	0: ICMP
 ------------------------
 
 
@@ -1032,104 +200,20 @@ return time - outbound time: 0:01:37.552000 | 97
 processing PcapTracesAssignment3/group2-trace3.pcap 
 
 parsed 54 packets
-source ip = 192.168.0.16
+The IP address of the source node: 192.168.0.16
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 192.168.0.1
+	router 2: 24.108.0.1
+	router 3: 64.59.161.197
+	router 4: 66.163.72.26
+	router 5: 66.163.68.18
+	router 6: 72.14.221.102
+	router 7: 108.170.245.113
+	router 8: 209.85.249.249
 
-ICMP (outbound): 2018-03-21 04:22:37.650000 | (1521605851, 306650000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11280| offset = 0 | icmp type: 8 | identifier = 122
-ICMP 11 (return): 2018-03-21 04:22:46.454000 | (1521605851, 315454000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25763| offset = 0 | icmp type: 11 | identifier = 122
-return time - outbound time: 0:00:08.804000 | 122
-
-ICMP (outbound): 2018-03-21 04:22:47.967000 | (1521605851, 316967000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11281| offset = 0 | icmp type: 8 | identifier = 123
-ICMP 11 (return): 2018-03-21 04:22:49.356000 | (1521605851, 318356000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25764| offset = 0 | icmp type: 11 | identifier = 123
-return time - outbound time: 0:00:01.389000 | 123
-
-ICMP (outbound): 2018-03-21 04:22:50.071000 | (1521605851, 319071000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11282| offset = 0 | icmp type: 8 | identifier = 124
-ICMP 11 (return): 2018-03-21 04:23:03.440000 | (1521605851, 332440000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25765| offset = 0 | icmp type: 11 | identifier = 124
-return time - outbound time: 0:00:13.369000 | 124
-
-ICMP (outbound): 2018-03-21 04:23:00.857000 | (1521605852, 328857000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11283| offset = 0 | icmp type: 8 | identifier = 125
-ICMP 11 (return): 2018-03-21 04:23:12.186000 | (1521605852, 340186000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 31980| offset = 0 | icmp type: 11 | identifier = 125
-return time - outbound time: 0:00:11.329000 | 125
-
-ICMP (outbound): 2018-03-21 04:23:14.932000 | (1521605852, 342932000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11284| offset = 0 | icmp type: 8 | identifier = 126
-ICMP 11 (return): 2018-03-21 04:23:28.520000 | (1521605852, 356520000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 31985| offset = 0 | icmp type: 11 | identifier = 126
-return time - outbound time: 0:00:13.588000 | 126
-
-ICMP (outbound): 2018-03-21 04:23:31.366000 | (1521605852, 359366000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11285| offset = 0 | icmp type: 8 | identifier = 127
-ICMP 11 (return): 2018-03-21 04:23:41.955000 | (1521605852, 369955000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 31986| offset = 0 | icmp type: 11 | identifier = 127
-return time - outbound time: 0:00:10.589000 | 127
-
-ICMP (outbound): 2018-03-21 04:24:26.265000 | (1521605862, 404265000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11286| offset = 0 | icmp type: 8 | identifier = 128
-ICMP 11 (return): 2018-03-21 04:24:53.084000 | (1521605862, 431084000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 38279| offset = 0 | icmp type: 11 | identifier = 128
-return time - outbound time: 0:00:26.819000 | 128
-
-ICMP (outbound): 2018-03-21 04:24:56.147000 | (1521605862, 434147000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11287| offset = 0 | icmp type: 8 | identifier = 129
-ICMP 11 (return): 2018-03-21 04:25:14.868000 | (1521605862, 452868000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 38282| offset = 0 | icmp type: 11 | identifier = 129
-return time - outbound time: 0:00:18.721000 | 129
-
-ICMP (outbound): 2018-03-21 04:25:17.683000 | (1521605862, 455683000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11288| offset = 0 | icmp type: 8 | identifier = 130
-ICMP 11 (return): 2018-03-21 04:25:39.881000 | (1521605862, 477881000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 38284| offset = 0 | icmp type: 11 | identifier = 130
-return time - outbound time: 0:00:22.198000 | 130
-
-ICMP (outbound): 2018-03-21 04:25:28.217000 | (1521605863, 465217000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11289| offset = 0 | icmp type: 8 | identifier = 131
-ICMP 11 (return): 2018-03-21 04:25:44.233000 | (1521605863, 481233000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 17638| offset = 0 | icmp type: 11 | identifier = 131
-return time - outbound time: 0:00:16.016000 | 131
-
-ICMP (outbound): 2018-03-21 04:25:47.380000 | (1521605863, 484380000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11290| offset = 0 | icmp type: 8 | identifier = 132
-ICMP 11 (return): 2018-03-21 04:26:09.959000 | (1521605863, 506959000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 17639| offset = 0 | icmp type: 11 | identifier = 132
-return time - outbound time: 0:00:22.579000 | 132
-
-ICMP (outbound): 2018-03-21 04:26:13.185000 | (1521605863, 510185000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11291| offset = 0 | icmp type: 8 | identifier = 133
-ICMP 11 (return): 2018-03-21 04:26:32.971000 | (1521605863, 529971000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 17640| offset = 0 | icmp type: 11 | identifier = 133
-return time - outbound time: 0:00:19.786000 | 133
-
-ICMP (outbound): 2018-03-21 04:26:55.146000 | (1521605873, 542146000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11292| offset = 0 | icmp type: 8 | identifier = 134
-ICMP 11 (return): 2018-03-21 04:27:13.632000 | (1521605873, 560632000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 52228| offset = 0 | icmp type: 11 | identifier = 134
-return time - outbound time: 0:00:18.486000 | 134
-
-ICMP (outbound): 2018-03-21 04:27:16.987000 | (1521605873, 563987000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11293| offset = 0 | icmp type: 8 | identifier = 135
-ICMP 11 (return): 2018-03-21 04:27:37.184000 | (1521605873, 584184000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 52231| offset = 0 | icmp type: 11 | identifier = 135
-return time - outbound time: 0:00:20.197000 | 135
-
-ICMP (outbound): 2018-03-21 04:27:40.530000 | (1521605873, 587530000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11294| offset = 0 | icmp type: 8 | identifier = 136
-ICMP 11 (return): 2018-03-21 04:28:02.811000 | (1521605873, 609811000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 52233| offset = 0 | icmp type: 11 | identifier = 136
-return time - outbound time: 0:00:22.281000 | 136
-
-ICMP (outbound): 2018-03-21 04:27:51.959000 | (1521605874, 597959000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11295| offset = 0 | icmp type: 8 | identifier = 137
-ICMP 11 (return): 2018-03-21 04:28:13.415000 | (1521605874, 619415000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 137
-return time - outbound time: 0:00:21.456000 | 137
-
-ICMP (outbound): 2018-03-21 04:28:16.508000 | (1521605874, 622508000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11296| offset = 0 | icmp type: 8 | identifier = 138
-ICMP 11 (return): 2018-03-21 04:28:41.093000 | (1521605874, 647093000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 138
-return time - outbound time: 0:00:24.585000 | 138
-
-ICMP (outbound): 2018-03-21 04:28:44.368000 | (1521605874, 650368000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11297| offset = 0 | icmp type: 8 | identifier = 139
-ICMP 11 (return): 2018-03-21 04:29:03.876000 | (1521605874, 669876000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 139
-return time - outbound time: 0:00:19.508000 | 139
-
-ICMP (outbound): 2018-03-21 04:29:39.136000 | (1521605884, 695136000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11298| offset = 0 | icmp type: 8 | identifier = 140
-ICMP 11 (return): 2018-03-21 04:29:56.790000 | (1521605884, 712790000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31751| offset = 0 | icmp type: 11 | identifier = 140
-return time - outbound time: 0:00:17.654000 | 140
-
-ICMP (outbound): 2018-03-21 04:29:59.910000 | (1521605884, 715910000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11299| offset = 0 | icmp type: 8 | identifier = 141
-ICMP 11 (return): 2018-03-21 04:30:23.841000 | (1521605884, 739841000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31752| offset = 0 | icmp type: 11 | identifier = 141
-return time - outbound time: 0:00:23.931000 | 141
-
-ICMP (outbound): 2018-03-21 04:30:26.822000 | (1521605884, 742822000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11300| offset = 0 | icmp type: 8 | identifier = 142
-ICMP 11 (return): 2018-03-21 04:30:53.527000 | (1521605884, 769527000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31753| offset = 0 | icmp type: 11 | identifier = 142
-return time - outbound time: 0:00:26.705000 | 142
-
-ICMP (outbound): 2018-03-21 04:31:15.215000 | (1521605894, 781215000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11301| offset = 0 | icmp type: 8 | identifier = 143
-ICMP 11 (return): 2018-03-21 04:31:37.853000 | (1521605894, 803853000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 55650| offset = 0 | icmp type: 11 | identifier = 143
-return time - outbound time: 0:00:22.638000 | 143
-
-ICMP (outbound): 2018-03-21 04:31:41.054000 | (1521605894, 807054000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11302| offset = 0 | icmp type: 8 | identifier = 144
-ICMP 11 (return): 2018-03-21 04:31:59.041000 | (1521605894, 825041000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 55651| offset = 0 | icmp type: 11 | identifier = 144
-return time - outbound time: 0:00:17.987000 | 144
-
-ICMP (outbound): 2018-03-21 04:32:02.350000 | (1521605894, 828350000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11303| offset = 0 | icmp type: 8 | identifier = 145
-ICMP 11 (return): 2018-03-21 04:32:23.501000 | (1521605894, 849501000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 55652| offset = 0 | icmp type: 11 | identifier = 145
-return time - outbound time: 0:00:21.151000 | 145
-
+The values in the protocol field of IP headers:
+	0: ICMP
 ------------------------
 
 
@@ -1137,104 +221,20 @@ return time - outbound time: 0:00:21.151000 | 145
 processing PcapTracesAssignment3/group2-trace4.pcap 
 
 parsed 54 packets
-source ip = 192.168.0.16
+The IP address of the source node: 192.168.0.16
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 192.168.0.1
+	router 2: 24.108.0.1
+	router 3: 64.59.161.197
+	router 4: 66.163.72.26
+	router 5: 66.163.68.18
+	router 6: 72.14.221.102
+	router 7: 108.170.245.113
+	router 8: 209.85.249.249
 
-ICMP (outbound): 2018-03-21 04:26:06.723000 | (1521606084, 282723000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11307| offset = 0 | icmp type: 8 | identifier = 149
-ICMP 11 (return): 2018-03-21 04:26:08.483000 | (1521606084, 284483000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25772| offset = 0 | icmp type: 11 | identifier = 149
-return time - outbound time: 0:00:01.760000 | 149
-
-ICMP (outbound): 2018-03-21 04:26:09.759000 | (1521606084, 285759000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11308| offset = 0 | icmp type: 8 | identifier = 150
-ICMP 11 (return): 2018-03-21 04:26:11.459000 | (1521606084, 287459000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25773| offset = 0 | icmp type: 11 | identifier = 150
-return time - outbound time: 0:00:01.700000 | 150
-
-ICMP (outbound): 2018-03-21 04:26:12.368000 | (1521606084, 288368000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11309| offset = 0 | icmp type: 8 | identifier = 151
-ICMP 11 (return): 2018-03-21 04:26:19.154000 | (1521606084, 295154000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25774| offset = 0 | icmp type: 11 | identifier = 151
-return time - outbound time: 0:00:06.786000 | 151
-
-ICMP (outbound): 2018-03-21 04:26:25.279000 | (1521606085, 300279000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11310| offset = 0 | icmp type: 8 | identifier = 152
-ICMP 11 (return): 2018-03-21 04:26:38.589000 | (1521606085, 313589000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 41889| offset = 0 | icmp type: 11 | identifier = 152
-return time - outbound time: 0:00:13.310000 | 152
-
-ICMP (outbound): 2018-03-21 04:26:41.806000 | (1521606085, 316806000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11311| offset = 0 | icmp type: 8 | identifier = 153
-ICMP 11 (return): 2018-03-21 04:26:57.613000 | (1521606085, 332613000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 41892| offset = 0 | icmp type: 11 | identifier = 153
-return time - outbound time: 0:00:15.807000 | 153
-
-ICMP (outbound): 2018-03-21 04:26:59.289000 | (1521606085, 334289000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11312| offset = 0 | icmp type: 8 | identifier = 154
-ICMP 11 (return): 2018-03-21 04:27:09.907000 | (1521606085, 344907000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 41893| offset = 0 | icmp type: 11 | identifier = 154
-return time - outbound time: 0:00:10.618000 | 154
-
-ICMP (outbound): 2018-03-21 04:27:47.369000 | (1521606095, 372369000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11313| offset = 0 | icmp type: 8 | identifier = 155
-ICMP 11 (return): 2018-03-21 04:28:10.718000 | (1521606095, 395718000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 60468| offset = 0 | icmp type: 11 | identifier = 155
-return time - outbound time: 0:00:23.349000 | 155
-
-ICMP (outbound): 2018-03-21 04:28:13.391000 | (1521606095, 398391000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11314| offset = 0 | icmp type: 8 | identifier = 156
-ICMP 11 (return): 2018-03-21 04:28:32.554000 | (1521606095, 417554000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 60471| offset = 0 | icmp type: 11 | identifier = 156
-return time - outbound time: 0:00:19.163000 | 156
-
-ICMP (outbound): 2018-03-21 04:28:35.638000 | (1521606095, 420638000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11315| offset = 0 | icmp type: 8 | identifier = 157
-ICMP 11 (return): 2018-03-21 04:28:58.143000 | (1521606095, 443143000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 60474| offset = 0 | icmp type: 11 | identifier = 157
-return time - outbound time: 0:00:22.505000 | 157
-
-ICMP (outbound): 2018-03-21 04:28:47.762000 | (1521606096, 431762000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11316| offset = 0 | icmp type: 8 | identifier = 158
-ICMP 11 (return): 2018-03-21 04:29:03.844000 | (1521606096, 447844000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 22268| offset = 0 | icmp type: 11 | identifier = 158
-return time - outbound time: 0:00:16.082000 | 158
-
-ICMP (outbound): 2018-03-21 04:29:07.188000 | (1521606096, 451188000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11317| offset = 0 | icmp type: 8 | identifier = 159
-ICMP 11 (return): 2018-03-21 04:29:23.541000 | (1521606096, 467541000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 22269| offset = 0 | icmp type: 11 | identifier = 159
-return time - outbound time: 0:00:16.353000 | 159
-
-ICMP (outbound): 2018-03-21 04:29:26.664000 | (1521606096, 470664000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11318| offset = 0 | icmp type: 8 | identifier = 160
-ICMP 11 (return): 2018-03-21 04:29:53.493000 | (1521606096, 497493000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 22270| offset = 0 | icmp type: 11 | identifier = 160
-return time - outbound time: 0:00:26.829000 | 160
-
-ICMP (outbound): 2018-03-21 04:30:14.819000 | (1521606106, 508819000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11319| offset = 0 | icmp type: 8 | identifier = 161
-ICMP 11 (return): 2018-03-21 04:30:43.501000 | (1521606106, 537501000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 63251| offset = 0 | icmp type: 11 | identifier = 161
-return time - outbound time: 0:00:28.682000 | 161
-
-ICMP (outbound): 2018-03-21 04:30:46.846000 | (1521606106, 540846000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11320| offset = 0 | icmp type: 8 | identifier = 162
-ICMP 11 (return): 2018-03-21 04:31:34.100000 | (1521606106, 588100000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 63253| offset = 0 | icmp type: 11 | identifier = 162
-return time - outbound time: 0:00:47.254000 | 162
-
-ICMP (outbound): 2018-03-21 04:31:37.355000 | (1521606106, 591355000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11321| offset = 0 | icmp type: 8 | identifier = 163
-ICMP 11 (return): 2018-03-21 04:32:08.733000 | (1521606106, 622733000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 63258| offset = 0 | icmp type: 11 | identifier = 163
-return time - outbound time: 0:00:31.378000 | 163
-
-ICMP (outbound): 2018-03-21 04:31:49.590000 | (1521606107, 602590000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11322| offset = 0 | icmp type: 8 | identifier = 164
-ICMP 11 (return): 2018-03-21 04:32:15.784000 | (1521606107, 628784000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 164
-return time - outbound time: 0:00:26.194000 | 164
-
-ICMP (outbound): 2018-03-21 04:32:19.427000 | (1521606107, 632427000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11323| offset = 0 | icmp type: 8 | identifier = 165
-ICMP 11 (return): 2018-03-21 04:32:36.737000 | (1521606107, 649737000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 165
-return time - outbound time: 0:00:17.310000 | 165
-
-ICMP (outbound): 2018-03-21 04:32:39.866000 | (1521606107, 652866000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11324| offset = 0 | icmp type: 8 | identifier = 166
-ICMP 11 (return): 2018-03-21 04:33:04.386000 | (1521606107, 677386000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 166
-return time - outbound time: 0:00:24.520000 | 166
-
-ICMP (outbound): 2018-03-21 04:33:39.635000 | (1521606117, 702635000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11325| offset = 0 | icmp type: 8 | identifier = 167
-ICMP 11 (return): 2018-03-21 04:33:57.163000 | (1521606117, 720163000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31754| offset = 0 | icmp type: 11 | identifier = 167
-return time - outbound time: 0:00:17.528000 | 167
-
-ICMP (outbound): 2018-03-21 04:34:00.094000 | (1521606117, 723094000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11326| offset = 0 | icmp type: 8 | identifier = 168
-ICMP 11 (return): 2018-03-21 04:34:19.900000 | (1521606117, 742900000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31755| offset = 0 | icmp type: 11 | identifier = 168
-return time - outbound time: 0:00:19.806000 | 168
-
-ICMP (outbound): 2018-03-21 04:34:22.838000 | (1521606117, 745838000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11327| offset = 0 | icmp type: 8 | identifier = 169
-ICMP 11 (return): 2018-03-21 04:34:40.516000 | (1521606117, 763516000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31756| offset = 0 | icmp type: 11 | identifier = 169
-return time - outbound time: 0:00:17.678000 | 169
-
-ICMP (outbound): 2018-03-21 04:35:24.642000 | (1521606127, 797642000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11328| offset = 0 | icmp type: 8 | identifier = 170
-ICMP 11 (return): 2018-03-21 04:35:44.134000 | (1521606127, 817134000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 57514| offset = 0 | icmp type: 11 | identifier = 170
-return time - outbound time: 0:00:19.492000 | 170
-
-ICMP (outbound): 2018-03-21 04:35:46.998000 | (1521606127, 819998000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11329| offset = 0 | icmp type: 8 | identifier = 171
-ICMP 11 (return): 2018-03-21 04:36:16.740000 | (1521606127, 849740000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 57515| offset = 0 | icmp type: 11 | identifier = 171
-return time - outbound time: 0:00:29.742000 | 171
-
-ICMP (outbound): 2018-03-21 04:36:19.646000 | (1521606127, 852646000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11330| offset = 0 | icmp type: 8 | identifier = 172
-ICMP 11 (return): 2018-03-21 04:36:44.135000 | (1521606127, 877135000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 57516| offset = 0 | icmp type: 11 | identifier = 172
-return time - outbound time: 0:00:24.489000 | 172
-
+The values in the protocol field of IP headers:
+	0: ICMP
 ------------------------
 
 
@@ -1242,104 +242,20 @@ return time - outbound time: 0:00:24.489000 | 172
 processing PcapTracesAssignment3/group2-trace5.pcap 
 
 parsed 53 packets
-source ip = 192.168.0.16
+The IP address of the source node: 192.168.0.16
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 192.168.0.1
+	router 2: 24.108.0.1
+	router 3: 64.59.161.197
+	router 4: 66.163.72.26
+	router 5: 66.163.68.18
+	router 6: 72.14.221.102
+	router 7: 108.170.245.113
+	router 8: 209.85.249.249
 
-ICMP (outbound): 2018-03-21 04:38:27.763000 | (1521606178, 929763000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11334| offset = 0 | icmp type: 8 | identifier = 176
-ICMP 11 (return): 2018-03-21 04:38:29.580000 | (1521606178, 931580000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25784| offset = 0 | icmp type: 11 | identifier = 176
-return time - outbound time: 0:00:01.817000 | 176
-
-ICMP (outbound): 2018-03-21 04:38:30.304000 | (1521606178, 932304000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11335| offset = 0 | icmp type: 8 | identifier = 177
-ICMP 11 (return): 2018-03-21 04:38:31.965000 | (1521606178, 933965000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25785| offset = 0 | icmp type: 11 | identifier = 177
-return time - outbound time: 0:00:01.661000 | 177
-
-ICMP (outbound): 2018-03-21 04:38:32.601000 | (1521606178, 934601000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 1 | id = 11336| offset = 0 | icmp type: 8 | identifier = 178
-ICMP 11 (return): 2018-03-21 04:38:34.360000 | (1521606178, 936360000) | 192.168.0.1 -> 192.168.0.16 | ICMP | TTL : 64 | id = 25786| offset = 0 | icmp type: 11 | identifier = 178
-return time - outbound time: 0:00:01.759000 | 178
-
-ICMP (outbound): 2018-03-21 04:38:42.532000 | (1521606179, 943532000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11337| offset = 0 | icmp type: 8 | identifier = 179
-ICMP 11 (return): 2018-03-21 04:38:55.374000 | (1521606179, 956374000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 46252| offset = 0 | icmp type: 11 | identifier = 179
-return time - outbound time: 0:00:12.842000 | 179
-
-ICMP (outbound): 2018-03-21 04:38:58.772000 | (1521606179, 959772000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11338| offset = 0 | icmp type: 8 | identifier = 180
-ICMP 11 (return): 2018-03-21 04:39:13.631000 | (1521606179, 974631000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 46254| offset = 0 | icmp type: 11 | identifier = 180
-return time - outbound time: 0:00:14.859000 | 180
-
-ICMP (outbound): 2018-03-21 04:39:15.020000 | (1521606179, 976020000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 2 | id = 11339| offset = 0 | icmp type: 8 | identifier = 181
-ICMP 11 (return): 2018-03-21 04:39:35.780000 | (1521606179, 996780000) | 24.108.0.1 -> 192.168.0.16 | ICMP | TTL : 63 | id = 46257| offset = 0 | icmp type: 11 | identifier = 181
-return time - outbound time: 0:00:20.760000 | 181
-
-ICMP (outbound): 2018-03-21 04:23:24.546000 | (1521606190, 14546000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11340| offset = 0 | icmp type: 8 | identifier = 182
-ICMP 11 (return): 2018-03-21 04:23:44.373000 | (1521606190, 34373000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 3162| offset = 0 | icmp type: 11 | identifier = 182
-return time - outbound time: 0:00:19.827000 | 182
-
-ICMP (outbound): 2018-03-21 04:23:47.652000 | (1521606190, 37652000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11341| offset = 0 | icmp type: 8 | identifier = 183
-ICMP 11 (return): 2018-03-21 04:24:16.448000 | (1521606190, 66448000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 3165| offset = 0 | icmp type: 11 | identifier = 183
-return time - outbound time: 0:00:28.796000 | 183
-
-ICMP (outbound): 2018-03-21 04:24:19.659000 | (1521606190, 69659000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 3 | id = 11342| offset = 0 | icmp type: 8 | identifier = 184
-ICMP 11 (return): 2018-03-21 04:24:35.841000 | (1521606190, 85841000) | 64.59.161.197 -> 192.168.0.16 | ICMP | TTL : 253 | id = 3167| offset = 0 | icmp type: 11 | identifier = 184
-return time - outbound time: 0:00:16.182000 | 184
-
-ICMP (outbound): 2018-03-21 04:24:35.029000 | (1521606191, 84029000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11343| offset = 0 | icmp type: 8 | identifier = 185
-ICMP 11 (return): 2018-03-21 04:24:55.143000 | (1521606191, 104143000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 23869| offset = 0 | icmp type: 11 | identifier = 185
-return time - outbound time: 0:00:20.114000 | 185
-
-ICMP (outbound): 2018-03-21 04:24:58.359000 | (1521606191, 107359000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11344| offset = 0 | icmp type: 8 | identifier = 186
-ICMP 11 (return): 2018-03-21 04:25:15.712000 | (1521606191, 124712000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 23871| offset = 0 | icmp type: 11 | identifier = 186
-return time - outbound time: 0:00:17.353000 | 186
-
-ICMP (outbound): 2018-03-21 04:25:19.048000 | (1521606191, 128048000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 4 | id = 11345| offset = 0 | icmp type: 8 | identifier = 187
-ICMP 11 (return): 2018-03-21 04:25:37.256000 | (1521606191, 146256000) | 66.163.72.26 -> 192.168.0.16 | ICMP | TTL : 252 | id = 23872| offset = 0 | icmp type: 11 | identifier = 187
-return time - outbound time: 0:00:18.208000 | 187
-
-ICMP (outbound): 2018-03-21 04:26:00.685000 | (1521606201, 159685000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11346| offset = 0 | icmp type: 8 | identifier = 188
-ICMP 11 (return): 2018-03-21 04:26:18.304000 | (1521606201, 177304000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 1899| offset = 0 | icmp type: 11 | identifier = 188
-return time - outbound time: 0:00:17.619000 | 188
-
-ICMP (outbound): 2018-03-21 04:26:20.512000 | (1521606201, 179512000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11347| offset = 0 | icmp type: 8 | identifier = 189
-ICMP 11 (return): 2018-03-21 04:26:47.105000 | (1521606201, 206105000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 1900| offset = 0 | icmp type: 11 | identifier = 189
-return time - outbound time: 0:00:26.593000 | 189
-
-ICMP (outbound): 2018-03-21 04:26:49.900000 | (1521606201, 208900000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 5 | id = 11348| offset = 0 | icmp type: 8 | identifier = 190
-ICMP 11 (return): 2018-03-21 04:27:07.839000 | (1521606201, 226839000) | 66.163.68.18 -> 192.168.0.16 | ICMP | TTL : 251 | id = 1902| offset = 0 | icmp type: 11 | identifier = 190
-return time - outbound time: 0:00:17.939000 | 190
-
-ICMP (outbound): 2018-03-21 04:27:01.825000 | (1521606202, 219825000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11349| offset = 0 | icmp type: 8 | identifier = 191
-ICMP 11 (return): 2018-03-21 04:27:21.692000 | (1521606202, 239692000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 191
-return time - outbound time: 0:00:19.867000 | 191
-
-ICMP (outbound): 2018-03-21 04:27:24.900000 | (1521606202, 242900000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11350| offset = 0 | icmp type: 8 | identifier = 192
-ICMP 11 (return): 2018-03-21 04:27:43.077000 | (1521606202, 261077000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 192
-return time - outbound time: 0:00:18.177000 | 192
-
-ICMP (outbound): 2018-03-21 04:27:46.212000 | (1521606202, 264212000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 6 | id = 11351| offset = 0 | icmp type: 8 | identifier = 193
-ICMP 11 (return): 2018-03-21 04:29:18.584000 | (1521606202, 356584000) | 72.14.221.102 -> 192.168.0.16 | ICMP | TTL : 250 | id = 0| offset = 0 | icmp type: 11 | identifier = 193
-return time - outbound time: 0:01:32.372000 | 193
-
-ICMP (outbound): 2018-03-21 04:29:22.720000 | (1521606212, 350720000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11352| offset = 0 | icmp type: 8 | identifier = 194
-ICMP 11 (return): 2018-03-21 04:29:47.700000 | (1521606212, 375700000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31745| offset = 0 | icmp type: 11 | identifier = 194
-return time - outbound time: 0:00:24.980000 | 194
-
-ICMP (outbound): 2018-03-21 04:29:49.595000 | (1521606212, 377595000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11353| offset = 0 | icmp type: 8 | identifier = 195
-ICMP 11 (return): 2018-03-21 04:30:27.315000 | (1521606212, 415315000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31746| offset = 0 | icmp type: 11 | identifier = 195
-return time - outbound time: 0:00:37.720000 | 195
-
-ICMP (outbound): 2018-03-21 04:30:29.673000 | (1521606212, 417673000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 7 | id = 11354| offset = 0 | icmp type: 8 | identifier = 196
-ICMP 11 (return): 2018-03-21 04:30:47.737000 | (1521606212, 435737000) | 108.170.245.113 -> 192.168.0.16 | ICMP | TTL : 57 | id = 31747| offset = 0 | icmp type: 11 | identifier = 196
-return time - outbound time: 0:00:18.064000 | 196
-
-ICMP (outbound): 2018-03-21 04:31:25.899000 | (1521606222, 463899000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11355| offset = 0 | icmp type: 8 | identifier = 197
-ICMP 11 (return): 2018-03-21 04:31:55.024000 | (1521606222, 493024000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 58251| offset = 0 | icmp type: 11 | identifier = 197
-return time - outbound time: 0:00:29.125000 | 197
-
-ICMP (outbound): 2018-03-21 04:31:58.326000 | (1521606222, 496326000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11356| offset = 0 | icmp type: 8 | identifier = 198
-ICMP 11 (return): 2018-03-21 04:32:18.161000 | (1521606222, 516161000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 58252| offset = 0 | icmp type: 11 | identifier = 198
-return time - outbound time: 0:00:19.835000 | 198
-
-ICMP (outbound): 2018-03-21 04:32:21.088000 | (1521606222, 519088000) | 192.168.0.16 -> 8.8.8.8 | ICMP | TTL : 8 | id = 11357| offset = 0 | icmp type: 8 | identifier = 199
-ICMP 11 (return): 2018-03-21 04:32:48.998000 | (1521606222, 546998000) | 209.85.249.249 -> 192.168.0.16 | ICMP | TTL : 247 | id = 58253| offset = 0 | icmp type: 11 | identifier = 199
-return time - outbound time: 0:00:27.910000 | 199
-
+The values in the protocol field of IP headers:
+	0: ICMP
 ------------------------
 
 
@@ -1347,128 +263,32 @@ return time - outbound time: 0:00:27.910000 | 199
 processing PcapTracesAssignment3/traceroute-frag.pcap 
 
 parsed 185 packets
-source ip = 192.168.0.108
+The IP address of the source node: 192.168.0.108
+The IP address of the destination node: 4.2.2.2
+The IP address of the intermediate nodes:
+	router 1: 142.104.69.243
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 7: 142.104.252.246
+	router 8: 142.104.250.37
+	router 9: 207.23.241.221
+	router 10: 67.69.244.53
+	router 11: 64.230.122.248
+	router 12: 64.230.77.230
+	router 12: 64.230.77.228
+	router 13: 64.230.79.98
+	router 14: 64.230.125.231
+	router 14: 64.230.125.233
+	router 15: 4.71.152.53
+	router 16: 4.69.152.15
 
-UDP (outbound): 2016-03-25 23:31:34.243000 | (1458947705, 989243000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 1 | id = 21908| offset = 0 | identifier = 58165
-ICMP 11 (return): 2016-03-25 23:31:36.467000 | (1458947705, 991467000) | 142.104.69.243 -> 192.168.0.108 | ICMP | TTL : 29 | id = 61219| offset = 0 | icmp type: 11 | identifier = 58165
-return time - outbound time: 0:00:02.224000 | 58165
-
-UDP (outbound): 2016-03-25 23:15:12.703000 | (1458947706, 6703000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 7 | id = 21929| offset = 0 | identifier = 42153
-ICMP 11 (return): 2016-03-25 23:15:24.744000 | (1458947706, 18744000) | 142.104.252.246 -> 192.168.0.108 | ICMP | TTL : 249 | id = 61245| offset = 0 | icmp type: 11 | identifier = 42153
-return time - outbound time: 0:00:12.041000 | 42153
-
-UDP (outbound): 2016-03-25 23:15:13.004000 | (1458947706, 7004000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 7 | id = 21930| offset = 0 | identifier = 39139
-ICMP 11 (return): 2016-03-25 23:15:25.364000 | (1458947706, 19364000) | 142.104.252.246 -> 192.168.0.108 | ICMP | TTL : 249 | id = 61246| offset = 0 | icmp type: 11 | identifier = 39139
-return time - outbound time: 0:00:12.360000 | 39139
-
-UDP (outbound): 2016-03-25 23:15:13.290000 | (1458947706, 7290000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 8 | id = 21931| offset = 0 | identifier = 40771
-ICMP 11 (return): 2016-03-25 23:15:28.415000 | (1458947706, 22415000) | 142.104.250.37 -> 192.168.0.108 | ICMP | TTL : 248 | id = 61249| offset = 0 | icmp type: 11 | identifier = 40771
-return time - outbound time: 0:00:15.125000 | 40771
-
-UDP (outbound): 2016-03-25 23:15:13.544000 | (1458947706, 7544000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 8 | id = 21932| offset = 0 | identifier = 57990
-ICMP 11 (return): 2016-03-25 23:15:28.741000 | (1458947706, 22741000) | 142.104.250.37 -> 192.168.0.108 | ICMP | TTL : 248 | id = 61250| offset = 0 | icmp type: 11 | identifier = 57990
-return time - outbound time: 0:00:15.197000 | 57990
-
-UDP (outbound): 2016-03-25 23:15:13.815000 | (1458947706, 7815000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 8 | id = 21933| offset = 0 | identifier = 58717
-ICMP 11 (return): 2016-03-25 23:15:29.021000 | (1458947706, 23021000) | 142.104.250.37 -> 192.168.0.108 | ICMP | TTL : 248 | id = 61251| offset = 0 | icmp type: 11 | identifier = 58717
-return time - outbound time: 0:00:15.206000 | 58717
-
-UDP (outbound): 2016-03-25 23:15:25.443000 | (1458947706, 19443000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 10 | id = 21939| offset = 0 | identifier = 55356
-ICMP 11 (return): 2016-03-25 23:15:38.380000 | (1458947706, 32380000) | 67.69.244.53 -> 192.168.0.108 | ICMP | TTL : 246 | id = 61255| offset = 0 | icmp type: 11 | identifier = 55356
-return time - outbound time: 0:00:12.937000 | 55356
-
-UDP (outbound): 2016-03-25 23:15:28.490000 | (1458947706, 22490000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 10 | id = 21940| offset = 0 | identifier = 33438
-ICMP 11 (return): 2016-03-25 23:15:39.021000 | (1458947706, 33021000) | 67.69.244.53 -> 192.168.0.108 | ICMP | TTL : 246 | id = 61256| offset = 0 | icmp type: 11 | identifier = 33438
-return time - outbound time: 0:00:10.531000 | 33438
-
-UDP (outbound): 2016-03-25 23:15:28.823000 | (1458947706, 22823000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 10 | id = 21941| offset = 0 | identifier = 42419
-ICMP 11 (return): 2016-03-25 23:15:39.323000 | (1458947706, 33323000) | 67.69.244.53 -> 192.168.0.108 | ICMP | TTL : 246 | id = 61257| offset = 0 | icmp type: 11 | identifier = 42419
-return time - outbound time: 0:00:10.500000 | 42419
-
-UDP (outbound): 2016-03-25 23:15:29.100000 | (1458947706, 23100000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 11 | id = 21942| offset = 0 | identifier = 46074
-ICMP 11 (return): 2016-03-25 23:15:43.533000 | (1458947706, 37533000) | 64.230.122.248 -> 192.168.0.108 | ICMP | TTL : 238 | id = 61261| offset = 0 | icmp type: 11 | identifier = 46074
-return time - outbound time: 0:00:14.433000 | 46074
-
-UDP (outbound): 2016-03-25 23:15:38.461000 | (1458947706, 32461000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 11 | id = 21943| offset = 0 | identifier = 41042
-ICMP 11 (return): 2016-03-25 23:15:52.096000 | (1458947706, 46096000) | 64.230.122.248 -> 192.168.0.108 | ICMP | TTL : 238 | id = 61263| offset = 0 | icmp type: 11 | identifier = 41042
-return time - outbound time: 0:00:13.635000 | 41042
-
-UDP (outbound): 2016-03-25 23:15:39.099000 | (1458947706, 33099000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 11 | id = 21944| offset = 0 | identifier = 47793
-ICMP 11 (return): 2016-03-25 23:15:52.673000 | (1458947706, 46673000) | 64.230.122.248 -> 192.168.0.108 | ICMP | TTL : 238 | id = 61264| offset = 0 | icmp type: 11 | identifier = 47793
-return time - outbound time: 0:00:13.574000 | 47793
-
-UDP (outbound): 2016-03-25 23:15:39.403000 | (1458947706, 33403000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 12 | id = 21945| offset = 0 | identifier = 55075
-ICMP 11 (return): 2016-03-25 23:15:54.366000 | (1458947706, 48366000) | 64.230.77.230 -> 192.168.0.108 | ICMP | TTL : 240 | id = 61266| offset = 0 | icmp type: 11 | identifier = 55075
-return time - outbound time: 0:00:14.963000 | 55075
-
-UDP (outbound): 2016-03-25 23:15:43.602000 | (1458947706, 37602000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 12 | id = 21946| offset = 0 | identifier = 41700
-ICMP 11 (return): 2016-03-25 23:15:57.548000 | (1458947706, 51548000) | 64.230.77.228 -> 192.168.0.108 | ICMP | TTL : 240 | id = 61269| offset = 0 | icmp type: 11 | identifier = 41700
-return time - outbound time: 0:00:13.946000 | 41700
-
-UDP (outbound): 2016-03-25 23:15:52.732000 | (1458947706, 46732000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 13 | id = 21949| offset = 0 | identifier = 48140
-ICMP 11 (return): 2016-03-25 23:16:08.299000 | (1458947706, 62299000) | 64.230.79.98 -> 192.168.0.108 | ICMP | TTL : 241 | id = 61271| offset = 0 | icmp type: 11 | identifier = 48140
-return time - outbound time: 0:00:15.567000 | 48140
-
-UDP (outbound): 2016-03-25 23:15:54.454000 | (1458947706, 48454000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 13 | id = 21950| offset = 0 | identifier = 49169
-ICMP 11 (return): 2016-03-25 23:16:08.599000 | (1458947706, 62599000) | 64.230.79.98 -> 192.168.0.108 | ICMP | TTL : 241 | id = 61272| offset = 0 | icmp type: 11 | identifier = 49169
-return time - outbound time: 0:00:14.145000 | 49169
-
-UDP (outbound): 2016-03-25 23:15:52.158000 | (1458947706, 46158000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 12 | id = 21948| offset = 0 | identifier = 36784
-ICMP 11 (return): 2016-03-25 23:16:09.194000 | (1458947706, 63194000) | 64.230.77.228 -> 192.168.0.108 | ICMP | TTL : 240 | id = 61273| offset = 0 | icmp type: 11 | identifier = 36784
-return time - outbound time: 0:00:17.036000 | 36784
-
-UDP (outbound): 2016-03-25 23:15:15.287000 | (1458947706, 9287000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 9 | id = 21935| offset = 0 | identifier = 34262
-ICMP 11 (return): 2016-03-25 23:16:13.185000 | (1458947706, 67185000) | 207.23.241.221 -> 192.168.0.108 | ICMP | TTL : 246 | id = 61277| offset = 0 | icmp type: 11 | identifier = 34262
-return time - outbound time: 0:00:57.898000 | 34262
-
-UDP (outbound): 2016-03-25 23:15:14.083000 | (1458947706, 8083000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 9 | id = 21934| offset = 0 | identifier = 41547
-ICMP 11 (return): 2016-03-25 23:16:13.507000 | (1458947706, 67507000) | 207.23.241.221 -> 192.168.0.108 | ICMP | TTL : 246 | id = 61278| offset = 0 | icmp type: 11 | identifier = 41547
-return time - outbound time: 0:00:59.424000 | 41547
-
-UDP (outbound): 2016-03-25 23:15:24.825000 | (1458947706, 18825000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 9 | id = 21938| offset = 0 | identifier = 39711
-ICMP 11 (return): 2016-03-25 23:16:13.782000 | (1458947706, 67782000) | 207.23.241.221 -> 192.168.0.108 | ICMP | TTL : 246 | id = 61279| offset = 0 | icmp type: 11 | identifier = 39711
-return time - outbound time: 0:00:48.957000 | 39711
-
-UDP (outbound): 2016-03-25 23:15:57.611000 | (1458947706, 51611000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 13 | id = 21951| offset = 0 | identifier = 39649
-ICMP 11 (return): 2016-03-25 23:16:14.067000 | (1458947706, 68067000) | 64.230.79.98 -> 192.168.0.108 | ICMP | TTL : 241 | id = 61280| offset = 0 | icmp type: 11 | identifier = 39649
-return time - outbound time: 0:00:16.456000 | 39649
-
-UDP (outbound): 2016-03-25 23:16:08.363000 | (1458947706, 62363000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 14 | id = 21953| offset = 0 | identifier = 53746
-ICMP 11 (return): 2016-03-25 23:16:27.097000 | (1458947706, 81097000) | 64.230.125.233 -> 192.168.0.108 | ICMP | TTL : 242 | id = 61285| offset = 0 | icmp type: 11 | identifier = 53746
-return time - outbound time: 0:00:18.734000 | 53746
-
-UDP (outbound): 2016-03-25 23:16:08.657000 | (1458947706, 62657000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 14 | id = 21954| offset = 0 | identifier = 51096
-ICMP 11 (return): 2016-03-25 23:16:27.670000 | (1458947706, 81670000) | 64.230.125.231 -> 192.168.0.108 | ICMP | TTL : 242 | id = 61286| offset = 0 | icmp type: 11 | identifier = 51096
-return time - outbound time: 0:00:19.013000 | 51096
-
-UDP (outbound): 2016-03-25 23:16:09.254000 | (1458947706, 63254000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 14 | id = 21955| offset = 0 | identifier = 51326
-ICMP 11 (return): 2016-03-25 23:16:28.396000 | (1458947706, 82396000) | 64.230.125.231 -> 192.168.0.108 | ICMP | TTL : 242 | id = 61287| offset = 0 | icmp type: 11 | identifier = 51326
-return time - outbound time: 0:00:19.142000 | 51326
-
-UDP (outbound): 2016-03-25 23:16:14.131000 | (1458947706, 68131000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 16 | id = 21959| offset = 0 | identifier = 56467
-ICMP 11 (return): 2016-03-25 23:16:46.153000 | (1458947706, 100153000) | 4.69.152.15 -> 192.168.0.108 | ICMP | TTL : 237 | id = 61291| offset = 0 | icmp type: 11 | identifier = 56467
-return time - outbound time: 0:00:32.022000 | 56467
-
-UDP (outbound): 2016-03-25 23:16:27.163000 | (1458947706, 81163000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 16 | id = 21961| offset = 0 | identifier = 58126
-ICMP 11 (return): 2016-03-25 23:16:57.129000 | (1458947706, 111129000) | 4.69.152.15 -> 192.168.0.108 | ICMP | TTL : 237 | id = 61293| offset = 0 | icmp type: 11 | identifier = 58126
-return time - outbound time: 0:00:29.966000 | 58126
-
-UDP (outbound): 2016-03-25 23:16:27.731000 | (1458947706, 81731000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 16 | id = 21962| offset = 0 | identifier = 34771
-ICMP 11 (return): 2016-03-25 23:16:57.725000 | (1458947706, 111725000) | 4.69.152.15 -> 192.168.0.108 | ICMP | TTL : 237 | id = 61294| offset = 0 | icmp type: 11 | identifier = 34771
-return time - outbound time: 0:00:29.994000 | 34771
-
-UDP (outbound): 2016-03-25 23:16:13.570000 | (1458947706, 67570000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 15 | id = 21957| offset = 0 | identifier = 35414
-ICMP 11 (return): 2016-03-25 23:18:20.864000 | (1458947706, 194864000) | 4.71.152.53 -> 192.168.0.108 | ICMP | TTL : 241 | id = 61302| offset = 0 | icmp type: 11 | identifier = 35414
-return time - outbound time: 0:02:07.294000 | 35414
-
-UDP (outbound): 2016-03-25 23:16:13.249000 | (1458947706, 67249000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 15 | id = 21956| offset = 0 | identifier = 37491
-ICMP 11 (return): 2016-03-25 23:18:21.188000 | (1458947706, 195188000) | 4.71.152.53 -> 192.168.0.108 | ICMP | TTL : 241 | id = 61303| offset = 0 | icmp type: 11 | identifier = 37491
-return time - outbound time: 0:02:07.939000 | 37491
-
-UDP (outbound): 2016-03-25 23:16:13.841000 | (1458947706, 67841000) | 192.168.0.108 -> 4.2.2.2 | UDP | TTL : 15 | id = 21958| offset = 0 | identifier = 50317
-ICMP 11 (return): 2016-03-25 23:18:21.449000 | (1458947706, 195449000) | 4.71.152.53 -> 192.168.0.108 | ICMP | TTL : 241 | id = 61304| offset = 0 | icmp type: 11 | identifier = 50317
-return time - outbound time: 0:02:07.608000 | 50317
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: ICMP
+	2: TCP
+	3: UDP
+	4: 177
 ------------------------
 
 
@@ -1476,164 +296,29 @@ return time - outbound time: 0:02:07.608000 | 50317
 processing PcapTracesAssignment3/win_trace1.pcap 
 
 parsed 127 packets
-source ip = 192.168.0.17
+The IP address of the source node: 192.168.0.17
+The IP address of the destination node: 8.8.8.8
+The IP address of the intermediate nodes:
+	router 1: 142.104.69.243
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 207.23.244.242
+	router 9: 206.12.3.17
+	router 10: 199.212.24.64
+	router 11: 206.81.80.17
+	router 12: 74.125.37.91
+	router 13: 209.85.250.59
 
-ICMP (outbound): 2016-07-14 00:57:51.915000 | (1468457412, 459915000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 1 | id = 1480| offset = 0 | icmp type: 8 | identifier = 453
-ICMP 11 (return): 2016-07-14 00:57:53.069000 | (1468457412, 461069000) | 142.104.69.243 -> 192.168.0.17 | ICMP | TTL : 29 | id = 38863| offset = 0 | icmp type: 11 | identifier = 453
-return time - outbound time: 0:00:01.154000 | 453
-
-ICMP (outbound): 2016-07-14 00:57:53.698000 | (1468457412, 461698000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 1 | id = 1481| offset = 0 | icmp type: 8 | identifier = 454
-ICMP 11 (return): 2016-07-14 00:57:54.739000 | (1468457412, 462739000) | 142.104.69.243 -> 192.168.0.17 | ICMP | TTL : 29 | id = 38865| offset = 0 | icmp type: 11 | identifier = 454
-return time - outbound time: 0:00:01.041000 | 454
-
-ICMP (outbound): 2016-07-14 00:57:55.204000 | (1468457412, 463204000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 1 | id = 1482| offset = 0 | icmp type: 8 | identifier = 455
-ICMP 11 (return): 2016-07-14 00:57:56.245000 | (1468457412, 464245000) | 142.104.69.243 -> 192.168.0.17 | ICMP | TTL : 29 | id = 38867| offset = 0 | icmp type: 11 | identifier = 455
-return time - outbound time: 0:00:01.041000 | 455
-
-ICMP (outbound): 2016-07-14 00:58:14.659000 | (1468457413, 481659000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 2 | id = 1483| offset = 0 | icmp type: 8 | identifier = 456
-ICMP 11 (return): 2016-07-14 00:58:16.278000 | (1468457413, 483278000) | 142.104.68.1 -> 192.168.0.17 | ICMP | TTL : 254 | id = 38871| offset = 0 | icmp type: 11 | identifier = 456
-return time - outbound time: 0:00:01.619000 | 456
-
-ICMP (outbound): 2016-07-14 00:58:16.843000 | (1468457413, 483843000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 2 | id = 1484| offset = 0 | icmp type: 8 | identifier = 457
-ICMP 11 (return): 2016-07-14 00:58:18.189000 | (1468457413, 485189000) | 142.104.68.1 -> 192.168.0.17 | ICMP | TTL : 254 | id = 38873| offset = 0 | icmp type: 11 | identifier = 457
-return time - outbound time: 0:00:01.346000 | 457
-
-ICMP (outbound): 2016-07-14 00:58:18.648000 | (1468457413, 485648000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 2 | id = 1485| offset = 0 | icmp type: 8 | identifier = 458
-ICMP 11 (return): 2016-07-14 00:58:20.146000 | (1468457413, 487146000) | 142.104.68.1 -> 192.168.0.17 | ICMP | TTL : 254 | id = 38875| offset = 0 | icmp type: 11 | identifier = 458
-return time - outbound time: 0:00:01.498000 | 458
-
-ICMP (outbound): 2016-07-14 00:58:31.319000 | (1468457414, 497319000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 3 | id = 1486| offset = 0 | icmp type: 8 | identifier = 459
-ICMP 11 (return): 2016-07-14 00:58:32.696000 | (1468457414, 498696000) | 192.168.9.5 -> 192.168.0.17 | ICMP | TTL : 62 | id = 38888| offset = 0 | icmp type: 11 | identifier = 459
-return time - outbound time: 0:00:01.377000 | 459
-
-ICMP (outbound): 2016-07-14 00:58:33.214000 | (1468457414, 499214000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 3 | id = 1487| offset = 0 | icmp type: 8 | identifier = 460
-ICMP 11 (return): 2016-07-14 00:58:34.512000 | (1468457414, 500512000) | 192.168.9.5 -> 192.168.0.17 | ICMP | TTL : 62 | id = 38890| offset = 0 | icmp type: 11 | identifier = 460
-return time - outbound time: 0:00:01.298000 | 460
-
-ICMP (outbound): 2016-07-14 00:58:34.983000 | (1468457414, 500983000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 3 | id = 1488| offset = 0 | icmp type: 8 | identifier = 461
-ICMP 11 (return): 2016-07-14 00:58:36.497000 | (1468457414, 502497000) | 192.168.9.5 -> 192.168.0.17 | ICMP | TTL : 62 | id = 38892| offset = 0 | icmp type: 11 | identifier = 461
-return time - outbound time: 0:00:01.514000 | 461
-
-ICMP (outbound): 2016-07-14 00:58:47.906000 | (1468457415, 512906000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 4 | id = 1489| offset = 0 | icmp type: 8 | identifier = 462
-ICMP 11 (return): 2016-07-14 00:58:49.414000 | (1468457415, 514414000) | 192.168.10.1 -> 192.168.0.17 | ICMP | TTL : 252 | id = 38901| offset = 0 | icmp type: 11 | identifier = 462
-return time - outbound time: 0:00:01.508000 | 462
-
-ICMP (outbound): 2016-07-14 00:58:49.979000 | (1468457415, 514979000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 4 | id = 1490| offset = 0 | icmp type: 8 | identifier = 463
-ICMP 11 (return): 2016-07-14 00:58:51.381000 | (1468457415, 516381000) | 192.168.10.1 -> 192.168.0.17 | ICMP | TTL : 252 | id = 38903| offset = 0 | icmp type: 11 | identifier = 463
-return time - outbound time: 0:00:01.402000 | 463
-
-ICMP (outbound): 2016-07-14 00:58:51.815000 | (1468457415, 516815000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 4 | id = 1491| offset = 0 | icmp type: 8 | identifier = 464
-ICMP 11 (return): 2016-07-14 00:58:53.205000 | (1468457415, 518205000) | 192.168.10.1 -> 192.168.0.17 | ICMP | TTL : 252 | id = 38905| offset = 0 | icmp type: 11 | identifier = 464
-return time - outbound time: 0:00:01.390000 | 464
-
-ICMP (outbound): 2016-07-14 00:59:04.672000 | (1468457416, 528672000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 5 | id = 1493| offset = 0 | icmp type: 8 | identifier = 465
-ICMP 11 (return): 2016-07-14 00:59:06.303000 | (1468457416, 530303000) | 192.168.8.6 -> 192.168.0.17 | ICMP | TTL : 251 | id = 38920| offset = 0 | icmp type: 11 | identifier = 465
-return time - outbound time: 0:00:01.631000 | 465
-
-ICMP (outbound): 2016-07-14 00:59:06.882000 | (1468457416, 530882000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 5 | id = 1494| offset = 0 | icmp type: 8 | identifier = 466
-ICMP 11 (return): 2016-07-14 00:59:08.480000 | (1468457416, 532480000) | 192.168.8.6 -> 192.168.0.17 | ICMP | TTL : 251 | id = 38922| offset = 0 | icmp type: 11 | identifier = 466
-return time - outbound time: 0:00:01.598000 | 466
-
-ICMP (outbound): 2016-07-14 00:59:08.927000 | (1468457416, 532927000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 5 | id = 1495| offset = 0 | icmp type: 8 | identifier = 467
-ICMP 11 (return): 2016-07-14 00:59:10.755000 | (1468457416, 534755000) | 192.168.8.6 -> 192.168.0.17 | ICMP | TTL : 251 | id = 38924| offset = 0 | icmp type: 11 | identifier = 467
-return time - outbound time: 0:00:01.828000 | 467
-
-ICMP (outbound): 2016-07-14 00:59:21.180000 | (1468457417, 544180000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 6 | id = 1496| offset = 0 | icmp type: 8 | identifier = 468
-ICMP 11 (return): 2016-07-14 00:59:22.971000 | (1468457417, 545971000) | 142.104.252.37 -> 192.168.0.17 | ICMP | TTL : 250 | id = 38928| offset = 0 | icmp type: 11 | identifier = 468
-return time - outbound time: 0:00:01.791000 | 468
-
-ICMP (outbound): 2016-07-14 00:59:23.619000 | (1468457417, 546619000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 6 | id = 1497| offset = 0 | icmp type: 8 | identifier = 469
-ICMP 11 (return): 2016-07-14 00:59:25.111000 | (1468457417, 548111000) | 142.104.252.37 -> 192.168.0.17 | ICMP | TTL : 250 | id = 38930| offset = 0 | icmp type: 11 | identifier = 469
-return time - outbound time: 0:00:01.492000 | 469
-
-ICMP (outbound): 2016-07-14 00:59:25.599000 | (1468457417, 548599000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 6 | id = 1498| offset = 0 | icmp type: 8 | identifier = 470
-ICMP 11 (return): 2016-07-14 00:59:27.146000 | (1468457417, 550146000) | 142.104.252.37 -> 192.168.0.17 | ICMP | TTL : 250 | id = 38932| offset = 0 | icmp type: 11 | identifier = 470
-return time - outbound time: 0:00:01.547000 | 470
-
-ICMP (outbound): 2016-07-14 00:59:37.790000 | (1468457418, 559790000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 7 | id = 1499| offset = 0 | icmp type: 8 | identifier = 471
-ICMP 11 (return): 2016-07-14 00:59:39.930000 | (1468457418, 561930000) | 142.104.252.246 -> 192.168.0.17 | ICMP | TTL : 249 | id = 38940| offset = 0 | icmp type: 11 | identifier = 471
-return time - outbound time: 0:00:02.140000 | 471
-
-ICMP (outbound): 2016-07-14 00:59:40.470000 | (1468457418, 562470000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 7 | id = 1500| offset = 0 | icmp type: 8 | identifier = 472
-ICMP 11 (return): 2016-07-14 00:59:42.357000 | (1468457418, 564357000) | 142.104.252.246 -> 192.168.0.17 | ICMP | TTL : 249 | id = 38942| offset = 0 | icmp type: 11 | identifier = 472
-return time - outbound time: 0:00:01.887000 | 472
-
-ICMP (outbound): 2016-07-14 00:59:42.874000 | (1468457418, 564874000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 7 | id = 1501| offset = 0 | icmp type: 8 | identifier = 473
-ICMP 11 (return): 2016-07-14 00:59:44.764000 | (1468457418, 566764000) | 142.104.252.246 -> 192.168.0.17 | ICMP | TTL : 249 | id = 38944| offset = 0 | icmp type: 11 | identifier = 473
-return time - outbound time: 0:00:01.890000 | 473
-
-ICMP (outbound): 2016-07-14 00:59:54.500000 | (1468457419, 575500000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 8 | id = 1502| offset = 0 | icmp type: 8 | identifier = 474
-ICMP 11 (return): 2016-07-14 00:59:56.492000 | (1468457419, 577492000) | 207.23.244.242 -> 192.168.0.17 | ICMP | TTL : 247 | id = 38953| offset = 0 | icmp type: 11 | identifier = 474
-return time - outbound time: 0:00:01.992000 | 474
-
-ICMP (outbound): 2016-07-14 00:59:57.096000 | (1468457419, 578096000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 8 | id = 1503| offset = 0 | icmp type: 8 | identifier = 475
-ICMP 11 (return): 2016-07-14 00:59:59.079000 | (1468457419, 580079000) | 207.23.244.242 -> 192.168.0.17 | ICMP | TTL : 247 | id = 38955| offset = 0 | icmp type: 11 | identifier = 475
-return time - outbound time: 0:00:01.983000 | 475
-
-ICMP (outbound): 2016-07-14 00:59:59.540000 | (1468457419, 580540000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 8 | id = 1504| offset = 0 | icmp type: 8 | identifier = 476
-ICMP 11 (return): 2016-07-14 01:00:01.717000 | (1468457419, 582717000) | 207.23.244.242 -> 192.168.0.17 | ICMP | TTL : 247 | id = 38957| offset = 0 | icmp type: 11 | identifier = 476
-return time - outbound time: 0:00:02.177000 | 476
-
-ICMP (outbound): 2016-07-14 01:00:11.211000 | (1468457420, 591211000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 9 | id = 1505| offset = 0 | icmp type: 8 | identifier = 477
-ICMP 11 (return): 2016-07-14 01:00:14.951000 | (1468457420, 594951000) | 206.12.3.17 -> 192.168.0.17 | ICMP | TTL : 247 | id = 38969| offset = 0 | icmp type: 11 | identifier = 477
-return time - outbound time: 0:00:03.740000 | 477
-
-ICMP (outbound): 2016-07-14 01:00:15.516000 | (1468457420, 595516000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 9 | id = 1506| offset = 0 | icmp type: 8 | identifier = 478
-ICMP 11 (return): 2016-07-14 01:00:23.566000 | (1468457420, 603566000) | 206.12.3.17 -> 192.168.0.17 | ICMP | TTL : 247 | id = 38971| offset = 0 | icmp type: 11 | identifier = 478
-return time - outbound time: 0:00:08.050000 | 478
-
-ICMP (outbound): 2016-07-14 01:00:24.020000 | (1468457420, 604020000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 9 | id = 1507| offset = 0 | icmp type: 8 | identifier = 479
-ICMP 11 (return): 2016-07-14 01:00:27.878000 | (1468457420, 607878000) | 206.12.3.17 -> 192.168.0.17 | ICMP | TTL : 247 | id = 38973| offset = 0 | icmp type: 11 | identifier = 479
-return time - outbound time: 0:00:03.858000 | 479
-
-ICMP (outbound): 2016-07-14 01:00:43.398000 | (1468457421, 622398000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 10 | id = 1508| offset = 0 | icmp type: 8 | identifier = 480
-ICMP 11 (return): 2016-07-14 01:00:47.300000 | (1468457421, 626300000) | 199.212.24.64 -> 192.168.0.17 | ICMP | TTL : 246 | id = 38982| offset = 0 | icmp type: 11 | identifier = 480
-return time - outbound time: 0:00:03.902000 | 480
-
-ICMP (outbound): 2016-07-14 01:00:48.005000 | (1468457421, 627005000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 10 | id = 1509| offset = 0 | icmp type: 8 | identifier = 481
-ICMP 11 (return): 2016-07-14 01:00:51.851000 | (1468457421, 630851000) | 199.212.24.64 -> 192.168.0.17 | ICMP | TTL : 246 | id = 38984| offset = 0 | icmp type: 11 | identifier = 481
-return time - outbound time: 0:00:03.846000 | 481
-
-ICMP (outbound): 2016-07-14 01:00:52.573000 | (1468457421, 631573000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 10 | id = 1510| offset = 0 | icmp type: 8 | identifier = 482
-ICMP 11 (return): 2016-07-14 01:00:56.336000 | (1468457421, 635336000) | 199.212.24.64 -> 192.168.0.17 | ICMP | TTL : 246 | id = 38986| offset = 0 | icmp type: 11 | identifier = 482
-return time - outbound time: 0:00:03.763000 | 482
-
-ICMP (outbound): 2016-07-14 01:00:59.994000 | (1468457422, 637994000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 11 | id = 1511| offset = 0 | icmp type: 8 | identifier = 483
-ICMP 11 (return): 2016-07-14 01:01:07.468000 | (1468457422, 645468000) | 206.81.80.17 -> 192.168.0.17 | ICMP | TTL : 245 | id = 38990| offset = 0 | icmp type: 11 | identifier = 483
-return time - outbound time: 0:00:07.474000 | 483
-
-ICMP (outbound): 2016-07-14 01:01:08.264000 | (1468457422, 646264000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 11 | id = 1512| offset = 0 | icmp type: 8 | identifier = 484
-ICMP 11 (return): 2016-07-14 01:01:15.533000 | (1468457422, 653533000) | 206.81.80.17 -> 192.168.0.17 | ICMP | TTL : 245 | id = 38992| offset = 0 | icmp type: 11 | identifier = 484
-return time - outbound time: 0:00:07.269000 | 484
-
-ICMP (outbound): 2016-07-14 01:01:16.201000 | (1468457422, 654201000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 11 | id = 1513| offset = 0 | icmp type: 8 | identifier = 485
-ICMP 11 (return): 2016-07-14 01:01:23.458000 | (1468457422, 661458000) | 206.81.80.17 -> 192.168.0.17 | ICMP | TTL : 245 | id = 38994| offset = 0 | icmp type: 11 | identifier = 485
-return time - outbound time: 0:00:07.257000 | 485
-
-ICMP (outbound): 2016-07-14 01:01:32.197000 | (1468457423, 669197000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 12 | id = 1514| offset = 0 | icmp type: 8 | identifier = 486
-ICMP 11 (return): 2016-07-14 01:01:39.611000 | (1468457423, 676611000) | 74.125.37.91 -> 192.168.0.17 | ICMP | TTL : 52 | id = 39005| offset = 0 | icmp type: 11 | identifier = 486
-return time - outbound time: 0:00:07.414000 | 486
-
-ICMP (outbound): 2016-07-14 01:01:40.184000 | (1468457423, 677184000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 12 | id = 1515| offset = 0 | icmp type: 8 | identifier = 487
-ICMP 11 (return): 2016-07-14 01:01:47.901000 | (1468457423, 684901000) | 74.125.37.91 -> 192.168.0.17 | ICMP | TTL : 52 | id = 39007| offset = 0 | icmp type: 11 | identifier = 487
-return time - outbound time: 0:00:07.717000 | 487
-
-ICMP (outbound): 2016-07-14 01:01:48.653000 | (1468457423, 685653000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 12 | id = 1516| offset = 0 | icmp type: 8 | identifier = 488
-ICMP 11 (return): 2016-07-14 01:01:56.336000 | (1468457423, 693336000) | 74.125.37.91 -> 192.168.0.17 | ICMP | TTL : 52 | id = 39009| offset = 0 | icmp type: 11 | identifier = 488
-return time - outbound time: 0:00:07.683000 | 488
-
-ICMP (outbound): 2016-07-14 01:01:53.355000 | (1468457424, 689355000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 13 | id = 1517| offset = 0 | icmp type: 8 | identifier = 489
-ICMP 11 (return): 2016-07-14 01:02:01.023000 | (1468457424, 697023000) | 209.85.250.59 -> 192.168.0.17 | ICMP | TTL : 242 | id = 39033| offset = 0 | icmp type: 11 | identifier = 489
-return time - outbound time: 0:00:07.668000 | 489
-
-ICMP (outbound): 2016-07-14 01:02:01.574000 | (1468457424, 697574000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 13 | id = 1518| offset = 0 | icmp type: 8 | identifier = 490
-ICMP 11 (return): 2016-07-14 01:02:09.144000 | (1468457424, 705144000) | 209.85.250.59 -> 192.168.0.17 | ICMP | TTL : 242 | id = 39035| offset = 0 | icmp type: 11 | identifier = 490
-return time - outbound time: 0:00:07.570000 | 490
-
-ICMP (outbound): 2016-07-14 01:02:09.610000 | (1468457424, 705610000) | 192.168.0.17 -> 8.8.8.8 | ICMP | TTL : 13 | id = 1519| offset = 0 | icmp type: 8 | identifier = 491
-ICMP 11 (return): 2016-07-14 01:02:16.993000 | (1468457424, 712993000) | 209.85.250.59 -> 192.168.0.17 | ICMP | TTL : 242 | id = 39037| offset = 0 | icmp type: 11 | identifier = 491
-return time - outbound time: 0:00:07.383000 | 491
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: ICMP
+	2: 128
+	3: TCP
+	4: UDP
 ------------------------
 
 
@@ -1641,196 +326,32 @@ return time - outbound time: 0:00:07.383000 | 491
 processing PcapTracesAssignment3/win_trace2.pcap 
 
 parsed 8330 packets
-source ip = 192.168.0.17
+The IP address of the source node: 192.168.0.17
+The IP address of the destination node: 4.2.2.2
+The IP address of the intermediate nodes:
+	router 1: 142.104.69.243
+	router 2: 142.104.68.1
+	router 3: 192.168.9.5
+	router 4: 192.168.10.1
+	router 5: 192.168.8.6
+	router 6: 142.104.252.37
+	router 7: 142.104.252.246
+	router 8: 142.104.250.37
+	router 9: 207.23.241.221
+	router 10: 67.69.244.53
+	router 11: 64.230.122.248
+	router 12: 64.230.77.230
+	router 13: 64.230.79.98
+	router 14: 64.230.125.233
+	router 15: 4.71.152.41
+	router 16: 4.69.152.15
 
-ICMP (outbound): 2016-07-14 01:00:14.570000 | (1468457501, 513570000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 1 | id = 2573| offset = 0 | icmp type: 8 | identifier = 546
-ICMP 11 (return): 2016-07-14 01:00:15.634000 | (1468457501, 514634000) | 142.104.69.243 -> 192.168.0.17 | ICMP | TTL : 29 | id = 40240| offset = 0 | icmp type: 11 | identifier = 546
-return time - outbound time: 0:00:01.064000 | 546
-
-ICMP (outbound): 2016-07-14 01:00:16.477000 | (1468457501, 515477000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 1 | id = 2574| offset = 0 | icmp type: 8 | identifier = 547
-ICMP 11 (return): 2016-07-14 01:00:17.519000 | (1468457501, 516519000) | 142.104.69.243 -> 192.168.0.17 | ICMP | TTL : 29 | id = 40242| offset = 0 | icmp type: 11 | identifier = 547
-return time - outbound time: 0:00:01.042000 | 547
-
-ICMP (outbound): 2016-07-14 01:00:18.202000 | (1468457501, 517202000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 1 | id = 2575| offset = 0 | icmp type: 8 | identifier = 548
-ICMP 11 (return): 2016-07-14 01:00:19.244000 | (1468457501, 518244000) | 142.104.69.243 -> 192.168.0.17 | ICMP | TTL : 29 | id = 40244| offset = 0 | icmp type: 11 | identifier = 548
-return time - outbound time: 0:00:01.042000 | 548
-
-ICMP (outbound): 2016-07-14 01:00:30.424000 | (1468457502, 528424000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 2 | id = 2576| offset = 0 | icmp type: 8 | identifier = 549
-ICMP 11 (return): 2016-07-14 01:00:31.809000 | (1468457502, 529809000) | 142.104.68.1 -> 192.168.0.17 | ICMP | TTL : 254 | id = 40271| offset = 0 | icmp type: 11 | identifier = 549
-return time - outbound time: 0:00:01.385000 | 549
-
-ICMP (outbound): 2016-07-14 01:00:32.394000 | (1468457502, 530394000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 2 | id = 2577| offset = 0 | icmp type: 8 | identifier = 550
-ICMP 11 (return): 2016-07-14 01:00:33.716000 | (1468457502, 531716000) | 142.104.68.1 -> 192.168.0.17 | ICMP | TTL : 254 | id = 40273| offset = 0 | icmp type: 11 | identifier = 550
-return time - outbound time: 0:00:01.322000 | 550
-
-ICMP (outbound): 2016-07-14 01:00:34.202000 | (1468457502, 532202000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 2 | id = 2578| offset = 0 | icmp type: 8 | identifier = 551
-ICMP 11 (return): 2016-07-14 01:00:35.516000 | (1468457502, 533516000) | 142.104.68.1 -> 192.168.0.17 | ICMP | TTL : 254 | id = 40275| offset = 0 | icmp type: 11 | identifier = 551
-return time - outbound time: 0:00:01.314000 | 551
-
-ICMP (outbound): 2016-07-14 01:01:33.970000 | (1468457503, 590970000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 3 | id = 2579| offset = 0 | icmp type: 8 | identifier = 552
-ICMP 11 (return): 2016-07-14 01:01:35.254000 | (1468457503, 592254000) | 192.168.9.5 -> 192.168.0.17 | ICMP | TTL : 62 | id = 40279| offset = 0 | icmp type: 11 | identifier = 552
-return time - outbound time: 0:00:01.284000 | 552
-
-ICMP (outbound): 2016-07-14 01:01:36.093000 | (1468457503, 593093000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 3 | id = 2580| offset = 0 | icmp type: 8 | identifier = 553
-ICMP 11 (return): 2016-07-14 01:01:37.366000 | (1468457503, 594366000) | 192.168.9.5 -> 192.168.0.17 | ICMP | TTL : 62 | id = 40281| offset = 0 | icmp type: 11 | identifier = 553
-return time - outbound time: 0:00:01.273000 | 553
-
-ICMP (outbound): 2016-07-14 01:01:38.055000 | (1468457503, 595055000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 3 | id = 2581| offset = 0 | icmp type: 8 | identifier = 554
-ICMP 11 (return): 2016-07-14 01:01:39.341000 | (1468457503, 596341000) | 192.168.9.5 -> 192.168.0.17 | ICMP | TTL : 62 | id = 40283| offset = 0 | icmp type: 11 | identifier = 554
-return time - outbound time: 0:00:01.286000 | 554
-
-ICMP (outbound): 2016-07-14 01:02:17.935000 | (1468457504, 633935000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 4 | id = 2582| offset = 0 | icmp type: 8 | identifier = 555
-ICMP 11 (return): 2016-07-14 01:02:19.548000 | (1468457504, 635548000) | 192.168.10.1 -> 192.168.0.17 | ICMP | TTL : 252 | id = 40325| offset = 0 | icmp type: 11 | identifier = 555
-return time - outbound time: 0:00:01.613000 | 555
-
-ICMP (outbound): 2016-07-14 01:02:20.356000 | (1468457504, 636356000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 4 | id = 2583| offset = 0 | icmp type: 8 | identifier = 556
-ICMP 11 (return): 2016-07-14 01:02:21.786000 | (1468457504, 637786000) | 192.168.10.1 -> 192.168.0.17 | ICMP | TTL : 252 | id = 40327| offset = 0 | icmp type: 11 | identifier = 556
-return time - outbound time: 0:00:01.430000 | 556
-
-ICMP (outbound): 2016-07-14 01:02:22.520000 | (1468457504, 638520000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 4 | id = 2584| offset = 0 | icmp type: 8 | identifier = 557
-ICMP 11 (return): 2016-07-14 01:02:23.988000 | (1468457504, 639988000) | 192.168.10.1 -> 192.168.0.17 | ICMP | TTL : 252 | id = 40329| offset = 0 | icmp type: 11 | identifier = 557
-return time - outbound time: 0:00:01.468000 | 557
-
-ICMP (outbound): 2016-07-14 01:02:56.909000 | (1468457505, 671909000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 5 | id = 2585| offset = 0 | icmp type: 8 | identifier = 558
-ICMP 11 (return): 2016-07-14 01:02:58.507000 | (1468457505, 673507000) | 192.168.8.6 -> 192.168.0.17 | ICMP | TTL : 251 | id = 40361| offset = 0 | icmp type: 11 | identifier = 558
-return time - outbound time: 0:00:01.598000 | 558
-
-ICMP (outbound): 2016-07-14 01:02:59.346000 | (1468457505, 674346000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 5 | id = 2586| offset = 0 | icmp type: 8 | identifier = 559
-ICMP 11 (return): 2016-07-14 01:03:00.784000 | (1468457505, 675784000) | 192.168.8.6 -> 192.168.0.17 | ICMP | TTL : 251 | id = 40363| offset = 0 | icmp type: 11 | identifier = 559
-return time - outbound time: 0:00:01.438000 | 559
-
-ICMP (outbound): 2016-07-14 01:03:01.481000 | (1468457505, 676481000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 5 | id = 2587| offset = 0 | icmp type: 8 | identifier = 560
-ICMP 11 (return): 2016-07-14 01:03:03.092000 | (1468457505, 678092000) | 192.168.8.6 -> 192.168.0.17 | ICMP | TTL : 251 | id = 40365| offset = 0 | icmp type: 11 | identifier = 560
-return time - outbound time: 0:00:01.611000 | 560
-
-ICMP (outbound): 2016-07-14 01:03:44.702000 | (1468457506, 718702000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 6 | id = 2588| offset = 0 | icmp type: 8 | identifier = 561
-ICMP 11 (return): 2016-07-14 01:03:46.257000 | (1468457506, 720257000) | 142.104.252.37 -> 192.168.0.17 | ICMP | TTL : 250 | id = 40388| offset = 0 | icmp type: 11 | identifier = 561
-return time - outbound time: 0:00:01.555000 | 561
-
-ICMP (outbound): 2016-07-14 01:03:47.110000 | (1468457506, 721110000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 6 | id = 2589| offset = 0 | icmp type: 8 | identifier = 562
-ICMP 11 (return): 2016-07-14 01:03:48.586000 | (1468457506, 722586000) | 142.104.252.37 -> 192.168.0.17 | ICMP | TTL : 250 | id = 40390| offset = 0 | icmp type: 11 | identifier = 562
-return time - outbound time: 0:00:01.476000 | 562
-
-ICMP (outbound): 2016-07-14 01:03:49.278000 | (1468457506, 723278000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 6 | id = 2590| offset = 0 | icmp type: 8 | identifier = 563
-ICMP 11 (return): 2016-07-14 01:03:50.760000 | (1468457506, 724760000) | 142.104.252.37 -> 192.168.0.17 | ICMP | TTL : 250 | id = 40392| offset = 0 | icmp type: 11 | identifier = 563
-return time - outbound time: 0:00:01.482000 | 563
-
-ICMP (outbound): 2016-07-14 01:04:01.331000 | (1468457507, 734331000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 7 | id = 2591| offset = 0 | icmp type: 8 | identifier = 564
-ICMP 11 (return): 2016-07-14 01:04:03.385000 | (1468457507, 736385000) | 142.104.252.246 -> 192.168.0.17 | ICMP | TTL : 249 | id = 40457| offset = 0 | icmp type: 11 | identifier = 564
-return time - outbound time: 0:00:02.054000 | 564
-
-ICMP (outbound): 2016-07-14 01:04:04.224000 | (1468457507, 737224000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 7 | id = 2592| offset = 0 | icmp type: 8 | identifier = 565
-ICMP 11 (return): 2016-07-14 01:04:06.143000 | (1468457507, 739143000) | 142.104.252.246 -> 192.168.0.17 | ICMP | TTL : 249 | id = 40459| offset = 0 | icmp type: 11 | identifier = 565
-return time - outbound time: 0:00:01.919000 | 565
-
-ICMP (outbound): 2016-07-14 01:04:06.836000 | (1468457507, 739836000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 7 | id = 2593| offset = 0 | icmp type: 8 | identifier = 566
-ICMP 11 (return): 2016-07-14 01:04:08.696000 | (1468457507, 741696000) | 142.104.252.246 -> 192.168.0.17 | ICMP | TTL : 249 | id = 40461| offset = 0 | icmp type: 11 | identifier = 566
-return time - outbound time: 0:00:01.860000 | 566
-
-ICMP (outbound): 2016-07-14 01:04:17.946000 | (1468457508, 749946000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 8 | id = 2594| offset = 0 | icmp type: 8 | identifier = 567
-ICMP 11 (return): 2016-07-14 01:04:24.175000 | (1468457508, 756175000) | 142.104.250.37 -> 192.168.0.17 | ICMP | TTL : 248 | id = 40516| offset = 0 | icmp type: 11 | identifier = 567
-return time - outbound time: 0:00:06.229000 | 567
-
-ICMP (outbound): 2016-07-14 01:04:25.007000 | (1468457508, 757007000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 8 | id = 2595| offset = 0 | icmp type: 8 | identifier = 568
-ICMP 11 (return): 2016-07-14 01:04:27.983000 | (1468457508, 759983000) | 142.104.250.37 -> 192.168.0.17 | ICMP | TTL : 248 | id = 40518| offset = 0 | icmp type: 11 | identifier = 568
-return time - outbound time: 0:00:02.976000 | 568
-
-ICMP (outbound): 2016-07-14 01:04:28.678000 | (1468457508, 760678000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 8 | id = 2596| offset = 0 | icmp type: 8 | identifier = 569
-ICMP 11 (return): 2016-07-14 01:04:30.710000 | (1468457508, 762710000) | 142.104.250.37 -> 192.168.0.17 | ICMP | TTL : 248 | id = 40520| offset = 0 | icmp type: 11 | identifier = 569
-return time - outbound time: 0:00:02.032000 | 569
-
-ICMP (outbound): 2016-07-14 01:04:50.199000 | (1468457509, 781199000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 9 | id = 2597| offset = 0 | icmp type: 8 | identifier = 570
-ICMP 11 (return): 2016-07-14 01:04:53.116000 | (1468457509, 784116000) | 207.23.241.221 -> 192.168.0.17 | ICMP | TTL : 246 | id = 40681| offset = 0 | icmp type: 11 | identifier = 570
-return time - outbound time: 0:00:02.917000 | 570
-
-ICMP (outbound): 2016-07-14 01:04:53.963000 | (1468457509, 784963000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 9 | id = 2598| offset = 0 | icmp type: 8 | identifier = 571
-ICMP 11 (return): 2016-07-14 01:04:57.062000 | (1468457509, 788062000) | 207.23.241.221 -> 192.168.0.17 | ICMP | TTL : 246 | id = 40683| offset = 0 | icmp type: 11 | identifier = 571
-return time - outbound time: 0:00:03.099000 | 571
-
-ICMP (outbound): 2016-07-14 01:04:57.757000 | (1468457509, 788757000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 9 | id = 2599| offset = 0 | icmp type: 8 | identifier = 572
-ICMP 11 (return): 2016-07-14 01:05:00.059000 | (1468457509, 791059000) | 207.23.241.221 -> 192.168.0.17 | ICMP | TTL : 246 | id = 40685| offset = 0 | icmp type: 11 | identifier = 572
-return time - outbound time: 0:00:02.302000 | 572
-
-ICMP (outbound): 2016-07-14 01:05:06.838000 | (1468457510, 796838000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 10 | id = 2600| offset = 0 | icmp type: 8 | identifier = 573
-ICMP 11 (return): 2016-07-14 01:05:28.140000 | (1468457510, 818140000) | 67.69.244.53 -> 192.168.0.17 | ICMP | TTL : 246 | id = 40943| offset = 0 | icmp type: 11 | identifier = 573
-return time - outbound time: 0:00:21.302000 | 573
-
-ICMP (outbound): 2016-07-14 01:05:29.035000 | (1468457510, 819035000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 10 | id = 2601| offset = 0 | icmp type: 8 | identifier = 574
-ICMP 11 (return): 2016-07-14 01:05:40.039000 | (1468457510, 830039000) | 67.69.244.53 -> 192.168.0.17 | ICMP | TTL : 246 | id = 40946| offset = 0 | icmp type: 11 | identifier = 574
-return time - outbound time: 0:00:11.004000 | 574
-
-ICMP (outbound): 2016-07-14 01:05:40.798000 | (1468457510, 830798000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 10 | id = 2602| offset = 0 | icmp type: 8 | identifier = 575
-ICMP 11 (return): 2016-07-14 01:05:44.473000 | (1468457510, 834473000) | 67.69.244.53 -> 192.168.0.17 | ICMP | TTL : 246 | id = 40948| offset = 0 | icmp type: 11 | identifier = 575
-return time - outbound time: 0:00:03.675000 | 575
-
-ICMP (outbound): 2016-07-14 01:05:50.336000 | (1468457511, 839336000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 11 | id = 2603| offset = 0 | icmp type: 8 | identifier = 576
-ICMP 11 (return): 2016-07-14 01:05:57.963000 | (1468457511, 846963000) | 64.230.122.248 -> 192.168.0.17 | ICMP | TTL : 238 | id = 41396| offset = 0 | icmp type: 11 | identifier = 576
-return time - outbound time: 0:00:07.627000 | 576
-
-ICMP (outbound): 2016-07-14 01:05:58.809000 | (1468457511, 847809000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 11 | id = 2604| offset = 0 | icmp type: 8 | identifier = 577
-ICMP 11 (return): 2016-07-14 01:06:06.096000 | (1468457511, 855096000) | 64.230.122.248 -> 192.168.0.17 | ICMP | TTL : 238 | id = 41398| offset = 0 | icmp type: 11 | identifier = 577
-return time - outbound time: 0:00:07.287000 | 577
-
-ICMP (outbound): 2016-07-14 01:06:06.765000 | (1468457511, 855765000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 11 | id = 2605| offset = 0 | icmp type: 8 | identifier = 578
-ICMP 11 (return): 2016-07-14 01:06:14.333000 | (1468457511, 863333000) | 64.230.122.248 -> 192.168.0.17 | ICMP | TTL : 238 | id = 41400| offset = 0 | icmp type: 11 | identifier = 578
-return time - outbound time: 0:00:07.568000 | 578
-
-ICMP (outbound): 2016-07-14 01:06:22.514000 | (1468457512, 870514000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 12 | id = 2606| offset = 0 | icmp type: 8 | identifier = 579
-ICMP 11 (return): 2016-07-14 01:06:32.016000 | (1468457512, 880016000) | 64.230.77.230 -> 192.168.0.17 | ICMP | TTL : 240 | id = 42285| offset = 0 | icmp type: 11 | identifier = 579
-return time - outbound time: 0:00:09.502000 | 579
-
-ICMP (outbound): 2016-07-14 01:06:32.915000 | (1468457512, 880915000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 12 | id = 2607| offset = 0 | icmp type: 8 | identifier = 580
-ICMP 11 (return): 2016-07-14 01:06:43.463000 | (1468457512, 891463000) | 64.230.77.230 -> 192.168.0.17 | ICMP | TTL : 240 | id = 42287| offset = 0 | icmp type: 11 | identifier = 580
-return time - outbound time: 0:00:10.548000 | 580
-
-ICMP (outbound): 2016-07-14 01:06:44.209000 | (1468457512, 892209000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 12 | id = 2608| offset = 0 | icmp type: 8 | identifier = 581
-ICMP 11 (return): 2016-07-14 01:06:55.423000 | (1468457512, 903423000) | 64.230.77.230 -> 192.168.0.17 | ICMP | TTL : 240 | id = 42289| offset = 0 | icmp type: 11 | identifier = 581
-return time - outbound time: 0:00:11.214000 | 581
-
-ICMP (outbound): 2016-07-14 01:06:54.864000 | (1468457513, 901864000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 13 | id = 2609| offset = 0 | icmp type: 8 | identifier = 582
-ICMP 11 (return): 2016-07-14 01:07:17.918000 | (1468457513, 924918000) | 64.230.79.98 -> 192.168.0.17 | ICMP | TTL : 241 | id = 43396| offset = 0 | icmp type: 11 | identifier = 582
-return time - outbound time: 0:00:23.054000 | 582
-
-ICMP (outbound): 2016-07-14 01:07:18.682000 | (1468457513, 925682000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 13 | id = 2610| offset = 0 | icmp type: 8 | identifier = 583
-ICMP 11 (return): 2016-07-14 01:07:27.913000 | (1468457513, 934913000) | 64.230.79.98 -> 192.168.0.17 | ICMP | TTL : 241 | id = 43405| offset = 0 | icmp type: 11 | identifier = 583
-return time - outbound time: 0:00:09.231000 | 583
-
-ICMP (outbound): 2016-07-14 01:07:28.543000 | (1468457513, 935543000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 13 | id = 2611| offset = 0 | icmp type: 8 | identifier = 584
-ICMP 11 (return): 2016-07-14 01:07:35.822000 | (1468457513, 942822000) | 64.230.79.98 -> 192.168.0.17 | ICMP | TTL : 241 | id = 43407| offset = 0 | icmp type: 11 | identifier = 584
-return time - outbound time: 0:00:07.279000 | 584
-
-ICMP (outbound): 2016-07-14 01:07:42.528000 | (1468457514, 948528000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 14 | id = 2612| offset = 0 | icmp type: 8 | identifier = 585
-ICMP 11 (return): 2016-07-14 01:07:56.346000 | (1468457514, 962346000) | 64.230.125.233 -> 192.168.0.17 | ICMP | TTL : 241 | id = 44186| offset = 0 | icmp type: 11 | identifier = 585
-return time - outbound time: 0:00:13.818000 | 585
-
-ICMP (outbound): 2016-07-14 01:07:57.240000 | (1468457514, 963240000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 14 | id = 2613| offset = 0 | icmp type: 8 | identifier = 586
-ICMP 11 (return): 2016-07-14 01:08:16.467000 | (1468457514, 982467000) | 64.230.125.233 -> 192.168.0.17 | ICMP | TTL : 241 | id = 44237| offset = 0 | icmp type: 11 | identifier = 586
-return time - outbound time: 0:00:19.227000 | 586
-
-ICMP (outbound): 2016-07-14 01:08:17.293000 | (1468457514, 983293000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 14 | id = 2614| offset = 0 | icmp type: 8 | identifier = 587
-ICMP 11 (return): 2016-07-14 01:08:24.662000 | (1468457514, 990662000) | 64.230.125.233 -> 192.168.0.17 | ICMP | TTL : 241 | id = 44239| offset = 0 | icmp type: 11 | identifier = 587
-return time - outbound time: 0:00:07.369000 | 587
-
-ICMP (outbound): 2016-07-14 00:53:30.499000 | (1468457516, 94499000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 15 | id = 2616| offset = 0 | icmp type: 8 | identifier = 589
-ICMP 11 (return): 2016-07-14 00:53:38.094000 | (1468457516, 102094000) | 4.71.152.41 -> 192.168.0.17 | ICMP | TTL : 241 | id = 45820| offset = 0 | icmp type: 11 | identifier = 589
-return time - outbound time: 0:00:07.595000 | 589
-
-ICMP (outbound): 2016-07-14 00:53:38.806000 | (1468457516, 102806000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 15 | id = 2617| offset = 0 | icmp type: 8 | identifier = 590
-ICMP 11 (return): 2016-07-14 00:53:46.559000 | (1468457516, 110559000) | 4.71.152.41 -> 192.168.0.17 | ICMP | TTL : 241 | id = 45822| offset = 0 | icmp type: 11 | identifier = 590
-return time - outbound time: 0:00:07.753000 | 590
-
-ICMP (outbound): 2016-07-14 00:53:55.502000 | (1468457517, 118502000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 16 | id = 2618| offset = 0 | icmp type: 8 | identifier = 591
-ICMP 11 (return): 2016-07-14 00:54:19.759000 | (1468457517, 142759000) | 4.69.152.15 -> 192.168.0.17 | ICMP | TTL : 237 | id = 46933| offset = 0 | icmp type: 11 | identifier = 591
-return time - outbound time: 0:00:24.257000 | 591
-
-ICMP (outbound): 2016-07-14 00:54:20.631000 | (1468457517, 143631000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 16 | id = 2619| offset = 0 | icmp type: 8 | identifier = 592
-ICMP 11 (return): 2016-07-14 00:54:44.972000 | (1468457517, 167972000) | 4.69.152.15 -> 192.168.0.17 | ICMP | TTL : 237 | id = 46935| offset = 0 | icmp type: 11 | identifier = 592
-return time - outbound time: 0:00:24.341000 | 592
-
-ICMP (outbound): 2016-07-14 00:54:45.890000 | (1468457517, 168890000) | 192.168.0.17 -> 4.2.2.2 | ICMP | TTL : 16 | id = 2620| offset = 0 | icmp type: 8 | identifier = 593
-ICMP 11 (return): 2016-07-14 00:55:11.927000 | (1468457517, 194927000) | 4.69.152.15 -> 192.168.0.17 | ICMP | TTL : 237 | id = 46937| offset = 0 | icmp type: 11 | identifier = 593
-return time - outbound time: 0:00:26.037000 | 593
-
+The values in the protocol field of IP headers:
+	0: 0
+	1: ICMP
+	2: TCP
+	3: 108
+	4: UDP
 ------------------------
 
 

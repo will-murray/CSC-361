@@ -3,6 +3,7 @@ import socket
 import sys
 from datetime import datetime, timedelta
 from collections import defaultdict
+import math
 
 reference_datetime = datetime(1970, 1, 1)
 
@@ -107,7 +108,7 @@ class TCP_Message():
         self.src_port, self.dest_port, self.seq, self.ack, self.offset_reserved_flags, self.window_size = struct.unpack('!HHLLHH', buffer[:16])
         self.offset = (self.offset_reserved_flags >> 12) * 4 
         self.flags = self.offset_reserved_flags & 0x01FF  # Last 9 bits are the flags
-        
+      
 def parse_traceroute(file_path):
     """
     given the file path to a PCAP file, parse the file into a list of IP datagrams
@@ -125,7 +126,6 @@ def parse_traceroute(file_path):
             # Read the next packet header (16 bytes)
             packet_header = f.read(16)
             if len(packet_header) < 16:
-                print(f"parsed {count} packets")
                 break
             
             ts_sec, ts_usec, incl_len, orig_len = struct.unpack("IIII", packet_header)
@@ -158,14 +158,25 @@ def analyze_og_datagram(L,id):
     final_offset = L[len(L) - 1].header.frag_offset
     return [num_fragments,final_offset]
 
+def computeRTTs(outbound,inbound,L):
+
+    t1 = inbound.timestamp
+    O = [l for l in L if l.header.id == outbound.header.id] #set of datagrams leaving the src that share an id with the given outbound datagram
+    RTTs = [(inbound.header.source,outbound.header.ttl,t1 - l.timestamp) for l in O]
+
+
+    return RTTs
+
 def find_matching_packages(L, src_ip,verbose):
     """
     match outgoing packages with thier returning ICMP 11 packages, and collect the set of protocols found in the whole trace file
+    each match is recorded as a 3-tuple : (ip of intermediate router, ttl, IP header id of origonal outgoing package)
     """
+    RTTs = []
     matches=[]
     protos = []
 
-    for i in L:    
+    for i in L:   
         protos.append(i.header.proto)
         if i.header.proto == 1: 
             if i.payload.icmp_type == 11: #ICMP timeout packet detected
@@ -179,25 +190,28 @@ def find_matching_packages(L, src_ip,verbose):
                                     # print(f"{proto_map[icmp_og_packet_type]} (outbound): {j}") 
                                     # print(f"ICMP 11 (return): {i}")
                                     print(f"RTT: {i.timestamp - j.timestamp} | {i.payload.identifier} | ttl : {j.header.ttl}")
-                                matches.append((i.header.source, j.header.ttl))
-                                
+                                matches.append((i.header.source, j.header.ttl,j.header.id))
+                                RTTs += computeRTTs(outbound = j,inbound = i, L = L)
 
     protos = set(protos)
-    return [matches,protos]
+    return [matches,protos,RTTs]
 
-def analyze_traceroute(L, verbose = False):
+def analyze_traceroute(L, fname, verbose = False,r2 = False):
     """
     L is a list of IP_Datagrams
     """         
     src_ip,dest_ip,og_id = extract_og_datagram(L)
-    print(f"og id = {og_id}")
     print(f"The IP address of the source node: {src_ip}")
     print(f"The IP address of the destination node: {dest_ip}")
     print(f"The IP address of the intermediate nodes:")
 
-    matches,protos = find_matching_packages(L,src_ip,verbose) 
-    routers = list(set(matches))
+    matches,protos, RTTs = find_matching_packages(L,src_ip,verbose) 
+    
+
+    routers = list(set([m[:2] for m in matches]))
     routers = sorted(routers, key= lambda x: x[1])
+
+
     for r in routers:
         hop_num, ip = r[1], r[0]
         print(f"\trouter {hop_num}: {ip}")
@@ -212,10 +226,35 @@ def analyze_traceroute(L, verbose = False):
 
     num_frags,final_offset = analyze_og_datagram(L,og_id)
     print(f"\nThe number of fragments created from the original datagram is: {num_frags}")
-    print(f"The offset of the last fragment is: {final_offset}")
+    print(f"The offset of the last fragment is: {final_offset}\n")
 
+    out = []
 
+    ids = set( [r[0] for r in RTTs] )
+    
+    for id,ttl in routers:
+        R = [r[2] for r in RTTs if r[0] == id ]
+        total_time = sum(R, timedelta())
+        average_timedelta = total_time / len(R)
+        differences = [(r - average_timedelta).total_seconds() ** 2 for r in R]
+        variance = sum(differences) / len(R)
+        std_dev = timedelta(seconds=math.sqrt(variance))
 
+        print(f"The avg RTT between {src_ip} and {id} is: {average_timedelta} ms, the s.d. is: {std_dev} ms")
+        if r2:
+            out.append((fname, ttl, average_timedelta))
+    
+    if r2:
+         out_agg = []
+         for fname,ttl in set([o[:2] for o in out]):
+            times = [o[2] for o in out if o[1] == ttl]
+            avg_time = sum([t.total_seconds() for t in times]) / len(times)
+            out_agg.append((fname, ttl, avg_time))
+         
+         for o in sorted(out_agg,key = lambda x: x[1]):
+             print(o)
+
+            
 if len(sys.argv) == 1:
     fname = "PcapTracesAssignment3/group1-trace1.pcap"
     print(f"input file not provided as command line argument, defaulting to {fname}")
@@ -224,8 +263,7 @@ else:
 
 # Example usage
 L = parse_traceroute(fname)
-routers = analyze_traceroute(L, verbose= False)
-
+routers = analyze_traceroute(L, fname,verbose= False, r2 = True)
 
 
 

@@ -16,6 +16,7 @@ proto_map[17] = "UDP"
 class IP_Datagram():
     
     def __init__(self,buffer,incl_len,ts_sec, ts_usec):
+        self.time = (ts_sec,ts_usec)
         self.timestamp = reference_datetime + timedelta(seconds=ts_sec,microseconds=ts_usec)
         self.ethernet_header = buffer[:14]
         self.header = IP_Header(buffer[14:34])
@@ -34,8 +35,10 @@ class IP_Datagram():
         s = ""
         if self.header.proto == 1:
             s = f" | icmp type: {self.payload.icmp_type} | identifier = {self.payload.identifier}"
+        elif self.header.proto == 17:
+            s = f" | identifier = {self.payload.identifier}"
 
-        return self.header.__str__() + s
+        return str(self.timestamp) + " | " + str(self.time) + " | " + self.header.__str__() + s
     
 class IP_Header():
     def __init__(self, buffer):
@@ -94,6 +97,8 @@ class UDP_Message():
         self.udp_src_port = udp_fields[0]
         self.udp_dest_port = udp_fields[1]
 
+        self.identifier = udp_fields[0]
+
 class TCP_Message():
 
     def __init__(self,buffer):
@@ -131,42 +136,46 @@ def parse_traceroute(file_path):
 
 def get_src_ip(L):
     L = sorted(L, key = lambda x: x.header.ttl)
-    return L[0].header.source
+    L_filtered = []
+    for l in L:
+        if l.header.proto == 1:
+            if l.payload.icmp_type == 8:
+                return l.header.source
+        elif l.header.proto == 17:
+            return l.header.source    
+    exit("No valid source ip detected: check get_src_ip()")
+    
+def find_matching_packages(L, src_ip,verbose):
+    matches=[]
 
-def analyze_traceroute(L, verbose = False):
-    """
-    L is a list of IP_Datagrams
-    """         
-    routers = []
-    src_ip = get_src_ip(L)
-    print(f"source ip = {src_ip}")
-
-    for i in L:
+    for i in L:    
         if i.header.proto == 1: 
             if i.payload.icmp_type == 11: #ICMP timeout packet detected
 
                 icmp_og_packet_type = i.payload.OG_header.proto
                 for j in L:
-
-                    if icmp_og_packet_type == j.header.proto and j.header.source == src_ip:
-                        if icmp_og_packet_type == 17: #origonal packet was UDP (linux implementation of traceroute)
-                            #compare the UDP source ports
-                            if i.payload.identifier == j.payload.udp_src_port:
+                    
+                    if icmp_og_packet_type == j.header.proto and j.header.source == src_ip and i.timestamp > j.timestamp:
+                         if i.payload.identifier == j.payload.identifier:
                                 if verbose:
-                                    print(f"UDP (outbound): {j}") 
-                                    print(f"ICMP 11 (inbound): {i}")
-                                    print()
-                                routers.append((i.header.source, j.header.ttl))
+                                    print(f"{proto_map[icmp_og_packet_type]} (outbound): {j}") 
+                                    print(f"ICMP 11 (return): {i}")
+                                    print(f"return time - outbound time: {i.timestamp - j.timestamp} | {i.payload.identifier}\n")
+                                matches.append((i.header.source, j.header.ttl, i.timestamp - j.timestamp,  i.header.frag_offset))
+                                
+
+    return matches
 
 
-                        elif icmp_og_packet_type == 1: #origonal packer was ICMP echo message (windows implementation of traceroute)
-                            if i.payload.identifier == j.payload.identifier:
-                                if verbose:
-                                    print(f"ICMP 8 (outbound): {j}")
-                                    print(f"ICMP 11 (inbound): {i}")
-                                    print()
-                                routers.append((i.header.source, j.header.ttl))
-    routers = list(set(routers))
+def analyze_traceroute(L, verbose = False):
+    """
+    L is a list of IP_Datagrams
+    """         
+    src_ip = get_src_ip(L)
+    print(f"source ip = {src_ip}\n")
+
+    matches = find_matching_packages(L,src_ip,verbose) 
+    routers = list(set(matches))
     routers = sorted(routers, key= lambda x: x[1])
     return routers
 
@@ -181,8 +190,7 @@ else:
 L = parse_traceroute(fname)
 routers = analyze_traceroute(L, verbose= True)
 
-for r in routers:
-    print(r)
+
 
 
 

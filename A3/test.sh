@@ -16,6 +16,7 @@ fi
 for pcap_file in "$DIR"/*.pcap; do
     if [ -f "$pcap_file" ]; then
         # Run p3.py with the pcap file as argument and append output to test_output.txt
+        echo -e "\n+++++++\n$pcap_file\n+++++++\n"
         python3 p3.py "$pcap_file"
         echo -e "------------------------\n\n\n"
 
@@ -23,4 +24,4 @@ for pcap_file in "$DIR"/*.pcap; do
     fi
 done
 
-echo -e "Processing complete. Results stored in $OUTPUT_FILE."
+echo "done >:)"

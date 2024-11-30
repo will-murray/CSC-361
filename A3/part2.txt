@@ -1,0 +1,117 @@
+1. Number of probes per ttl:
+
+    group1 : 3 probes per ttl
+    group2 : 3 probes per ttl
+
+2. 
+    
+    In group 1:
+        intermediate routers 1-12 are the same for each of the 5 traces. Router 13 is different across traces.
+        In particular the differences are likely due to load balancing, where routers distribute traffic across multiple
+        paths to optimize performance and reliability. This is evident from the variation in IP addresses at the router 13,
+        as modern networks often use dynamic routing protocols and Anycast to manage traffic. 
+        These variations reflect the network's design congestion.
+
+    In group 2:
+        the intermediate routers match exactly for each trace
+
+    
+    here is the data I used to inform my answers above
+
+    grep -E 'router 13|group1' full_test.txt:
+
+        PcapTracesAssignment3/group1-trace1.pcap
+                router 13: 209.85.250.121
+                router 13: 209.85.249.153
+                router 13: 209.85.249.155
+        PcapTracesAssignment3/group1-trace2.pcap
+                router 13: 209.85.250.57
+                router 13: 209.85.249.109
+                router 13: 209.85.246.219
+        PcapTracesAssignment3/group1-trace3.pcap
+                router 13: 209.85.249.155
+                router 13: 209.85.247.63
+                router 13: 209.85.245.65
+        PcapTracesAssignment3/group1-trace4.pcap
+                router 13: 209.85.250.123
+                router 13: 209.85.246.219
+                router 13: 209.85.245.65
+        PcapTracesAssignment3/group1-trace5.pcap
+                router 13: 209.85.249.153
+                router 13: 209.85.247.61
+                router 13: 209.85.250.59
+
+    
+    
+    grep -E 'router 13|group2' full_test.txt:
+
+        PcapTracesAssignment3/group2-trace1.pcap
+                router 1: 192.168.0.1
+                router 2: 24.108.0.1
+                router 3: 64.59.161.197
+                router 4: 66.163.72.26
+                router 5: 66.163.68.18
+                router 6: 72.14.221.102
+                router 7: 108.170.245.113
+                router 8: 209.85.249.249
+        PcapTracesAssignment3/group2-trace2.pcap
+                router 1: 192.168.0.1
+                router 2: 24.108.0.1
+                router 3: 64.59.161.197
+                router 4: 66.163.72.26
+                router 5: 66.163.68.18
+                router 6: 72.14.221.102
+                router 7: 108.170.245.113
+                router 8: 209.85.249.249
+        PcapTracesAssignment3/group2-trace3.pcap
+                router 1: 192.168.0.1
+                router 2: 24.108.0.1
+                router 3: 64.59.161.197
+                router 4: 66.163.72.26
+                router 5: 66.163.68.18
+                router 6: 72.14.221.102
+                router 7: 108.170.245.113
+                router 8: 209.85.249.249
+        PcapTracesAssignment3/group2-trace4.pcap
+                router 1: 192.168.0.1
+                router 2: 24.108.0.1
+                router 3: 64.59.161.197
+                router 4: 66.163.72.26
+                router 5: 66.163.68.18
+                router 6: 72.14.221.102
+                router 7: 108.170.245.113
+                router 8: 209.85.249.249
+        PcapTracesAssignment3/group2-trace5.pcap
+                router 1: 192.168.0.1
+                router 2: 24.108.0.1
+                router 3: 64.59.161.197
+                router 4: 66.163.72.26
+                router 5: 66.163.68.18
+                router 6: 72.14.221.102
+                router 7: 108.170.245.113
+                router 8: 209.85.249.249
+
+
+3. 
+
+In group1, The 8th hop (TTL 8) is likely to incur the maximum delay. 
+This is evidenced by the unusually high delay value (50.242) in group1 trace2
+This significant increase suggests there might be a network bottleneck or congestion
+
+In group 2 the second hop likely incurs the most delay as there's a large difference between the RTT
+at hop count 1 vs 2.
+
+
+                1           2      3           4          5         6         7            8         9        10            11           12        13
+-----------------------------------------------------------------------------------------------------------------------------------------------
+group1 trace1 11.366667 16.850667 16.008667 17.562      18.361    11.861333 13.507333   14.095667 18.234333 16.911667   19.429          14.697  19.620333333333335
+group1 trace2 11.385    15.933    15.450333 17.711667   16.878    11.641    13.429333   50.242    16.794667 17.578      19.223333       15.6222 18.018666666666668
+group1 trace3 11.686    15.732333 16.314333 17.158      17.914667 12.113333 14.406      15.182333 18.085667 18.865      20.102667       12.7695 20.839666666666666
+group1 trace4 11.214    15.712667 15.420667 16.688667   17.442667 11.519333 13.587667   14.006333 16.930667 18.181      19.434          13.9400 19.775333333333332
+group1 trace5 11.298333 16.691333 17.484333 18.246667   19.010333 11.917667 13.539      18.522333 16.708333 17.964667   19.327333       13.892  19.634666666666664
+
+group2 trace1 3.329667  15.811667 18.869333 22.843      26.502    24.263667 18.408      22.970667     
+group2 trace2 2.710667  17.118333 20.096667 19.42       21.555333 19.982333 51.658      -224.262333     
+group2 trace3 7.854     11.835333 22.579333 19.460333   20.321333 21.849667 22.763333   20.592     
+group2 trace4 3.415333  13.245    21.672333 19.754667   35.771333 22.674667 18.337333   24.574333     
+group2 trace5 1.745667  16.153667 21.601667 18.558333   20.717    43.472    26.921333   25.623333     

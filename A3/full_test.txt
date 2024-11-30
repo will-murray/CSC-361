@@ -1,3 +1,8 @@
+
++++++++
+PcapTracesAssignment3/group1-trace1.pcap
++++++++
+
 The IP address of the source node: 192.168.100.17
 The IP address of the destination node: 8.8.8.8
 The IP address of the intermediate nodes:
@@ -12,17 +17,17 @@ The IP address of the intermediate nodes:
 	router 9: 206.12.3.17
 	router 10: 199.212.24.64
 	router 11: 206.81.80.17
-	router 12: 72.14.237.123
 	router 12: 74.125.37.91
-	router 13: 209.85.250.121
+	router 12: 72.14.237.123
 	router 13: 209.85.249.153
 	router 13: 209.85.249.155
+	router 13: 209.85.250.121
 
 The values in the protocol field of IP headers:
 	0: 0
 	1: UDP
-	2: TCP
-	3: ICMP
+	2: ICMP
+	3: TCP
 
 The number of fragments created from the original datagram is: 1
 The offset of the last fragment is: 0
@@ -38,11 +43,11 @@ The avg RTT between 192.168.100.17 and 207.23.244.242 is: 0:00:14.095667 ms, the
 The avg RTT between 192.168.100.17 and 206.12.3.17 is: 0:00:18.234333 ms, the s.d. is: 0:00:00.235075 ms
 The avg RTT between 192.168.100.17 and 199.212.24.64 is: 0:00:16.911667 ms, the s.d. is: 0:00:00.213561 ms
 The avg RTT between 192.168.100.17 and 206.81.80.17 is: 0:00:19.429000 ms, the s.d. is: 0:00:00.232151 ms
-The avg RTT between 192.168.100.17 and 72.14.237.123 is: 0:00:17.624000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 74.125.37.91 is: 0:00:11.770000 ms, the s.d. is: 0:00:02.409000 ms
-The avg RTT between 192.168.100.17 and 209.85.250.121 is: 0:00:18.468000 ms, the s.d. is: 0:00:00 ms
+The avg RTT between 192.168.100.17 and 72.14.237.123 is: 0:00:17.624000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.249.153 is: 0:00:20.572000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.249.155 is: 0:00:19.821000 ms, the s.d. is: 0:00:00 ms
+The avg RTT between 192.168.100.17 and 209.85.250.121 is: 0:00:18.468000 ms, the s.d. is: 0:00:00 ms
 ('PcapTracesAssignment3/group1-trace1.pcap', 1, 11.366667)
 ('PcapTracesAssignment3/group1-trace1.pcap', 2, 16.850667)
 ('PcapTracesAssignment3/group1-trace1.pcap', 3, 16.008667)
@@ -60,6 +65,11 @@ The avg RTT between 192.168.100.17 and 209.85.249.155 is: 0:00:19.821000 ms, the
 
 
 
+
++++++++
+PcapTracesAssignment3/group1-trace2.pcap
++++++++
+
 The IP address of the source node: 192.168.100.17
 The IP address of the destination node: 8.8.8.8
 The IP address of the intermediate nodes:
@@ -74,11 +84,11 @@ The IP address of the intermediate nodes:
 	router 9: 206.12.3.17
 	router 10: 199.212.24.64
 	router 11: 206.81.80.17
-	router 12: 74.125.37.91
 	router 12: 72.14.237.123
+	router 12: 74.125.37.91
 	router 13: 209.85.250.57
-	router 13: 209.85.249.109
 	router 13: 209.85.246.219
+	router 13: 209.85.249.109
 
 The values in the protocol field of IP headers:
 	0: 0
@@ -99,11 +109,11 @@ The avg RTT between 192.168.100.17 and 207.23.244.242 is: 0:00:50.242000 ms, the
 The avg RTT between 192.168.100.17 and 206.12.3.17 is: 0:00:16.794667 ms, the s.d. is: 0:00:00.235916 ms
 The avg RTT between 192.168.100.17 and 199.212.24.64 is: 0:00:17.578000 ms, the s.d. is: 0:00:00.204534 ms
 The avg RTT between 192.168.100.17 and 206.81.80.17 is: 0:00:19.223333 ms, the s.d. is: 0:00:00.225794 ms
-The avg RTT between 192.168.100.17 and 74.125.37.91 is: 0:00:16.414000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 72.14.237.123 is: 0:00:14.830500 ms, the s.d. is: 0:00:02.330500 ms
+The avg RTT between 192.168.100.17 and 74.125.37.91 is: 0:00:16.414000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.250.57 is: 0:00:17.936000 ms, the s.d. is: 0:00:00 ms
-The avg RTT between 192.168.100.17 and 209.85.249.109 is: 0:00:17.418000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.246.219 is: 0:00:18.702000 ms, the s.d. is: 0:00:00 ms
+The avg RTT between 192.168.100.17 and 209.85.249.109 is: 0:00:17.418000 ms, the s.d. is: 0:00:00 ms
 ('PcapTracesAssignment3/group1-trace2.pcap', 1, 11.385)
 ('PcapTracesAssignment3/group1-trace2.pcap', 2, 15.933)
 ('PcapTracesAssignment3/group1-trace2.pcap', 3, 15.450333)
@@ -116,10 +126,15 @@ The avg RTT between 192.168.100.17 and 209.85.246.219 is: 0:00:18.702000 ms, the
 ('PcapTracesAssignment3/group1-trace2.pcap', 10, 17.578)
 ('PcapTracesAssignment3/group1-trace2.pcap', 11, 19.223333)
 ('PcapTracesAssignment3/group1-trace2.pcap', 12, 15.622250000000001)
-('PcapTracesAssignment3/group1-trace2.pcap', 13, 18.018666666666665)
+('PcapTracesAssignment3/group1-trace2.pcap', 13, 18.018666666666668)
 ------------------------
 
 
+
+
++++++++
+PcapTracesAssignment3/group1-trace3.pcap
++++++++
 
 The IP address of the source node: 192.168.100.17
 The IP address of the destination node: 8.8.8.8
@@ -137,9 +152,9 @@ The IP address of the intermediate nodes:
 	router 11: 206.81.80.17
 	router 12: 72.14.237.123
 	router 12: 74.125.37.91
-	router 13: 209.85.249.155
 	router 13: 209.85.247.63
 	router 13: 209.85.245.65
+	router 13: 209.85.249.155
 
 The values in the protocol field of IP headers:
 	0: 0
@@ -163,9 +178,9 @@ The avg RTT between 192.168.100.17 and 199.212.24.64 is: 0:00:18.865000 ms, the 
 The avg RTT between 192.168.100.17 and 206.81.80.17 is: 0:00:20.102667 ms, the s.d. is: 0:00:00.218135 ms
 The avg RTT between 192.168.100.17 and 72.14.237.123 is: 0:00:09.568000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 74.125.37.91 is: 0:00:15.971000 ms, the s.d. is: 0:00:02.067000 ms
-The avg RTT between 192.168.100.17 and 209.85.249.155 is: 0:00:19.802000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.247.63 is: 0:00:23.165000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.245.65 is: 0:00:19.552000 ms, the s.d. is: 0:00:00 ms
+The avg RTT between 192.168.100.17 and 209.85.249.155 is: 0:00:19.802000 ms, the s.d. is: 0:00:00 ms
 ('PcapTracesAssignment3/group1-trace3.pcap', 1, 11.686)
 ('PcapTracesAssignment3/group1-trace3.pcap', 2, 15.732333)
 ('PcapTracesAssignment3/group1-trace3.pcap', 3, 16.314333)
@@ -183,6 +198,11 @@ The avg RTT between 192.168.100.17 and 209.85.245.65 is: 0:00:19.552000 ms, the 
 
 
 
+
++++++++
+PcapTracesAssignment3/group1-trace4.pcap
++++++++
+
 The IP address of the source node: 192.168.100.17
 The IP address of the destination node: 8.8.8.8
 The IP address of the intermediate nodes:
@@ -197,11 +217,11 @@ The IP address of the intermediate nodes:
 	router 9: 206.12.3.17
 	router 10: 199.212.24.64
 	router 11: 206.81.80.17
-	router 12: 74.125.37.91
 	router 12: 72.14.237.123
+	router 12: 74.125.37.91
+	router 13: 209.85.245.65
 	router 13: 209.85.246.219
 	router 13: 209.85.250.123
-	router 13: 209.85.245.65
 
 The values in the protocol field of IP headers:
 	0: 0
@@ -222,11 +242,11 @@ The avg RTT between 192.168.100.17 and 207.23.244.242 is: 0:00:14.006333 ms, the
 The avg RTT between 192.168.100.17 and 206.12.3.17 is: 0:00:16.930667 ms, the s.d. is: 0:00:00.214772 ms
 The avg RTT between 192.168.100.17 and 199.212.24.64 is: 0:00:18.181000 ms, the s.d. is: 0:00:00.250728 ms
 The avg RTT between 192.168.100.17 and 206.81.80.17 is: 0:00:19.434000 ms, the s.d. is: 0:00:00.240753 ms
-The avg RTT between 192.168.100.17 and 74.125.37.91 is: 0:00:14.242000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 72.14.237.123 is: 0:00:13.638000 ms, the s.d. is: 0:00:04.067000 ms
+The avg RTT between 192.168.100.17 and 74.125.37.91 is: 0:00:14.242000 ms, the s.d. is: 0:00:00 ms
+The avg RTT between 192.168.100.17 and 209.85.245.65 is: 0:00:20.806000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.246.219 is: 0:00:19.006000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.250.123 is: 0:00:19.514000 ms, the s.d. is: 0:00:00 ms
-The avg RTT between 192.168.100.17 and 209.85.245.65 is: 0:00:20.806000 ms, the s.d. is: 0:00:00 ms
 ('PcapTracesAssignment3/group1-trace4.pcap', 1, 11.214)
 ('PcapTracesAssignment3/group1-trace4.pcap', 2, 15.712667)
 ('PcapTracesAssignment3/group1-trace4.pcap', 3, 15.420667)
@@ -244,6 +264,11 @@ The avg RTT between 192.168.100.17 and 209.85.245.65 is: 0:00:20.806000 ms, the 
 
 
 
+
++++++++
+PcapTracesAssignment3/group1-trace5.pcap
++++++++
+
 The IP address of the source node: 192.168.100.17
 The IP address of the destination node: 8.8.8.8
 The IP address of the intermediate nodes:
@@ -259,8 +284,8 @@ The IP address of the intermediate nodes:
 	router 10: 199.212.24.64
 	router 11: 206.81.80.17
 	router 12: 72.14.237.123
-	router 13: 209.85.249.153
 	router 13: 209.85.250.59
+	router 13: 209.85.249.153
 	router 13: 209.85.247.61
 
 The values in the protocol field of IP headers:
@@ -284,8 +309,8 @@ The avg RTT between 192.168.100.17 and 206.12.3.17 is: 0:00:16.708333 ms, the s.
 The avg RTT between 192.168.100.17 and 199.212.24.64 is: 0:00:17.964667 ms, the s.d. is: 0:00:00.242356 ms
 The avg RTT between 192.168.100.17 and 206.81.80.17 is: 0:00:19.327333 ms, the s.d. is: 0:00:00.406101 ms
 The avg RTT between 192.168.100.17 and 72.14.237.123 is: 0:00:13.892000 ms, the s.d. is: 0:00:03.573473 ms
-The avg RTT between 192.168.100.17 and 209.85.249.153 is: 0:00:19.648000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.250.59 is: 0:00:19.365000 ms, the s.d. is: 0:00:00 ms
+The avg RTT between 192.168.100.17 and 209.85.249.153 is: 0:00:19.648000 ms, the s.d. is: 0:00:00 ms
 The avg RTT between 192.168.100.17 and 209.85.247.61 is: 0:00:19.891000 ms, the s.d. is: 0:00:00 ms
 ('PcapTracesAssignment3/group1-trace5.pcap', 1, 11.298333)
 ('PcapTracesAssignment3/group1-trace5.pcap', 2, 16.691333)
@@ -303,6 +328,11 @@ The avg RTT between 192.168.100.17 and 209.85.247.61 is: 0:00:19.891000 ms, the 
 ------------------------
 
 
+
+
++++++++
+PcapTracesAssignment3/group2-trace1.pcap
++++++++
 
 The IP address of the source node: 192.168.0.16
 The IP address of the destination node: 8.8.8.8
@@ -342,6 +372,11 @@ The avg RTT between 192.168.0.16 and 209.85.249.249 is: 0:00:22.970667 ms, the s
 
 
 
+
++++++++
+PcapTracesAssignment3/group2-trace2.pcap
++++++++
+
 The IP address of the source node: 192.168.0.16
 The IP address of the destination node: 8.8.8.8
 The IP address of the intermediate nodes:
@@ -379,6 +414,11 @@ The avg RTT between 192.168.0.16 and 209.85.249.249 is: -1 day, 23:56:15.737667 
 ------------------------
 
 
+
+
++++++++
+PcapTracesAssignment3/group2-trace3.pcap
++++++++
 
 The IP address of the source node: 192.168.0.16
 The IP address of the destination node: 8.8.8.8
@@ -418,6 +458,11 @@ The avg RTT between 192.168.0.16 and 209.85.249.249 is: 0:00:20.592000 ms, the s
 
 
 
+
++++++++
+PcapTracesAssignment3/group2-trace4.pcap
++++++++
+
 The IP address of the source node: 192.168.0.16
 The IP address of the destination node: 8.8.8.8
 The IP address of the intermediate nodes:
@@ -455,6 +500,11 @@ The avg RTT between 192.168.0.16 and 209.85.249.249 is: 0:00:24.574333 ms, the s
 ------------------------
 
 
+
+
++++++++
+PcapTracesAssignment3/group2-trace5.pcap
++++++++
 
 The IP address of the source node: 192.168.0.16
 The IP address of the destination node: 8.8.8.8
@@ -494,6 +544,11 @@ The avg RTT between 192.168.0.16 and 209.85.249.249 is: 0:00:25.623333 ms, the s
 
 
 
+
++++++++
+PcapTracesAssignment3/traceroute-frag.pcap
++++++++
+
 The IP address of the source node: 192.168.0.108
 The IP address of the destination node: 4.2.2.2
 The IP address of the intermediate nodes:
@@ -506,11 +561,11 @@ The IP address of the intermediate nodes:
 	router 9: 207.23.241.221
 	router 10: 67.69.244.53
 	router 11: 64.230.122.248
-	router 12: 64.230.77.230
 	router 12: 64.230.77.228
+	router 12: 64.230.77.230
 	router 13: 64.230.79.98
-	router 14: 64.230.125.233
 	router 14: 64.230.125.231
+	router 14: 64.230.125.233
 	router 15: 4.71.152.53
 	router 16: 4.69.152.15
 
@@ -518,8 +573,8 @@ The values in the protocol field of IP headers:
 	0: 0
 	1: ICMP
 	2: TCP
-	3: UDP
-	4: 177
+	3: 177
+	4: UDP
 
 The number of fragments created from the original datagram is: 2
 The offset of the last fragment is: 185
@@ -533,11 +588,11 @@ The avg RTT between 192.168.0.108 and 142.104.250.37 is: 0:00:15.173833 ms, the 
 The avg RTT between 192.168.0.108 and 207.23.241.221 is: 0:00:55.424000 ms, the s.d. is: 0:00:04.616503 ms
 The avg RTT between 192.168.0.108 and 67.69.244.53 is: 0:00:11.320167 ms, the s.d. is: 0:00:01.141579 ms
 The avg RTT between 192.168.0.108 and 64.230.122.248 is: 0:00:13.878167 ms, the s.d. is: 0:00:00.391360 ms
-The avg RTT between 192.168.0.108 and 64.230.77.230 is: 0:00:14.960500 ms, the s.d. is: 0:00:00.002500 ms
 The avg RTT between 192.168.0.108 and 64.230.77.228 is: 0:00:15.489500 ms, the s.d. is: 0:00:01.545501 ms
+The avg RTT between 192.168.0.108 and 64.230.77.230 is: 0:00:14.960500 ms, the s.d. is: 0:00:00.002500 ms
 The avg RTT between 192.168.0.108 and 64.230.79.98 is: 0:00:15.387833 ms, the s.d. is: 0:00:00.951790 ms
-The avg RTT between 192.168.0.108 and 64.230.125.233 is: 0:00:18.733000 ms, the s.d. is: 0:00:00.001000 ms
 The avg RTT between 192.168.0.108 and 64.230.125.231 is: 0:00:19.076000 ms, the s.d. is: 0:00:00.064517 ms
+The avg RTT between 192.168.0.108 and 64.230.125.233 is: 0:00:18.733000 ms, the s.d. is: 0:00:00.001000 ms
 The avg RTT between 192.168.0.108 and 4.71.152.53 is: 0:02:07.612333 ms, the s.d. is: 0:00:00.263560 ms
 The avg RTT between 192.168.0.108 and 4.69.152.15 is: 0:00:30.659333 ms, the s.d. is: 0:00:00.962557 ms
 ('PcapTracesAssignment3/traceroute-frag.pcap', 1, -656.558167)
@@ -557,6 +612,11 @@ The avg RTT between 192.168.0.108 and 4.69.152.15 is: 0:00:30.659333 ms, the s.d
 ------------------------
 
 
+
+
++++++++
+PcapTracesAssignment3/win_trace1.pcap
++++++++
 
 The IP address of the source node: 192.168.0.17
 The IP address of the destination node: 8.8.8.8
@@ -614,6 +674,11 @@ The avg RTT between 192.168.0.17 and 209.85.250.59 is: 0:00:07.540333 ms, the s.
 ------------------------
 
 
+
+
++++++++
+PcapTracesAssignment3/win_trace2.pcap
++++++++
 
 The IP address of the source node: 192.168.0.17
 The IP address of the destination node: 4.2.2.2
@@ -681,4 +746,4 @@ The avg RTT between 192.168.0.17 and 4.69.152.15 is: 0:00:24.878333 ms, the s.d.
 
 
 
-Processing complete. Results stored in .
+done >:)

@@ -7,10 +7,6 @@ It expects one command line argument which is the path to a pcap file generated 
 - Ex. ```python3 p3.py PcapTracesAssingment3/group1-trace1.pcap```
 
 
-# Requirement 2 - part2.sh
+# Requirement 2 - part2.txt
 
-The summary tables for group 1 and 2 can be generated with  
--  ```bash test.sh | grep group1 | bash part2.sh > g1.summary.txt```
--  ```bash test.sh | grep group2 | bash part2.sh > g2.summary.txt```
-
-respectively
+This file contains answers to the questions specified in part2. It pulls results from code produced with ad hoc commands.

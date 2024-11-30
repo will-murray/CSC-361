@@ -175,7 +175,8 @@ def find_matching_packages(L, src_ip,verbose):
     RTTs = []
     matches=[]
     protos = []
-
+    
+    L = sorted(L, key= lambda x: x.header.ttl)
     for i in L:   
         protos.append(i.header.proto)
         if i.header.proto == 1: 
@@ -192,7 +193,7 @@ def find_matching_packages(L, src_ip,verbose):
                                     print(f"RTT: {i.timestamp - j.timestamp} | {i.payload.identifier} | ttl : {j.header.ttl}")
                                 matches.append((i.header.source, j.header.ttl,j.header.id))
                                 RTTs += computeRTTs(outbound = j,inbound = i, L = L)
-
+    
     protos = set(protos)
     return [matches,protos,RTTs]
 
@@ -263,7 +264,7 @@ else:
 
 # Example usage
 L = parse_traceroute(fname)
-routers = analyze_traceroute(L, fname,verbose= False, r2 = True)
+routers = analyze_traceroute(L, fname,verbose= False, r2 = False)
 
 
 

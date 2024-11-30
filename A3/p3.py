@@ -4,6 +4,7 @@ import sys
 from datetime import datetime, timedelta
 from collections import defaultdict
 import math
+a = 10
 
 reference_datetime = datetime(1970, 1, 1)
 
